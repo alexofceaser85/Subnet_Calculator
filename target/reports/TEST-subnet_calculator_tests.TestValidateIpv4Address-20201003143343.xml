@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" file="subnet_calculator_tests.py" name="subnet_calculator_tests.TestValidateIpv4Address-20201003143343" skipped="0" tests="5" time="0.007" timestamp="2020-10-03T14:33:43">
+	<testcase classname="subnet_calculator_tests.TestValidateIpv4Address" name="test_empty_ipv4_address" time="0.003" timestamp="2020-10-03T14:33:43"/>
+	<testcase classname="subnet_calculator_tests.TestValidateIpv4Address" name="test_ipv4_with_four_digits_in_octet" time="0.001" timestamp="2020-10-03T14:33:43"/>
+	<testcase classname="subnet_calculator_tests.TestValidateIpv4Address" name="test_ipv4_with_one_digit_in_octet" time="0.001" timestamp="2020-10-03T14:33:43"/>
+	<testcase classname="subnet_calculator_tests.TestValidateIpv4Address" name="test_ipv4_with_three_digits_in_octet" time="0.001" timestamp="2020-10-03T14:33:43"/>
+	<testcase classname="subnet_calculator_tests.TestValidateIpv4Address" name="test_ipv4_with_two_digits_in_octet" time="0.002" timestamp="2020-10-03T14:33:43"/>
+</testsuite>

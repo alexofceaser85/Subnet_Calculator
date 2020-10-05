@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="1" file="subnet_calculator_tests.py" name="subnet_calculator_tests.TestIsValid-20201003125330" skipped="0" tests="1" time="0.005" timestamp="2020-10-03T12:53:30">
+	<testcase classname="subnet_calculator_tests.TestIsValid" name="test_works" time="0.005" timestamp="2020-10-03T12:53:30">
+		<failure message="False is not true" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 11, in test_works
+    self.assertTrue(x)
+  File "/usr/lib/python3.6/unittest/case.py", line 682, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+]]>		</failure>
+	</testcase>
+</testsuite>

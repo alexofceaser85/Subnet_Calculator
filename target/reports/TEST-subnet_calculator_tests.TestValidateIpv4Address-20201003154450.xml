@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="1" file="subnet_calculator_tests.py" name="subnet_calculator_tests.TestValidateIpv4Address-20201003154450" skipped="0" tests="12" time="0.017" timestamp="2020-10-03T15:44:51">
+	<testcase classname="subnet_calculator_tests.TestValidateIpv4Address" name="test_empty_ipv4_address" time="0.002" timestamp="2020-10-03T15:44:51"/>
+	<testcase classname="subnet_calculator_tests.TestValidateIpv4Address" name="test_ipv4_with_four_digits_in_octet" time="0.001" timestamp="2020-10-03T15:44:51"/>
+	<testcase classname="subnet_calculator_tests.TestValidateIpv4Address" name="test_ipv4_with_no_digits_in_octet" time="0.001" timestamp="2020-10-03T15:44:51"/>
+	<testcase classname="subnet_calculator_tests.TestValidateIpv4Address" name="test_ipv4_with_octets_one_above_valid" time="0.001" timestamp="2020-10-03T15:44:51"/>
+	<testcase classname="subnet_calculator_tests.TestValidateIpv4Address" name="test_ipv4_with_octets_one_below_valid" time="0.001" timestamp="2020-10-03T15:44:51"/>
+	<testcase classname="subnet_calculator_tests.TestValidateIpv4Address" name="test_ipv4_with_octets_well_above_valid" time="0.001" timestamp="2020-10-03T15:44:51"/>
+	<testcase classname="subnet_calculator_tests.TestValidateIpv4Address" name="test_ipv4_with_one_digit_in_octet" time="0.001" timestamp="2020-10-03T15:44:51"/>
+	<testcase classname="subnet_calculator_tests.TestValidateIpv4Address" name="test_ipv4_with_one_octets_well_below_valid" time="0.001" timestamp="2020-10-03T15:44:51"/>
+	<testcase classname="subnet_calculator_tests.TestValidateIpv4Address" name="test_ipv4_with_three_digits_in_octet" time="0.001" timestamp="2020-10-03T15:44:51"/>
+	<testcase classname="subnet_calculator_tests.TestValidateIpv4Address" name="test_ipv4_with_two_digits_in_octet" time="0.001" timestamp="2020-10-03T15:44:51"/>
+	<testcase classname="subnet_calculator_tests.TestValidateIpv4Address" name="test_ipv4_with_well_more_than_three_digits_in_octet" time="0.001" timestamp="2020-10-03T15:44:51"/>
+	<testcase classname="subnet_calculator_tests.TestValidateIpv4Address" name="test_ipv4_with_four_octets_valid" time="0.004" timestamp="2020-10-03T15:44:51">
+		<failure message="False is not true" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 57, in test_ipv4_with_four_octets_valid
+    self.assertTrue(is_valid)
+  File "/usr/lib/python3.6/unittest/case.py", line 682, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+]]>		</failure>
+	</testcase>
+</testsuite>

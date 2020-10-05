@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="2" failures="0" file="subnet_calculator_tests.py" name="subnet_calculator_tests.TestValidateIpv4Address-20201003142452" skipped="0" tests="2" time="0.005" timestamp="2020-10-03T14:24:53">
+	<testcase classname="subnet_calculator_tests.TestValidateIpv4Address" name="test_empty_ipv4_address" time="0.003" timestamp="2020-10-03T14:24:53">
+		<error message="test_empty_ipv4_address() takes 0 positional arguments but 1 was given" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+TypeError: test_empty_ipv4_address() takes 0 positional arguments but 1 was given
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestValidateIpv4Address" name="test_ipv4_with_one_digit_in_octet" time="0.002" timestamp="2020-10-03T14:24:53">
+		<error message="test_ipv4_with_one_digit_in_octet() takes 0 positional arguments but 1 was given" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+TypeError: test_ipv4_with_one_digit_in_octet() takes 0 positional arguments but 1 was given
+]]>		</error>
+	</testcase>
+</testsuite>

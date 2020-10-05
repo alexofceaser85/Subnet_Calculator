@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="1" failures="0" file="subnet_calculator_tests.py" name="subnet_calculator_tests.TestValidateIpv4Address-20201003143121" skipped="0" tests="4" time="0.007" timestamp="2020-10-03T14:31:21">
+	<testcase classname="subnet_calculator_tests.TestValidateIpv4Address" name="test_empty_ipv4_address" time="0.002" timestamp="2020-10-03T14:31:21"/>
+	<testcase classname="subnet_calculator_tests.TestValidateIpv4Address" name="test_ipv4_with_one_digit_in_octet" time="0.001" timestamp="2020-10-03T14:31:21"/>
+	<testcase classname="subnet_calculator_tests.TestValidateIpv4Address" name="test_ipv4_with_three_digits_in_octet" time="0.001" timestamp="2020-10-03T14:31:21"/>
+	<testcase classname="subnet_calculator_tests.TestValidateIpv4Address" name="test_ipv4_with_two_digits_in_octet" time="0.003" timestamp="2020-10-03T14:31:21">
+		<error message="name 'valid' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 21, in test_ipv4_with_two_digits_in_octet
+    self.assertTrue(valid)
+NameError: name 'valid' is not defined
+]]>		</error>
+	</testcase>
+</testsuite>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" file="subnet_calculator_tests.py" name="subnet_calculator_tests.TestIsValid-20201003141100" skipped="0" tests="1" time="0.002" timestamp="2020-10-03T14:11:01">
+	<testcase classname="subnet_calculator_tests.TestIsValid" name="test_works" time="0.002" timestamp="2020-10-03T14:11:01"/>
+</testsuite>

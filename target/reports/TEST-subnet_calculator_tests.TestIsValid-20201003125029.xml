@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="1" failures="0" file="subnet_calculator_tests.py" name="subnet_calculator_tests.TestIsValid-20201003125029" skipped="0" tests="1" time="0.014" timestamp="2020-10-03T12:50:29">
+	<testcase classname="subnet_calculator_tests.TestIsValid" name="test_works" time="0.014" timestamp="2020-10-03T12:50:29">
+		<error message="name 'utils' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 10, in test_works
+    x = utils.is_valid('4545-7845-7845-1231')
+NameError: name 'utils' is not defined
+]]>		</error>
+	</testcase>
+</testsuite>
