@@ -550,5 +550,72 @@ class TestValidateNetmaskIpFormat(unittest.TestCase):
         is_valid = subnet_calculator.validate_netmask_ip_format('255.255.255.180')
         self.assertFalse(is_valid)
 
+class ValidateNetmaskBitFormat(unittest.TestCase):
+
+    def test_empty_netmask(self):
+
+        is_valid = subnet_calculator.validate_netmask_bit_format('')
+        self.assertFalse(is_valid)
+
+    def test_netmask_well_below_zero(self):
+
+        is_valid = subnet_calculator.validate_netmask_bit_format('-99')
+        self.assertFalse(is_valid)
+
+    def test_netmask_one_below_zero(self):
+
+        is_valid = subnet_calculator.validate_netmask_bit_format('-1')
+        self.assertFalse(is_valid)
+
+    def test_netmask_at_zero(self):
+
+        is_valid = subnet_calculator.validate_netmask_bit_format('0')
+        self.assertFalse(is_valid)
+
+    def test_netmask_one_above_zero(self):
+
+        is_valid = subnet_calculator.validate_netmask_bit_format('1')
+        self.assertTrue(is_valid)
+
+    def test_netmask_well_above_zero(self):
+
+        is_valid = subnet_calculator.validate_netmask_bit_format('12')
+        self.assertTrue(is_valid)
+
+    def test_netmask_well_below_31(self):
+
+        is_valid = subnet_calculator.validate_netmask_bit_format('18')
+        self.assertTrue(is_valid)
+
+    def test_netmask_one_below_31(self):
+
+        is_valid = subnet_calculator.validate_netmask_bit_format('30')
+        self.assertTrue(is_valid)
+
+    def test_netmask_at_31(self):
+
+        is_valid = subnet_calculator.validate_netmask_bit_format('31')
+        self.assertTrue(is_valid)
+
+    def test_netmask_one_above_31(self):
+
+        is_valid = subnet_calculator.validate_netmask_bit_format('32')
+        self.assertFalse(is_valid)
+
+    def test_netmask_well_above_31(self):
+
+        is_valid = subnet_calculator.validate_netmask_bit_format('99')
+        self.assertFalse(is_valid)
+
+    def test_netmask_with_letters(self):
+
+        is_valid = subnet_calculator.validate_netmask_bit_format('9f')
+        self.assertFalse(is_valid)
+
+    def test_netmask_with_symbols(self):
+
+        is_valid = subnet_calculator.validate_netmask_bit_format('9.0')
+        self.assertFalse(is_valid)
+
 if __name__ == '__main__':
     unittest.main()

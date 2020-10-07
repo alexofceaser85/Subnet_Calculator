@@ -56,3 +56,17 @@ def validate_netmask_ip_format(netmask):
         return True
 
     return False
+
+def validate_netmask_bit_format(netmask):
+
+    """
+    Checks if the given netmask is in a valid bit format
+    for example: 16 is valid but 255.255.0.0 is not
+    """
+
+    valid_netmask_ip_regex = r"^(([1-9])|((1|2)[0-9])|(3[0-1]))$"
+
+    if (re.match(valid_netmask_ip_regex, netmask)):
+        return True
+
+    return False
