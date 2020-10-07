@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="2" file="subnet_calculator_tests.py" name="subnet_calculator_tests.TestValidateSubnetMaskIpFormat-20201006202411" skipped="0" tests="7" time="0.011" timestamp="2020-10-06T20:24:12">
+	<testcase classname="subnet_calculator_tests.TestValidateSubnetMaskIpFormat" name="test_empty_subnet" time="0.002" timestamp="2020-10-06T20:24:12"/>
+	<testcase classname="subnet_calculator_tests.TestValidateSubnetMaskIpFormat" name="test_subnet_with_no_digits_in_octet" time="0.001" timestamp="2020-10-06T20:24:12"/>
+	<testcase classname="subnet_calculator_tests.TestValidateSubnetMaskIpFormat" name="test_subnet_with_octets_at_four" time="0.001" timestamp="2020-10-06T20:24:12"/>
+	<testcase classname="subnet_calculator_tests.TestValidateSubnetMaskIpFormat" name="test_subnet_with_octets_one_above_four" time="0.001" timestamp="2020-10-06T20:24:12"/>
+	<testcase classname="subnet_calculator_tests.TestValidateSubnetMaskIpFormat" name="test_subnet_with_octets_well_above_four" time="0.001" timestamp="2020-10-06T20:24:12"/>
+	<testcase classname="subnet_calculator_tests.TestValidateSubnetMaskIpFormat" name="test_subnet_with_octets_one_below_four" time="0.003" timestamp="2020-10-06T20:24:12">
+		<failure message="True is not false" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 441, in test_subnet_with_octets_one_below_four
+    self.assertFalse(is_valid)
+  File "/usr/lib/python3.6/unittest/case.py", line 676, in assertFalse
+    raise self.failureException(msg)
+AssertionError: True is not false
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestValidateSubnetMaskIpFormat" name="test_subnet_with_octets_well_below_four" time="0.002" timestamp="2020-10-06T20:24:12">
+		<failure message="True is not false" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 436, in test_subnet_with_octets_well_below_four
+    self.assertFalse(is_valid)
+  File "/usr/lib/python3.6/unittest/case.py", line 676, in assertFalse
+    raise self.failureException(msg)
+AssertionError: True is not false
+]]>		</failure>
+	</testcase>
+</testsuite>

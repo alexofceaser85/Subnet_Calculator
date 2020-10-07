@@ -418,5 +418,137 @@ class TestValidateIpv6Address(unittest.TestCase):
         is_valid = subnet_calculator.validate_ipv6_address('2001:4515:0000:0000:9999:4515:0042:-8329')
         self.assertFalse(is_valid)
 
+class TestValidateNetmaskIpFormat(unittest.TestCase):
+
+    def test_empty_netmask(self):
+        
+        is_valid = subnet_calculator.validate_netmask_ip_format('')
+        self.assertFalse(is_valid)
+
+    def test_netmask_with_no_digits_in_octet(self):
+
+        is_valid = subnet_calculator.validate_netmask_ip_format('....')
+        self.assertFalse(is_valid)
+
+    def test_netmask_with_octets_well_below_four(self):
+
+        is_valid = subnet_calculator.validate_netmask_ip_format('255')
+        self.assertFalse(is_valid)
+
+    def test_netmask_with_octets_one_below_four(self):
+
+        is_valid = subnet_calculator.validate_netmask_ip_format('255.255.255')
+        self.assertFalse(is_valid)
+
+    def test_netmask_with_octets_at_four(self):
+
+        is_valid = subnet_calculator.validate_netmask_ip_format('255.255.255.0')
+        self.assertTrue(is_valid)
+
+    def test_netmask_with_octets_one_above_four(self):
+
+        is_valid = subnet_calculator.validate_netmask_ip_format('255.255.255.0.0')
+        self.assertFalse(is_valid)
+
+    def test_netmask_with_octets_well_above_four(self):
+
+        is_valid = subnet_calculator.validate_netmask_ip_format('255.255.255.255.255.255.255.0')
+        self.assertFalse(is_valid)
+
+    def test_netmask_with_empty_octet(self):
+
+        is_valid = subnet_calculator.validate_netmask_ip_format('255..0.0')
+        self.assertFalse(is_valid)
+
+    def test_netmask_with_one_non_zero_after_one_zero(self):
+
+        is_valid = subnet_calculator.validate_netmask_ip_format('0.255.0.0')
+        self.assertFalse(is_valid)
+
+    def test_netmask_with_many_non_zeros_after_one_zero(self):
+
+        is_valid = subnet_calculator.validate_netmask_ip_format('0.255.255.255')
+        self.assertFalse(is_valid)
+
+    def test_netmask_with_one_non_zero_after_many_non_zeros(self):
+
+        is_valid = subnet_calculator.validate_netmask_ip_format('0.0.0.255')
+        self.assertFalse(is_valid)
+
+    def test_netmask_with_octet_less_than_255_before_255(self):
+
+        is_valid = subnet_calculator.validate_netmask_ip_format('0.255.0.0')
+        self.assertFalse(is_valid)
+
+    def test_netmask_with_octets_all_zero(self):
+
+        is_valid = subnet_calculator.validate_netmask_ip_format('0.0.0.0')
+        self.assertTrue(is_valid)
+
+    def test_netmask_with_octets_all_255(self):
+
+        is_valid = subnet_calculator.validate_netmask_ip_format('255.255.255.255')
+        self.assertFalse(is_valid)
+
+    def test_netmask_with_one_non_255_or_0_number(self):
+
+        is_valid = subnet_calculator.validate_netmask_ip_format('255.248.0.0')
+        self.assertTrue(is_valid)
+
+    def test_netmask_with_one_more_than_one_non_255_or_0_number(self):
+
+        is_valid = subnet_calculator.validate_netmask_ip_format('255.248.240.0')
+        self.assertFalse(is_valid)
+
+    def test_netmask_with_well_more_than_one_non_255_or_0_number(self):
+
+        is_valid = subnet_calculator.validate_netmask_ip_format('254.248.240.128')
+        self.assertFalse(is_valid)
+
+    def test_maximum_bit_netmask_ending_in_254(self):
+
+        is_valid = subnet_calculator.validate_netmask_ip_format('255.255.255.254')
+        self.assertTrue(is_valid)
+
+    def test_netmask_with_one_octet_with_valid_value_of_254(self):
+
+        is_valid = subnet_calculator.validate_netmask_ip_format('255.255.255.254')
+        self.assertTrue(is_valid)
+
+    def test_netmask_with_one_octet_with_valid_value_of_252(self):
+
+        is_valid = subnet_calculator.validate_netmask_ip_format('255.255.255.252')
+        self.assertTrue(is_valid)
+
+    def test_netmask_with_one_octet_with_valid_value_of_248(self):
+
+        is_valid = subnet_calculator.validate_netmask_ip_format('255.255.255.248')
+        self.assertTrue(is_valid)
+
+    def test_netmask_with_one_octet_with_valid_value_of_240(self):
+
+        is_valid = subnet_calculator.validate_netmask_ip_format('255.255.255.240')
+        self.assertTrue(is_valid)
+
+    def test_netmask_with_one_octet_with_valid_value_of_224(self):
+
+        is_valid = subnet_calculator.validate_netmask_ip_format('255.255.255.224')
+        self.assertTrue(is_valid)
+
+    def test_netmask_with_one_octet_with_valid_value_of_192(self):
+
+        is_valid = subnet_calculator.validate_netmask_ip_format('255.255.255.192')
+        self.assertTrue(is_valid)
+
+    def test_netmask_with_one_octet_with_valid_value_of_128(self):
+
+        is_valid = subnet_calculator.validate_netmask_ip_format('255.255.255.128')
+        self.assertTrue(is_valid)
+    
+    def test_netmask_with_non_valid_octet_value(self):
+
+        is_valid = subnet_calculator.validate_netmask_ip_format('255.255.255.180')
+        self.assertFalse(is_valid)
+
 if __name__ == '__main__':
     unittest.main()

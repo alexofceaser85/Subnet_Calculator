@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" file="subnet_calculator_tests.py" name="subnet_calculator_tests.TestValidateSubnetMaskIpFormat-20201006200526" skipped="0" tests="1" time="0.003" timestamp="2020-10-06T20:05:28">
+	<testcase classname="subnet_calculator_tests.TestValidateSubnetMaskIpFormat" name="test_empty_subnet" time="0.003" timestamp="2020-10-06T20:05:28"/>
+</testsuite>

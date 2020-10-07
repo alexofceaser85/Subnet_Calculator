@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="1" failures="0" file="subnet_calculator_tests.py" name="subnet_calculator_tests.TestValidateSubnetMaskIpFormat-20201006102631" skipped="0" tests="1" time="0.008" timestamp="2020-10-06T10:26:33">
+	<testcase classname="subnet_calculator_tests.TestValidateSubnetMaskIpFormat" name="test_empty_subnet" time="0.008" timestamp="2020-10-06T10:26:33">
+		<error message="cannot refer to an open group at position 86" type="error">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 425, in test_empty_subnet
+    is_valid = subnet_calculator.validate_subnet_mask_ip_format('255.255.255.254')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 55, in validate_subnet_mask_ip_format
+    if (re.match(valid_subnet_ip_regex, subnet_mask)):
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/re.py", line 172, in match
+    return _compile(pattern, flags).match(string)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/re.py", line 301, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_compile.py", line 562, in compile
+    p = sre_parse.parse(p, flags)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_parse.py", line 855, in parse
+    p = _parse_sub(source, pattern, flags & SRE_FLAG_VERBOSE, 0)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_parse.py", line 416, in _parse_sub
+    not nested and not items))
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_parse.py", line 765, in _parse
+    p = _parse_sub(source, state, sub_verbose, nested + 1)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_parse.py", line 416, in _parse_sub
+    not nested and not items))
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_parse.py", line 765, in _parse
+    p = _parse_sub(source, state, sub_verbose, nested + 1)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_parse.py", line 416, in _parse_sub
+    not nested and not items))
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_parse.py", line 765, in _parse
+    p = _parse_sub(source, state, sub_verbose, nested + 1)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_parse.py", line 416, in _parse_sub
+    not nested and not items))
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_parse.py", line 765, in _parse
+    p = _parse_sub(source, state, sub_verbose, nested + 1)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_parse.py", line 416, in _parse_sub
+    not nested and not items))
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_parse.py", line 696, in _parse
+    p = _parse_sub(source, state, verbose, nested + 1)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_parse.py", line 416, in _parse_sub
+    not nested and not items))
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_parse.py", line 502, in _parse
+    code = _escape(source, this, state)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_parse.py", line 395, in _escape
+    len(escape))
+sre_constants.error: cannot refer to an open group at position 86
+]]>		</error>
+	</testcase>
+</testsuite>
