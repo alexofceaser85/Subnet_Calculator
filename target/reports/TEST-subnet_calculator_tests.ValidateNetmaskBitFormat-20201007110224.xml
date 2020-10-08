@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" file="subnet_calculator_tests.py" name="subnet_calculator_tests.ValidateNetmaskBitFormat-20201007110224" skipped="0" tests="14" time="0.038" timestamp="2020-10-07T11:02:26">
+	<testcase classname="subnet_calculator_tests.ValidateNetmaskBitFormat" name="test_calculator" time="0.003" timestamp="2020-10-07T11:02:26"/>
+	<testcase classname="subnet_calculator_tests.ValidateNetmaskBitFormat" name="test_empty_netmask" time="0.008" timestamp="2020-10-07T11:02:26"/>
+	<testcase classname="subnet_calculator_tests.ValidateNetmaskBitFormat" name="test_netmask_at_31" time="0.008" timestamp="2020-10-07T11:02:26"/>
+	<testcase classname="subnet_calculator_tests.ValidateNetmaskBitFormat" name="test_netmask_at_zero" time="0.001" timestamp="2020-10-07T11:02:26"/>
+	<testcase classname="subnet_calculator_tests.ValidateNetmaskBitFormat" name="test_netmask_one_above_31" time="0.003" timestamp="2020-10-07T11:02:26"/>
+	<testcase classname="subnet_calculator_tests.ValidateNetmaskBitFormat" name="test_netmask_one_above_zero" time="0.002" timestamp="2020-10-07T11:02:26"/>
+	<testcase classname="subnet_calculator_tests.ValidateNetmaskBitFormat" name="test_netmask_one_below_31" time="0.002" timestamp="2020-10-07T11:02:26"/>
+	<testcase classname="subnet_calculator_tests.ValidateNetmaskBitFormat" name="test_netmask_one_below_zero" time="0.002" timestamp="2020-10-07T11:02:26"/>
+	<testcase classname="subnet_calculator_tests.ValidateNetmaskBitFormat" name="test_netmask_well_above_31" time="0.001" timestamp="2020-10-07T11:02:26"/>
+	<testcase classname="subnet_calculator_tests.ValidateNetmaskBitFormat" name="test_netmask_well_above_zero" time="0.001" timestamp="2020-10-07T11:02:26"/>
+	<testcase classname="subnet_calculator_tests.ValidateNetmaskBitFormat" name="test_netmask_well_below_31" time="0.001" timestamp="2020-10-07T11:02:26"/>
+	<testcase classname="subnet_calculator_tests.ValidateNetmaskBitFormat" name="test_netmask_well_below_zero" time="0.001" timestamp="2020-10-07T11:02:26"/>
+	<testcase classname="subnet_calculator_tests.ValidateNetmaskBitFormat" name="test_netmask_with_letters" time="0.001" timestamp="2020-10-07T11:02:26"/>
+	<testcase classname="subnet_calculator_tests.ValidateNetmaskBitFormat" name="test_netmask_with_symbols" time="0.001" timestamp="2020-10-07T11:02:26"/>
+</testsuite>

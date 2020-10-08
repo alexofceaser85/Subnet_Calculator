@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="1" failures="0" file="subnet_calculator_tests.py" name="subnet_calculator_tests.ValidateNetmaskBitFormat-20201007105639" skipped="0" tests="14" time="0.018" timestamp="2020-10-07T10:56:41">
+	<testcase classname="subnet_calculator_tests.ValidateNetmaskBitFormat" name="test_empty_netmask" time="0.002" timestamp="2020-10-07T10:56:41"/>
+	<testcase classname="subnet_calculator_tests.ValidateNetmaskBitFormat" name="test_netmask_at_31" time="0.001" timestamp="2020-10-07T10:56:41"/>
+	<testcase classname="subnet_calculator_tests.ValidateNetmaskBitFormat" name="test_netmask_at_zero" time="0.001" timestamp="2020-10-07T10:56:41"/>
+	<testcase classname="subnet_calculator_tests.ValidateNetmaskBitFormat" name="test_netmask_one_above_31" time="0.001" timestamp="2020-10-07T10:56:41"/>
+	<testcase classname="subnet_calculator_tests.ValidateNetmaskBitFormat" name="test_netmask_one_above_zero" time="0.001" timestamp="2020-10-07T10:56:41"/>
+	<testcase classname="subnet_calculator_tests.ValidateNetmaskBitFormat" name="test_netmask_one_below_31" time="0.001" timestamp="2020-10-07T10:56:41"/>
+	<testcase classname="subnet_calculator_tests.ValidateNetmaskBitFormat" name="test_netmask_one_below_zero" time="0.001" timestamp="2020-10-07T10:56:41"/>
+	<testcase classname="subnet_calculator_tests.ValidateNetmaskBitFormat" name="test_netmask_well_above_31" time="0.001" timestamp="2020-10-07T10:56:41"/>
+	<testcase classname="subnet_calculator_tests.ValidateNetmaskBitFormat" name="test_netmask_well_above_zero" time="0.001" timestamp="2020-10-07T10:56:41"/>
+	<testcase classname="subnet_calculator_tests.ValidateNetmaskBitFormat" name="test_netmask_well_below_31" time="0.001" timestamp="2020-10-07T10:56:41"/>
+	<testcase classname="subnet_calculator_tests.ValidateNetmaskBitFormat" name="test_netmask_well_below_zero" time="0.001" timestamp="2020-10-07T10:56:41"/>
+	<testcase classname="subnet_calculator_tests.ValidateNetmaskBitFormat" name="test_netmask_with_letters" time="0.001" timestamp="2020-10-07T10:56:41"/>
+	<testcase classname="subnet_calculator_tests.ValidateNetmaskBitFormat" name="test_netmask_with_symbols" time="0.001" timestamp="2020-10-07T10:56:41"/>
+	<testcase classname="subnet_calculator_tests.ValidateNetmaskBitFormat" name="test_calculator" time="0.003" timestamp="2020-10-07T10:56:41">
+		<error message="'str' object cannot be interpreted as an integer" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 622, in test_calculator
+    subnet_calculator.calculate_subnet('128.0.0.0', '21')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 76, in calculate_subnet
+    print(int(bin(ip_address)))
+TypeError: 'str' object cannot be interpreted as an integer
+]]>		</error>
+	</testcase>
+</testsuite>

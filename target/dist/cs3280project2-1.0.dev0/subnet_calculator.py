@@ -70,3 +70,30 @@ def validate_netmask_bit_format(netmask):
         return True
 
     return False
+
+
+
+def calculate_ipv4_subnet(ip_address, netmask):
+
+    """
+    calculates an ip address given that it is in valid ipv4 format
+    """
+
+    split_ip_address = ip_address.split('.')
+    split_netmask = netmask.split('.')
+    subnet = ""
+    current_octet_index = 0
+
+    for octet in split_ip_address:
+        current_ip_octet_as_integer = int(octet)
+        current_netmask_as_integer = int(split_netmask[current_octet_index])
+         
+        binary_octet = bin(current_ip_octet_as_integer & current_netmask_as_integer)
+        
+        octet_without_binary_indicator = binary_octet.replace('0b', '')
+        
+        subnet += '.' + str(int(octet_without_binary_indicator, 2))
+        current_octet_index += 1
+    
+    subnet_without_leading_period = subnet[1:]
+    return subnet_without_leading_period 

@@ -12,7 +12,7 @@
       "sum_lines_not_covered": 0
     },
     {
-      "branches": 12,
+      "branches": 14,
       "branches_missing": 0,
       "branches_partial": 0,
       "coverage": 100.0,
@@ -46,11 +46,25 @@
         67,
         69,
         70,
-        72
+        72,
+        76,
+        82,
+        83,
+        84,
+        85,
+        87,
+        88,
+        89,
+        91,
+        93,
+        95,
+        96,
+        98,
+        99
       ],
       "lines_not_covered": [],
       "module": "subnet_calculator",
-      "sum_lines": 30,
+      "sum_lines": 44,
       "sum_lines_not_covered": 0
     }
   ],

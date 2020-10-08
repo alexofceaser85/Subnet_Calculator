@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="3" file="subnet_calculator_tests.py" name="subnet_calculator_tests.TestCalculateIpv4Subnet-20201008000016" skipped="0" tests="10" time="0.017" timestamp="2020-10-08T00:00:17">
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_ipv4_with_minimum_ip_and_minimum_subnet" time="0.001" timestamp="2020-10-08T00:00:16"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_ipv4_with_minimum_ip_and_one_above_minimum_subnet" time="0.001" timestamp="2020-10-08T00:00:16"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_ipv4_with_minimum_ip_and_well_above_minimum_subnet" time="0.001" timestamp="2020-10-08T00:00:16"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_ipv4_with_one_above_minimum_ip_and_minimum_subnet" time="0.001" timestamp="2020-10-08T00:00:16"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_ipv4_with_one_above_minimum_ip_and_one_above_minimum_subnet" time="0.001" timestamp="2020-10-08T00:00:17"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_ipv4_with_well_above_minimum_ip_and_minimum_subnet" time="0.001" timestamp="2020-10-08T00:00:17"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_ipv4_with_well_above_minimum_ip_and_well_above_minimum_subnet" time="0.001" timestamp="2020-10-08T00:00:17"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_ipv4_with_maximum_ip_and_maximum_subnet" time="0.005" timestamp="2020-10-08T00:00:16">
+		<failure message="'255.255.255.255' != '255.255.255.254'
+- 255.255.255.255
+?               ^
++ 255.255.255.254
+?               ^
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 661, in test_calculate_ipv4_with_maximum_ip_and_maximum_subnet
+    self.assertEquals('255.255.255.255', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '255.255.255.255' != '255.255.255.254'
+- 255.255.255.255
+?               ^
++ 255.255.255.254
+?               ^
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_ipv4_with_maximum_ip_and_one_below_maximum_subnet" time="0.003" timestamp="2020-10-08T00:00:16">
+		<failure message="'255.255.255.255' != '255.255.255.252'
+- 255.255.255.255
+?               ^
++ 255.255.255.252
+?               ^
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 666, in test_calculate_ipv4_with_maximum_ip_and_one_below_maximum_subnet
+    self.assertEquals('255.255.255.255', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '255.255.255.255' != '255.255.255.252'
+- 255.255.255.255
+?               ^
++ 255.255.255.252
+?               ^
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_ipv4_with_maximum_ip_and_well_below_maximum_subnet" time="0.003" timestamp="2020-10-08T00:00:16">
+		<failure message="'255.255.240.0' != '255.240.0.0'
+- 255.255.240.0
+? ----
++ 255.240.0.0
+?          ++
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 671, in test_calculate_ipv4_with_maximum_ip_and_well_below_maximum_subnet
+    self.assertEquals('255.255.240.0', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '255.255.240.0' != '255.240.0.0'
+- 255.255.240.0
+? ----
++ 255.240.0.0
+?          ++
+
+]]>		</failure>
+	</testcase>
+</testsuite>
