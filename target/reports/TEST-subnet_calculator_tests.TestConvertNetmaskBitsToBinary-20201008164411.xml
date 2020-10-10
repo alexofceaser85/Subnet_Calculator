@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" file="subnet_calculator_tests.py" name="subnet_calculator_tests.TestConvertNetmaskBitsToBinary-20201008164411" skipped="0" tests="6" time="0.008" timestamp="2020-10-08T16:44:11">
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_maximum_netmask" time="0.001" timestamp="2020-10-08T16:44:11"/>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_minimum_netmask" time="0.001" timestamp="2020-10-08T16:44:11"/>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_netmask_one_above_minimum" time="0.001" timestamp="2020-10-08T16:44:11"/>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_netmask_one_below_maximum" time="0.001" timestamp="2020-10-08T16:44:11"/>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_netmask_well_above_minimum" time="0.001" timestamp="2020-10-08T16:44:11"/>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_netmask_well_below_maximum" time="0.001" timestamp="2020-10-08T16:44:11"/>
+</testsuite>

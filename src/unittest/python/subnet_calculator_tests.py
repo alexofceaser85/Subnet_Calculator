@@ -3,6 +3,10 @@
 import unittest
 import subnet_calculator
 
+IPV4_NETMASK_MAX_LENGTH = 35
+IPV6_NETMASK_MAX_LENGTH = 143
+
+
 class TestValidateIpv4Address(unittest.TestCase):
 
     def test_empty_ipv4_address(self):
@@ -617,79 +621,231 @@ class ValidateNetmaskBitFormat(unittest.TestCase):
         is_valid = subnet_calculator.validate_netmask_bit_format('9.0')
         self.assertFalse(is_valid)
 
+class TestConvertNetmaskBitsToBinary(unittest.TestCase):
+
+    def test_minimum_netmask(self):
+
+        binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('1', IPV4_NETMASK_MAX_LENGTH)
+        self.assertEquals('10000000.00000000.00000000.00000000', binary_netmask)
+
+    def test_netmask_one_above_minimum(self):
+
+        binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('2', IPV4_NETMASK_MAX_LENGTH)
+        self.assertEquals('11000000.00000000.00000000.00000000', binary_netmask)
+
+    def test_netmask_well_above_minimum(self):
+
+        binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('12', IPV4_NETMASK_MAX_LENGTH)
+        self.assertEquals('11111111.11110000.00000000.00000000', binary_netmask)
+
+    def test_maximum_ipv4_netmask(self):
+
+        binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('31', IPV4_NETMASK_MAX_LENGTH)
+        self.assertEquals('11111111.11111111.11111111.11111110', binary_netmask)
+
+    def test_one_below_maximum_ipv4_netmask(self):
+
+        binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('30', IPV4_NETMASK_MAX_LENGTH)
+        self.assertEquals('11111111.11111111.11111111.11111100', binary_netmask)
+
+    def test_well_below_maximum_ipv4_netmask(self):
+
+        binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('16', IPV4_NETMASK_MAX_LENGTH)
+        self.assertEquals('11111111.11111111.00000000.00000000', binary_netmask)
+
+    def test_minimum_ipv6_netmask(self):
+
+        binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('1', IPV6_NETMASK_MAX_LENGTH)
+        self.assertEquals('10000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000', binary_netmask)
+
+    def test_one_above_minimum_ipv6_netmask(self):
+
+        binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('2', IPV6_NETMASK_MAX_LENGTH)
+        self.assertEquals('11000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000', binary_netmask)
+
+    def test_well_above_minimum_ipv6_netmask(self):
+
+        binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('55', IPV6_NETMASK_MAX_LENGTH)
+        self.assertEquals('11111111.11111111.11111111.11111111.11111111.11111111.11111110.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000', binary_netmask)
+
+    def test_maximum_ipv6_netmask(self):
+
+        binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('128', IPV6_NETMASK_MAX_LENGTH)
+        self.assertEquals('11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111', binary_netmask)
+
+    def test_one_below_maximum_ipv6_netmask(self):
+
+        binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('127', IPV6_NETMASK_MAX_LENGTH)
+        self.assertEquals('11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111110', binary_netmask)
+
+    def test_well_below_maximum_ipv6_netmask(self):
+
+        binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('64', IPV6_NETMASK_MAX_LENGTH)
+        self.assertEquals('11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000', binary_netmask)
+
 class TestCalculateIpv4Subnet(unittest.TestCase):
 
-    def test_calculate_ipv4_with_minimum_ip_and_minimum_subnet(self):
+    def test_calculate_subnet_in_ip_format_with_minimum_ip_and_minimum_subnet(self):
 
         subnet = subnet_calculator.calculate_ipv4_subnet('0.0.0.0', '128.0.0.0')
         self.assertEquals('0.0.0.0', subnet)
 
-    def test_calculate_ipv4_with_minimum_ip_and_one_above_minimum_subnet(self):
+    def test_calculate_subnet_in_ip_format_with_minimum_ip_and_one_above_minimum_subnet(self):
 
         subnet = subnet_calculator.calculate_ipv4_subnet('0.0.0.0', '192.0.0.0')
         self.assertEquals('0.0.0.0', subnet)
 
-    def test_calculate_ipv4_with_minimum_ip_and_well_above_minimum_subnet(self):
+    def test_calculate_subnet_in_ip_format_with_minimum_ip_and_well_above_minimum_subnet(self):
 
         subnet = subnet_calculator.calculate_ipv4_subnet('0.0.0.0', '255.240.0.0')
         self.assertEquals('0.0.0.0', subnet)
 
-    def test_calculate_ipv4_with_one_above_minimum_ip_and_minimum_subnet(self):
-
-        subnet = subnet_calculator.calculate_ipv4_subnet('1.1.1.1', '0.0.0.0')
-        self.assertEquals('0.0.0.0', subnet)
-
-    def test_calculate_ipv4_with_well_above_minimum_ip_and_minimum_subnet(self):
-
-        subnet = subnet_calculator.calculate_ipv4_subnet('160.160.160.160', '0.0.0.0')
-        self.assertEquals('0.0.0.0', subnet)
-
-    def test_calculate_ipv4_with_one_above_minimum_ip_and_one_above_minimum_subnet(self):
+    def test_calculate_subnet_in_ip_format_with_one_above_minimum_ip_and_minimum_subnet(self):
 
         subnet = subnet_calculator.calculate_ipv4_subnet('1.1.1.1', '128.0.0.0')
         self.assertEquals('0.0.0.0', subnet)
 
-    def test_calculate_ipv4_with_well_above_minimum_ip_and_well_above_minimum_subnet(self):
+    def test_calculate_subnet_in_ip_format_with_well_above_minimum_ip_and_minimum_subnet(self):
+
+        subnet = subnet_calculator.calculate_ipv4_subnet('160.160.160.160', '128.0.0.0')
+        self.assertEquals('128.0.0.0', subnet)
+
+    def test_calculate_subnet_in_ip_format_with_one_above_minimum_ip_and_one_above_minimum_subnet(self):
+
+        subnet = subnet_calculator.calculate_ipv4_subnet('1.1.1.1', '128.0.0.0')
+        self.assertEquals('0.0.0.0', subnet)
+
+    def test_calculate_subnet_in_ip_format_with_well_above_minimum_ip_and_well_above_minimum_subnet(self):
 
         subnet = subnet_calculator.calculate_ipv4_subnet('160.160.160.160', '255.248.0.0')
         self.assertEquals('160.160.0.0', subnet)
 
-
-    def test_calculate_ipv4_with_maximum_ip_and_maximum_subnet(self):
+    def test_calculate_subnet_in_ip_format_with_maximum_ip_and_maximum_subnet(self):
 
         subnet = subnet_calculator.calculate_ipv4_subnet('255.255.255.255', '255.255.255.254')
         self.assertEquals('255.255.255.254', subnet)
 
-    def test_calculate_ipv4_with_maximum_ip_and_one_below_maximum_subnet(self):
+    def test_calculate_subnet_in_ip_format_with_maximum_ip_and_one_below_maximum_subnet(self):
 
         subnet = subnet_calculator.calculate_ipv4_subnet('255.255.255.255', '255.255.255.252')
         self.assertEquals('255.255.255.252', subnet)
 
-    def test_calculate_ipv4_with_maximum_ip_and_well_below_maximum_subnet(self):
+    def test_calculate_subnet_in_ip_format_maximum_ip_and_well_below_maximum_subnet(self):
 
         subnet = subnet_calculator.calculate_ipv4_subnet('255.255.255.255', '255.255.240.0')
         self.assertEquals('255.255.240.0', subnet)
 
-    def test_calculate_ipv4_with_one_below_maximum_ip_and_maximum_subnet(self):
+    def test_calculate_subnet_in_ip_format_with_one_below_maximum_ip_and_maximum_subnet(self):
 
         subnet = subnet_calculator.calculate_ipv4_subnet('254.254.254.254', '255.255.255.254')
         self.assertEquals('254.254.254.254', subnet)
 
-    def test_calculate_ipv4_with_well_below_maximum_ip_and_maximum_subnet(self):
+    def test_calculate_subnet_in_ip_format_with_well_below_maximum_ip_and_maximum_subnet(self):
 
         subnet = subnet_calculator.calculate_ipv4_subnet('160.160.160.160', '255.255.255.254')
         self.assertEquals('160.160.160.160', subnet)
 
-    def test_calculate_ipv4_with_one_below_maximum_ip_and_one_below_maximum_subnet(self):
+    def test_calculate_subnet_in_ip_format_with_one_below_maximum_ip_and_one_below_maximum_subnet(self):
 
         subnet = subnet_calculator.calculate_ipv4_subnet('254.254.254.254', '255.255.255.252')
         self.assertEquals('254.254.254.252', subnet)
 
-    def test_calculate_ipv4_with_well_below_maximum_ip_and_well_below_maximum_subnet(self):
+    def test_calculate_subnet_in_ip_format_with_well_below_maximum_ip_and_well_below_maximum_subnet(self):
 
         subnet = subnet_calculator.calculate_ipv4_subnet('160.160.160.160', '255.255.240.0')
         self.assertEquals('160.160.160.0', subnet)
 
+    def test_calculate_subnet_in_bit_format_with_minimum_ip_and_minimum_subnet(self):
+
+        subnet = subnet_calculator.calculate_ipv4_subnet('0.0.0.0', '10000000.00000000.00000000.00000000')
+        self.assertEquals('0.0.0.0', subnet)
+
+    def test_calculate_subnet_in_bit_format_with_minimum_ip_and_one_above_minimum_subnet(self):
+
+        subnet = subnet_calculator.calculate_ipv4_subnet('0.0.0.0', '11000000.00000000.00000000.00000000')
+        self.assertEquals('0.0.0.0', subnet)
+
+    def test_calculate_subnet_in_bit_format_with_minimum_ip_and_well_above_minimum_subnet(self):
+
+        subnet = subnet_calculator.calculate_ipv4_subnet('0.0.0.0', '11111111.11110000.00000000.00000000')
+        self.assertEquals('0.0.0.0', subnet)
+
+    def test_calculate_subnet_in_bit_format_with_one_above_minimum_ip_and_minimum_subnet(self):
+
+        subnet = subnet_calculator.calculate_ipv4_subnet('1.1.1.1', '10000000.00000000.00000000.00000000')
+        self.assertEquals('0.0.0.0', subnet)
+
+    def test_calculate_subnet_in_bit_format_with_well_above_minimum_ip_and_minimum_subnet(self):
+
+        subnet = subnet_calculator.calculate_ipv4_subnet('160.160.160.160', '10000000.00000000.00000000.00000000')
+        self.assertEquals('128.0.0.0', subnet)
+
+    def test_calculate_subnet_in_bit_format_with_one_above_minimum_ip_and_one_above_minimum_subnet(self):
+
+        subnet = subnet_calculator.calculate_ipv4_subnet('1.1.1.1', '11000000.00000000.00000000.00000000')
+        self.assertEquals('0.0.0.0', subnet)
+
+    def test_calculate_subnet_in_bit_format_with_well_above_minimum_ip_and_well_above_minimum_subnet(self):
+
+        subnet = subnet_calculator.calculate_ipv4_subnet('160.160.160.160', '11111111.11111000.00000000.00000000')
+        self.assertEquals('160.160.0.0', subnet)
+
+    def test_calculate_subnet_in_bit_format_with_maximum_ip_and_maximum_subnet(self):
+
+        subnet = subnet_calculator.calculate_ipv4_subnet('255.255.255.255', '11111111.11111111.11111111.11111110')
+        self.assertEquals('255.255.255.254', subnet)
+
+    def test_calculate_subnet_in_bit_format_with_maximum_ip_and_one_below_maximum_subnet(self):
+
+        subnet = subnet_calculator.calculate_ipv4_subnet('255.255.255.255', '11111111.11111111.11111111.11111100')
+        self.assertEquals('255.255.255.252', subnet)
+
+    def test_calculate_subnet_in_bit_format_maximum_ip_and_well_below_maximum_subnet(self):
+
+        subnet = subnet_calculator.calculate_ipv4_subnet('255.255.255.255', '11111111.11111111.11110000.00000000')
+        self.assertEquals('255.255.240.0', subnet)
+
+    def test_calculate_subnet_in_bit_format_with_one_below_maximum_ip_and_maximum_subnet(self):
+
+        subnet = subnet_calculator.calculate_ipv4_subnet('254.254.254.254', '11111111.11111111.11111111.11111110')
+        self.assertEquals('254.254.254.254', subnet)
+
+    def test_calculate_subnet_in_bit_format_with_well_below_maximum_ip_and_maximum_subnet(self):
+
+        subnet = subnet_calculator.calculate_ipv4_subnet('160.160.160.160', '11111111.11111111.11111111.11111110')
+        self.assertEquals('160.160.160.160', subnet)
+
+    def test_calculate_subnet_in_bit_format_with_one_below_maximum_ip_and_one_below_maximum_subnet(self):
+
+        subnet = subnet_calculator.calculate_ipv4_subnet('254.254.254.254', '11111111.11111111.11111111.11111100')
+        self.assertEquals('254.254.254.252', subnet)
+
+    def test_calculate_subnet_in_ip_format_with_well_below_maximum_ip_and_well_below_maximum_subnet(self):
+
+        subnet = subnet_calculator.calculate_ipv4_subnet('160.160.160.160', '11111111.11111111.11110000.0')
+        self.assertEquals('160.160.160.0', subnet)
+
+class TestExpandIpv6Address(unittest.TestCase):
+
+    def test_no_empty_groups(self):
+
+        expanded_ipv6_address = subnet_calculator.expand_ipv6_address('20f1:2a52:0000:0000:0000:0000:0000:2001')
+        self.assertEquals('20f1:2a52:0000:0000:0000:0000:0000:2001', expanded_ipv6_address)
+
+    def test_one_empty_group(self):
+
+        expanded_ipv6_address = subnet_calculator.expand_ipv6_address('20f1:2a52:0000:0000:0000:0000::2001')
+        self.assertEquals('20f1:2a52:0000:0000:0000:0000:0000:2001', expanded_ipv6_address)
+
+    def test_many_empty_groups(self):
+
+        expanded_ipv6_address = subnet_calculator.expand_ipv6_address('20f1:2a52::2001')
+        self.assertEquals('20f1:2a52:0000:0000:0000:0000:0000:2001', expanded_ipv6_address)
+
+    def test_only_empty_groups(self):
+
+        expanded_ipv6_address = subnet_calculator.expand_ipv6_address('::')
+        self.assertEquals('0000:0000:0000:0000:0000:0000:0000:0000', expanded_ipv6_address)
 
 if __name__ == '__main__':
     unittest.main()

@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="27" failures="0" file="subnet_calculator_tests.py" name="subnet_calculator_tests.TestCalculateIpv4Subnet-20201009143313" skipped="0" tests="27" time="0.058" timestamp="2020-10-09T14:33:14">
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_maximum_ip_and_well_below_maximum_subnet" time="0.005" timestamp="2020-10-09T14:33:13">
+		<error message="name 'test_delimiter' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 805, in test_calculate_subnet_in_bit_format_maximum_ip_and_well_below_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('255.255.255.255', '11111111.11111111.11110000.00000000')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 116, in calculate_ipv4_subnet
+    subnet += test_delimiter + str(int(octet_without_binary_indicator, 2))
+NameError: name 'test_delimiter' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_maximum_ip_and_maximum_subnet" time="0.002" timestamp="2020-10-09T14:33:13">
+		<error message="name 'test_delimiter' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 795, in test_calculate_subnet_in_bit_format_with_maximum_ip_and_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('255.255.255.255', '11111111.11111111.11111111.11111110')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 116, in calculate_ipv4_subnet
+    subnet += test_delimiter + str(int(octet_without_binary_indicator, 2))
+NameError: name 'test_delimiter' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_maximum_ip_and_one_below_maximum_subnet" time="0.002" timestamp="2020-10-09T14:33:13">
+		<error message="name 'test_delimiter' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 800, in test_calculate_subnet_in_bit_format_with_maximum_ip_and_one_below_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('255.255.255.255', '11111111.11111111.11111111.11111100')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 116, in calculate_ipv4_subnet
+    subnet += test_delimiter + str(int(octet_without_binary_indicator, 2))
+NameError: name 'test_delimiter' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_minimum_ip_and_minimum_subnet" time="0.002" timestamp="2020-10-09T14:33:13">
+		<error message="name 'test_delimiter' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 760, in test_calculate_subnet_in_bit_format_with_minimum_ip_and_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('0.0.0.0', '10000000.00000000.00000000.00000000')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 116, in calculate_ipv4_subnet
+    subnet += test_delimiter + str(int(octet_without_binary_indicator, 2))
+NameError: name 'test_delimiter' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_minimum_ip_and_one_above_minimum_subnet" time="0.002" timestamp="2020-10-09T14:33:13">
+		<error message="name 'test_delimiter' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 765, in test_calculate_subnet_in_bit_format_with_minimum_ip_and_one_above_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('0.0.0.0', '11000000.00000000.00000000.00000000')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 116, in calculate_ipv4_subnet
+    subnet += test_delimiter + str(int(octet_without_binary_indicator, 2))
+NameError: name 'test_delimiter' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_minimum_ip_and_well_above_minimum_subnet" time="0.002" timestamp="2020-10-09T14:33:13">
+		<error message="name 'test_delimiter' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 770, in test_calculate_subnet_in_bit_format_with_minimum_ip_and_well_above_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('0.0.0.0', '11111111.11110000.00000000.00000000')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 116, in calculate_ipv4_subnet
+    subnet += test_delimiter + str(int(octet_without_binary_indicator, 2))
+NameError: name 'test_delimiter' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_one_above_minimum_ip_and_minimum_subnet" time="0.002" timestamp="2020-10-09T14:33:13">
+		<error message="name 'test_delimiter' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 775, in test_calculate_subnet_in_bit_format_with_one_above_minimum_ip_and_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('1.1.1.1', '10000000.00000000.00000000.00000000')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 116, in calculate_ipv4_subnet
+    subnet += test_delimiter + str(int(octet_without_binary_indicator, 2))
+NameError: name 'test_delimiter' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_one_above_minimum_ip_and_one_above_minimum_subnet" time="0.002" timestamp="2020-10-09T14:33:13">
+		<error message="name 'test_delimiter' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 785, in test_calculate_subnet_in_bit_format_with_one_above_minimum_ip_and_one_above_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('1.1.1.1', '11000000.00000000.00000000.00000000')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 116, in calculate_ipv4_subnet
+    subnet += test_delimiter + str(int(octet_without_binary_indicator, 2))
+NameError: name 'test_delimiter' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_one_below_maximum_ip_and_maximum_subnet" time="0.002" timestamp="2020-10-09T14:33:13">
+		<error message="name 'test_delimiter' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 810, in test_calculate_subnet_in_bit_format_with_one_below_maximum_ip_and_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('254.254.254.254', '11111111.11111111.11111111.11111110')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 116, in calculate_ipv4_subnet
+    subnet += test_delimiter + str(int(octet_without_binary_indicator, 2))
+NameError: name 'test_delimiter' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_one_below_maximum_ip_and_one_below_maximum_subnet" time="0.002" timestamp="2020-10-09T14:33:14">
+		<error message="name 'test_delimiter' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 820, in test_calculate_subnet_in_bit_format_with_one_below_maximum_ip_and_one_below_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('254.254.254.254', '11111111.11111111.11111111.11111100')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 116, in calculate_ipv4_subnet
+    subnet += test_delimiter + str(int(octet_without_binary_indicator, 2))
+NameError: name 'test_delimiter' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_well_above_minimum_ip_and_minimum_subnet" time="0.002" timestamp="2020-10-09T14:33:14">
+		<error message="name 'test_delimiter' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 780, in test_calculate_subnet_in_bit_format_with_well_above_minimum_ip_and_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('160.160.160.160', '10000000.00000000.00000000.00000000')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 116, in calculate_ipv4_subnet
+    subnet += test_delimiter + str(int(octet_without_binary_indicator, 2))
+NameError: name 'test_delimiter' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_well_above_minimum_ip_and_well_above_minimum_subnet" time="0.002" timestamp="2020-10-09T14:33:14">
+		<error message="name 'test_delimiter' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 790, in test_calculate_subnet_in_bit_format_with_well_above_minimum_ip_and_well_above_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('160.160.160.160', '11111111.11111000.00000000.00000000')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 116, in calculate_ipv4_subnet
+    subnet += test_delimiter + str(int(octet_without_binary_indicator, 2))
+NameError: name 'test_delimiter' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_well_below_maximum_ip_and_maximum_subnet" time="0.002" timestamp="2020-10-09T14:33:14">
+		<error message="name 'test_delimiter' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 815, in test_calculate_subnet_in_bit_format_with_well_below_maximum_ip_and_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('160.160.160.160', '11111111.11111111.11111111.11111110')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 116, in calculate_ipv4_subnet
+    subnet += test_delimiter + str(int(octet_without_binary_indicator, 2))
+NameError: name 'test_delimiter' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_maximum_ip_and_well_below_maximum_subnet" time="0.002" timestamp="2020-10-09T14:33:14">
+		<error message="name 'test_delimiter' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 735, in test_calculate_subnet_in_ip_format_maximum_ip_and_well_below_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('255.255.255.255', '255.255.240.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 116, in calculate_ipv4_subnet
+    subnet += test_delimiter + str(int(octet_without_binary_indicator, 2))
+NameError: name 'test_delimiter' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_maximum_ip_and_maximum_subnet" time="0.002" timestamp="2020-10-09T14:33:14">
+		<error message="name 'test_delimiter' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 725, in test_calculate_subnet_in_ip_format_with_maximum_ip_and_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('255.255.255.255', '255.255.255.254')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 116, in calculate_ipv4_subnet
+    subnet += test_delimiter + str(int(octet_without_binary_indicator, 2))
+NameError: name 'test_delimiter' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_maximum_ip_and_one_below_maximum_subnet" time="0.002" timestamp="2020-10-09T14:33:14">
+		<error message="name 'test_delimiter' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 730, in test_calculate_subnet_in_ip_format_with_maximum_ip_and_one_below_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('255.255.255.255', '255.255.255.252')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 116, in calculate_ipv4_subnet
+    subnet += test_delimiter + str(int(octet_without_binary_indicator, 2))
+NameError: name 'test_delimiter' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_minimum_ip_and_minimum_subnet" time="0.002" timestamp="2020-10-09T14:33:14">
+		<error message="name 'test_delimiter' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 690, in test_calculate_subnet_in_ip_format_with_minimum_ip_and_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('0.0.0.0', '128.0.0.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 116, in calculate_ipv4_subnet
+    subnet += test_delimiter + str(int(octet_without_binary_indicator, 2))
+NameError: name 'test_delimiter' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_minimum_ip_and_one_above_minimum_subnet" time="0.002" timestamp="2020-10-09T14:33:14">
+		<error message="name 'test_delimiter' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 695, in test_calculate_subnet_in_ip_format_with_minimum_ip_and_one_above_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('0.0.0.0', '192.0.0.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 116, in calculate_ipv4_subnet
+    subnet += test_delimiter + str(int(octet_without_binary_indicator, 2))
+NameError: name 'test_delimiter' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_minimum_ip_and_well_above_minimum_subnet" time="0.002" timestamp="2020-10-09T14:33:14">
+		<error message="name 'test_delimiter' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 700, in test_calculate_subnet_in_ip_format_with_minimum_ip_and_well_above_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('0.0.0.0', '255.240.0.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 116, in calculate_ipv4_subnet
+    subnet += test_delimiter + str(int(octet_without_binary_indicator, 2))
+NameError: name 'test_delimiter' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_one_above_minimum_ip_and_minimum_subnet" time="0.002" timestamp="2020-10-09T14:33:14">
+		<error message="name 'test_delimiter' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 705, in test_calculate_subnet_in_ip_format_with_one_above_minimum_ip_and_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('1.1.1.1', '128.0.0.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 116, in calculate_ipv4_subnet
+    subnet += test_delimiter + str(int(octet_without_binary_indicator, 2))
+NameError: name 'test_delimiter' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_one_above_minimum_ip_and_one_above_minimum_subnet" time="0.002" timestamp="2020-10-09T14:33:14">
+		<error message="name 'test_delimiter' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 715, in test_calculate_subnet_in_ip_format_with_one_above_minimum_ip_and_one_above_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('1.1.1.1', '128.0.0.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 116, in calculate_ipv4_subnet
+    subnet += test_delimiter + str(int(octet_without_binary_indicator, 2))
+NameError: name 'test_delimiter' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_one_below_maximum_ip_and_maximum_subnet" time="0.002" timestamp="2020-10-09T14:33:14">
+		<error message="name 'test_delimiter' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 740, in test_calculate_subnet_in_ip_format_with_one_below_maximum_ip_and_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('254.254.254.254', '255.255.255.254')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 116, in calculate_ipv4_subnet
+    subnet += test_delimiter + str(int(octet_without_binary_indicator, 2))
+NameError: name 'test_delimiter' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_one_below_maximum_ip_and_one_below_maximum_subnet" time="0.002" timestamp="2020-10-09T14:33:14">
+		<error message="name 'test_delimiter' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 750, in test_calculate_subnet_in_ip_format_with_one_below_maximum_ip_and_one_below_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('254.254.254.254', '255.255.255.252')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 116, in calculate_ipv4_subnet
+    subnet += test_delimiter + str(int(octet_without_binary_indicator, 2))
+NameError: name 'test_delimiter' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_well_above_minimum_ip_and_minimum_subnet" time="0.002" timestamp="2020-10-09T14:33:14">
+		<error message="name 'test_delimiter' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 710, in test_calculate_subnet_in_ip_format_with_well_above_minimum_ip_and_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('160.160.160.160', '128.0.0.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 116, in calculate_ipv4_subnet
+    subnet += test_delimiter + str(int(octet_without_binary_indicator, 2))
+NameError: name 'test_delimiter' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_well_above_minimum_ip_and_well_above_minimum_subnet" time="0.002" timestamp="2020-10-09T14:33:14">
+		<error message="name 'test_delimiter' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 720, in test_calculate_subnet_in_ip_format_with_well_above_minimum_ip_and_well_above_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('160.160.160.160', '255.248.0.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 116, in calculate_ipv4_subnet
+    subnet += test_delimiter + str(int(octet_without_binary_indicator, 2))
+NameError: name 'test_delimiter' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_well_below_maximum_ip_and_maximum_subnet" time="0.002" timestamp="2020-10-09T14:33:14">
+		<error message="name 'test_delimiter' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 745, in test_calculate_subnet_in_ip_format_with_well_below_maximum_ip_and_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('160.160.160.160', '255.255.255.254')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 116, in calculate_ipv4_subnet
+    subnet += test_delimiter + str(int(octet_without_binary_indicator, 2))
+NameError: name 'test_delimiter' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_well_below_maximum_ip_and_well_below_maximum_subnet" time="0.002" timestamp="2020-10-09T14:33:14">
+		<error message="name 'test_delimiter' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 825, in test_calculate_subnet_in_ip_format_with_well_below_maximum_ip_and_well_below_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('160.160.160.160', '11111111.11111111.11110000.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 116, in calculate_ipv4_subnet
+    subnet += test_delimiter + str(int(octet_without_binary_indicator, 2))
+NameError: name 'test_delimiter' is not defined
+]]>		</error>
+	</testcase>
+</testsuite>

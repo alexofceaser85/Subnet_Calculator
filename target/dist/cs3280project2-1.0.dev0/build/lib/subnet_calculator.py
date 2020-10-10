@@ -8,10 +8,13 @@ __author__ = "Alex DeCesare"
 __version__ = "30-September-2020"
 
 IPV6_MAX_COLONS = 7
+IPV6_MAX_GROUPS = 8
+NETMASK_PERIOD_INDEX = 9
 NETMASK_MAX_PERIODS = 3
+IPV4_NETMASK_MAX_LENGTH = 35
+IPV6_NETMASK_MAX_LENGTH = 135
 
 def validate_ipv4_address(ipv4_address):
-
     """
     Checks if the given address is in valid ipv4 format
     """
@@ -24,7 +27,6 @@ def validate_ipv4_address(ipv4_address):
     return False
 
 def validate_ipv6_address(ipv6_address):
-
     """
     Checks if the given address is in valid ipv6 format
     """
@@ -41,9 +43,8 @@ def validate_ipv6_address(ipv6_address):
     return False
 
 def validate_netmask_ip_format(netmask):
-
     """
-    Checks if the given netmask is in a valid ip format
+    Checks if the given netmask is in a valid ipv4 format
     for example: 255.255.0.0 is valid but 16 is not.
     """
 
@@ -58,7 +59,6 @@ def validate_netmask_ip_format(netmask):
     return False
 
 def validate_netmask_bit_format(netmask):
-
     """
     Checks if the given netmask is in a valid bit format
     for example: 16 is valid but 255.255.0.0 is not
@@ -71,29 +71,74 @@ def validate_netmask_bit_format(netmask):
 
     return False
 
+def convert_netmask_bits_to_binary(netmask, max_length):
+    """
+    Converts netmask bits to a binary string
+    """
 
+    netmask_bits_index = max_length
+    current_netmask_bits = int(netmask)
+    binary_netmask = ''
+
+    while(netmask_bits_index != 0):
+
+        if (netmask_bits_index % NETMASK_PERIOD_INDEX == 0):
+            binary_netmask += '.'
+            netmask_bits_index -= 1
+        elif (current_netmask_bits != 0):
+            binary_netmask += '1'
+            current_netmask_bits -= 1
+            netmask_bits_index -= 1
+        else:
+            binary_netmask += '0'
+            netmask_bits_index -= 1
+
+    return binary_netmask
 
 def calculate_ipv4_subnet(ip_address, netmask):
-
     """
-    calculates an ip address given that it is in valid ipv4 format
+    calculates an ip address given that it is in valid ipv4 or binary format
     """
-
     split_ip_address = ip_address.split('.')
-    split_netmask = netmask.split('.')
     subnet = ""
     current_octet_index = 0
 
-    for octet in split_ip_address:
-        current_ip_octet_as_integer = int(octet)
-        current_netmask_as_integer = int(split_netmask[current_octet_index])
-         
-        binary_octet = bin(current_ip_octet_as_integer & current_netmask_as_integer)
-        
-        octet_without_binary_indicator = binary_octet.replace('0b', '')
-        
-        subnet += '.' + str(int(octet_without_binary_indicator, 2))
+    split_netmask = netmask.split('.')
+    
+    for octet in split_ip_address:        
+        if (validate_netmask_ip_format(netmask)):
+            current_netmask_as_integer = int(split_netmask[current_octet_index])
+        else:
+            current_netmask_as_integer = int(split_netmask[current_octet_index], 2)
+
+        binary_octet = bin(int(octet) & current_netmask_as_integer)
         current_octet_index += 1
+        octet_without_binary_indicator = binary_octet.replace('0b', '')
+        subnet += '.' + str(int(octet_without_binary_indicator, 2))
     
     subnet_without_leading_period = subnet[1:]
-    return subnet_without_leading_period 
+    return subnet_without_leading_period
+
+def expand_ipv6_address(ip_address):
+    """
+    searches the ipv6 address for shortened zero groups (::) and expands them to include the zeros in the groups
+    """
+
+    split_ip_address = ip_address.split(':')
+    group_index = 0
+    expanded_ipv6 = ''
+    integer_base = 16
+
+    for group in split_ip_address:
+        if not group:
+            group = '0000'
+
+            while(len(split_ip_address) < IPV6_MAX_GROUPS):     
+                split_ip_address.insert(group_index, '0000')
+        
+        expanded_ipv6 += ':' + group
+        group_index += 1
+
+    expanded_ipv6_without_leading_colon = expanded_ipv6[1:]
+    
+    return expanded_ipv6_without_leading_colon

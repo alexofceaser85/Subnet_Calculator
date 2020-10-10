@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="12" failures="0" file="subnet_calculator_tests.py" name="subnet_calculator_tests.TestConvertNetmaskBitsToBinary-20201009113701" skipped="0" tests="12" time="0.028" timestamp="2020-10-09T11:37:02">
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_maximum_ipv4_netmask" time="0.003" timestamp="2020-10-09T11:37:02">
+		<error message="name 'IPV4_NETMASK_MAX_WIDTH' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 642, in test_maximum_ipv4_netmask
+    binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('31', IPV4_NETMASK_MAX_WIDTH)
+NameError: name 'IPV4_NETMASK_MAX_WIDTH' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_maximum_ipv6_netmask" time="0.003" timestamp="2020-10-09T11:37:02">
+		<error message="name 'IPV6_NETMASK_MAX_WIDTH' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 672, in test_maximum_ipv6_netmask
+    binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('128', IPV6_NETMASK_MAX_WIDTH)
+NameError: name 'IPV6_NETMASK_MAX_WIDTH' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_minimum_ipv6_netmask" time="0.002" timestamp="2020-10-09T11:37:02">
+		<error message="name 'IPV6_NETMASK_MAX_WIDTH' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 657, in test_minimum_ipv6_netmask
+    binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('1', IPV6_NETMASK_MAX_WIDTH)
+NameError: name 'IPV6_NETMASK_MAX_WIDTH' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_minimum_netmask" time="0.003" timestamp="2020-10-09T11:37:02">
+		<error message="name 'IPV4_NETMASK_MAX_WIDTH' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 627, in test_minimum_netmask
+    binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('1', IPV4_NETMASK_MAX_WIDTH)
+NameError: name 'IPV4_NETMASK_MAX_WIDTH' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_netmask_one_above_minimum" time="0.002" timestamp="2020-10-09T11:37:02">
+		<error message="name 'IPV4_NETMASK_MAX_WIDTH' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 632, in test_netmask_one_above_minimum
+    binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('2', IPV4_NETMASK_MAX_WIDTH)
+NameError: name 'IPV4_NETMASK_MAX_WIDTH' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_netmask_well_above_minimum" time="0.002" timestamp="2020-10-09T11:37:02">
+		<error message="name 'IPV4_NETMASK_MAX_WIDTH' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 637, in test_netmask_well_above_minimum
+    binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('12', IPV4_NETMASK_MAX_WIDTH)
+NameError: name 'IPV4_NETMASK_MAX_WIDTH' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_one_above_minimum_ipv6_netmask" time="0.002" timestamp="2020-10-09T11:37:02">
+		<error message="name 'IPV6_NETMASK_MAX_WIDTH' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 662, in test_one_above_minimum_ipv6_netmask
+    binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('2', IPV6_NETMASK_MAX_WIDTH)
+NameError: name 'IPV6_NETMASK_MAX_WIDTH' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_one_below_maximum_ipv4_netmask" time="0.002" timestamp="2020-10-09T11:37:02">
+		<error message="name 'IPV4_NETMASK_MAX_WIDTH' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 647, in test_one_below_maximum_ipv4_netmask
+    binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('30', IPV4_NETMASK_MAX_WIDTH)
+NameError: name 'IPV4_NETMASK_MAX_WIDTH' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_one_below_maximum_ipv6_netmask" time="0.002" timestamp="2020-10-09T11:37:02">
+		<error message="name 'IPV6_NETMASK_MAX_WIDTH' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 677, in test_one_below_maximum_ipv6_netmask
+    binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('127', IPV6_NETMASK_MAX_WIDTH)
+NameError: name 'IPV6_NETMASK_MAX_WIDTH' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_well_above_minimum_ipv6_netmask" time="0.002" timestamp="2020-10-09T11:37:02">
+		<error message="name 'IPV6_NETMASK_MAX_WIDTH' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 667, in test_well_above_minimum_ipv6_netmask
+    binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('55', IPV6_NETMASK_MAX_WIDTH)
+NameError: name 'IPV6_NETMASK_MAX_WIDTH' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_well_below_maximum_ipv4_netmask" time="0.003" timestamp="2020-10-09T11:37:02">
+		<error message="name 'IPV4_NETMASK_MAX_WIDTH' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 652, in test_well_below_maximum_ipv4_netmask
+    binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('16', IPV4_NETMASK_MAX_WIDTH)
+NameError: name 'IPV4_NETMASK_MAX_WIDTH' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_well_below_maximum_ipv6_netmask" time="0.002" timestamp="2020-10-09T11:37:02">
+		<error message="name 'IPV6_NETMASK_MAX_WIDTH' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 682, in test_well_below_maximum_ipv6_netmask
+    binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('64', IPV6_NETMASK_MAX_WIDTH)
+NameError: name 'IPV6_NETMASK_MAX_WIDTH' is not defined
+]]>		</error>
+	</testcase>
+</testsuite>

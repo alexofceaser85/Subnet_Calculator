@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="1" failures="0" file="subnet_calculator_tests.py" name="subnet_calculator_tests.TestExpandIpv6Address-20201009224737" skipped="0" tests="1" time="0.022" timestamp="2020-10-09T22:47:38">
+	<testcase classname="subnet_calculator_tests.TestExpandIpv6Address" name="test_no_empty_groups" time="0.022" timestamp="2020-10-09T22:47:38">
+		<error message="expand_ipv6_address() missing 1 required positional argument: 'netmask'" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 832, in test_no_empty_groups
+    expanded_ipv6_address = subnet_calculator.expand_ipv6_address('20f1:2a52:0000:0000:0000:0000:0000:2001')
+TypeError: expand_ipv6_address() missing 1 required positional argument: 'netmask'
+]]>		</error>
+	</testcase>
+</testsuite>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" file="subnet_calculator_tests.py" name="subnet_calculator_tests.TestValidateNetmaskIpFormat-20201008132957" skipped="0" tests="26" time="0.032" timestamp="2020-10-08T13:29:59">
+	<testcase classname="subnet_calculator_tests.TestValidateNetmaskIpFormat" name="test_empty_netmask" time="0.001" timestamp="2020-10-08T13:29:59"/>
+	<testcase classname="subnet_calculator_tests.TestValidateNetmaskIpFormat" name="test_maximum_bit_netmask_ending_in_254" time="0.002" timestamp="2020-10-08T13:29:59"/>
+	<testcase classname="subnet_calculator_tests.TestValidateNetmaskIpFormat" name="test_netmask_with_empty_octet" time="0.001" timestamp="2020-10-08T13:29:59"/>
+	<testcase classname="subnet_calculator_tests.TestValidateNetmaskIpFormat" name="test_netmask_with_many_non_zeros_after_one_zero" time="0.001" timestamp="2020-10-08T13:29:59"/>
+	<testcase classname="subnet_calculator_tests.TestValidateNetmaskIpFormat" name="test_netmask_with_no_digits_in_octet" time="0.001" timestamp="2020-10-08T13:29:59"/>
+	<testcase classname="subnet_calculator_tests.TestValidateNetmaskIpFormat" name="test_netmask_with_non_valid_octet_value" time="0.001" timestamp="2020-10-08T13:29:59"/>
+	<testcase classname="subnet_calculator_tests.TestValidateNetmaskIpFormat" name="test_netmask_with_octet_less_than_255_before_255" time="0.001" timestamp="2020-10-08T13:29:59"/>
+	<testcase classname="subnet_calculator_tests.TestValidateNetmaskIpFormat" name="test_netmask_with_octets_all_255" time="0.001" timestamp="2020-10-08T13:29:59"/>
+	<testcase classname="subnet_calculator_tests.TestValidateNetmaskIpFormat" name="test_netmask_with_octets_all_zero" time="0.001" timestamp="2020-10-08T13:29:59"/>
+	<testcase classname="subnet_calculator_tests.TestValidateNetmaskIpFormat" name="test_netmask_with_octets_at_four" time="0.001" timestamp="2020-10-08T13:29:59"/>
+	<testcase classname="subnet_calculator_tests.TestValidateNetmaskIpFormat" name="test_netmask_with_octets_one_above_four" time="0.001" timestamp="2020-10-08T13:29:59"/>
+	<testcase classname="subnet_calculator_tests.TestValidateNetmaskIpFormat" name="test_netmask_with_octets_one_below_four" time="0.001" timestamp="2020-10-08T13:29:59"/>
+	<testcase classname="subnet_calculator_tests.TestValidateNetmaskIpFormat" name="test_netmask_with_octets_well_above_four" time="0.001" timestamp="2020-10-08T13:29:59"/>
+	<testcase classname="subnet_calculator_tests.TestValidateNetmaskIpFormat" name="test_netmask_with_octets_well_below_four" time="0.001" timestamp="2020-10-08T13:29:59"/>
+	<testcase classname="subnet_calculator_tests.TestValidateNetmaskIpFormat" name="test_netmask_with_one_more_than_one_non_255_or_0_number" time="0.005" timestamp="2020-10-08T13:29:59"/>
+	<testcase classname="subnet_calculator_tests.TestValidateNetmaskIpFormat" name="test_netmask_with_one_non_255_or_0_number" time="0.001" timestamp="2020-10-08T13:29:59"/>
+	<testcase classname="subnet_calculator_tests.TestValidateNetmaskIpFormat" name="test_netmask_with_one_non_zero_after_many_non_zeros" time="0.001" timestamp="2020-10-08T13:29:59"/>
+	<testcase classname="subnet_calculator_tests.TestValidateNetmaskIpFormat" name="test_netmask_with_one_non_zero_after_one_zero" time="0.001" timestamp="2020-10-08T13:29:59"/>
+	<testcase classname="subnet_calculator_tests.TestValidateNetmaskIpFormat" name="test_netmask_with_one_octet_with_valid_value_of_128" time="0.001" timestamp="2020-10-08T13:29:59"/>
+	<testcase classname="subnet_calculator_tests.TestValidateNetmaskIpFormat" name="test_netmask_with_one_octet_with_valid_value_of_192" time="0.001" timestamp="2020-10-08T13:29:59"/>
+	<testcase classname="subnet_calculator_tests.TestValidateNetmaskIpFormat" name="test_netmask_with_one_octet_with_valid_value_of_224" time="0.001" timestamp="2020-10-08T13:29:59"/>
+	<testcase classname="subnet_calculator_tests.TestValidateNetmaskIpFormat" name="test_netmask_with_one_octet_with_valid_value_of_240" time="0.001" timestamp="2020-10-08T13:29:59"/>
+	<testcase classname="subnet_calculator_tests.TestValidateNetmaskIpFormat" name="test_netmask_with_one_octet_with_valid_value_of_248" time="0.001" timestamp="2020-10-08T13:29:59"/>
+	<testcase classname="subnet_calculator_tests.TestValidateNetmaskIpFormat" name="test_netmask_with_one_octet_with_valid_value_of_252" time="0.001" timestamp="2020-10-08T13:29:59"/>
+	<testcase classname="subnet_calculator_tests.TestValidateNetmaskIpFormat" name="test_netmask_with_one_octet_with_valid_value_of_254" time="0.001" timestamp="2020-10-08T13:29:59"/>
+	<testcase classname="subnet_calculator_tests.TestValidateNetmaskIpFormat" name="test_netmask_with_well_more_than_one_non_255_or_0_number" time="0.001" timestamp="2020-10-08T13:29:59"/>
+</testsuite>

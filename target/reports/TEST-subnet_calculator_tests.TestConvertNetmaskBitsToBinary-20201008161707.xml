@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="1" file="subnet_calculator_tests.py" name="subnet_calculator_tests.TestConvertNetmaskBitsToBinary-20201008161707" skipped="0" tests="1" time="0.004" timestamp="2020-10-08T16:17:07">
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_empty_netmask" time="0.004" timestamp="2020-10-08T16:17:07">
+		<failure message="'128.0.0.0' != '10000000.00000000.00000000.00000000'
+- 128.0.0.0
++ 10000000.00000000.00000000.00000000
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 625, in test_empty_netmask
+    self.assertEquals('128.0.0.0', binary_netmask)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '128.0.0.0' != '10000000.00000000.00000000.00000000'
+- 128.0.0.0
++ 10000000.00000000.00000000.00000000
+
+]]>		</failure>
+	</testcase>
+</testsuite>

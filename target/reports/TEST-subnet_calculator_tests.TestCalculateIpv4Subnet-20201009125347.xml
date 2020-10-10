@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="1" failures="7" file="subnet_calculator_tests.py" name="subnet_calculator_tests.TestCalculateIpv4Subnet-20201009125347" skipped="0" tests="27" time="0.046" timestamp="2020-10-09T12:53:48">
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_minimum_ip_and_one_above_minimum_subnet" time="0.001" timestamp="2020-10-09T12:53:48"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_minimum_ip_and_well_above_minimum_subnet" time="0.001" timestamp="2020-10-09T12:53:48"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_one_above_minimum_ip_and_minimum_subnet" time="0.001" timestamp="2020-10-09T12:53:48"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_one_above_minimum_ip_and_one_above_minimum_subnet" time="0.001" timestamp="2020-10-09T12:53:48"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_well_above_minimum_ip_and_minimum_subnet" time="0.001" timestamp="2020-10-09T12:53:48"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_maximum_ip_and_well_below_maximum_subnet" time="0.001" timestamp="2020-10-09T12:53:48"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_maximum_ip_and_maximum_subnet" time="0.001" timestamp="2020-10-09T12:53:48"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_maximum_ip_and_one_below_maximum_subnet" time="0.001" timestamp="2020-10-09T12:53:48"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_minimum_ip_and_minimum_subnet" time="0.001" timestamp="2020-10-09T12:53:48"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_minimum_ip_and_one_above_minimum_subnet" time="0.001" timestamp="2020-10-09T12:53:48"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_minimum_ip_and_well_above_minimum_subnet" time="0.001" timestamp="2020-10-09T12:53:48"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_one_above_minimum_ip_and_minimum_subnet" time="0.001" timestamp="2020-10-09T12:53:48"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_one_above_minimum_ip_and_one_above_minimum_subnet" time="0.001" timestamp="2020-10-09T12:53:48"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_one_below_maximum_ip_and_maximum_subnet" time="0.001" timestamp="2020-10-09T12:53:48"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_one_below_maximum_ip_and_one_below_maximum_subnet" time="0.001" timestamp="2020-10-09T12:53:48"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_well_above_minimum_ip_and_minimum_subnet" time="0.001" timestamp="2020-10-09T12:53:48"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_well_above_minimum_ip_and_well_above_minimum_subnet" time="0.001" timestamp="2020-10-09T12:53:48"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_well_below_maximum_ip_and_maximum_subnet" time="0.001" timestamp="2020-10-09T12:53:48"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_well_below_maximum_ip_and_well_below_maximum_subnet" time="0.001" timestamp="2020-10-09T12:53:48"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_maximum_ip_and_well_below_maximum_subnet" time="0.005" timestamp="2020-10-09T12:53:48">
+		<failure message="'255.255.240.0' != '199.199.112.0'
+- 255.255.240.0
++ 199.199.112.0
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 806, in test_calculate_subnet_in_bit_format_maximum_ip_and_well_below_maximum_subnet
+    self.assertEquals('255.255.240.0', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '255.255.240.0' != '199.199.112.0'
+- 255.255.240.0
++ 199.199.112.0
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_maximum_ip_and_maximum_subnet" time="0.003" timestamp="2020-10-09T12:53:48">
+		<failure message="'255.255.255.254' != '199.199.199.198'
+- 255.255.255.254
++ 199.199.199.198
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 796, in test_calculate_subnet_in_bit_format_with_maximum_ip_and_maximum_subnet
+    self.assertEquals('255.255.255.254', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '255.255.255.254' != '199.199.199.198'
+- 255.255.255.254
++ 199.199.199.198
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_maximum_ip_and_one_below_maximum_subnet" time="0.003" timestamp="2020-10-09T12:53:48">
+		<failure message="'255.255.255.252' != '199.199.199.188'
+- 255.255.255.252
++ 199.199.199.188
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 801, in test_calculate_subnet_in_bit_format_with_maximum_ip_and_one_below_maximum_subnet
+    self.assertEquals('255.255.255.252', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '255.255.255.252' != '199.199.199.188'
+- 255.255.255.252
++ 199.199.199.188
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_one_below_maximum_ip_and_maximum_subnet" time="0.003" timestamp="2020-10-09T12:53:48">
+		<failure message="'254.254.254.254' != '198.198.198.198'
+- 254.254.254.254
++ 198.198.198.198
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 811, in test_calculate_subnet_in_bit_format_with_one_below_maximum_ip_and_maximum_subnet
+    self.assertEquals('254.254.254.254', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '254.254.254.254' != '198.198.198.198'
+- 254.254.254.254
++ 198.198.198.198
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_one_below_maximum_ip_and_one_below_maximum_subnet" time="0.003" timestamp="2020-10-09T12:53:48">
+		<failure message="'254.254.254.252' != '198.198.198.188'
+- 254.254.254.252
++ 198.198.198.188
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 821, in test_calculate_subnet_in_bit_format_with_one_below_maximum_ip_and_one_below_maximum_subnet
+    self.assertEquals('254.254.254.252', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '254.254.254.252' != '198.198.198.188'
+- 254.254.254.252
++ 198.198.198.188
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_well_above_minimum_ip_and_well_above_minimum_subnet" time="0.003" timestamp="2020-10-09T12:53:48">
+		<failure message="'160.160.0.0' != '128.0.0.0'
+- 160.160.0.0
++ 128.0.0.0
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 791, in test_calculate_subnet_in_bit_format_with_well_above_minimum_ip_and_well_above_minimum_subnet
+    self.assertEquals('160.160.0.0', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '160.160.0.0' != '128.0.0.0'
+- 160.160.0.0
++ 128.0.0.0
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_well_below_maximum_ip_and_maximum_subnet" time="0.004" timestamp="2020-10-09T12:53:48">
+		<failure message="'160.160.160.160' != '128.128.128.128'
+- 160.160.160.160
++ 128.128.128.128
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 816, in test_calculate_subnet_in_bit_format_with_well_below_maximum_ip_and_maximum_subnet
+    self.assertEquals('160.160.160.160', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '160.160.160.160' != '128.128.128.128'
+- 160.160.160.160
++ 128.128.128.128
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_minimum_ip_and_minimum_subnet" time="0.002" timestamp="2020-10-09T12:53:48">
+		<error message="invalid literal for int() with base 10: ''" type="ValueError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 760, in test_calculate_subnet_in_bit_format_with_minimum_ip_and_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('0.0.0.0', '')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 116, in calculate_ipv4_subnet
+    current_netmask_as_integer = int(split_netmask[current_octet_index])
+ValueError: invalid literal for int() with base 10: ''
+]]>		</error>
+	</testcase>
+</testsuite>

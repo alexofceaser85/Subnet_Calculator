@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="14" failures="0" file="subnet_calculator_tests.py" name="subnet_calculator_tests.TestCalculateIpv4Subnet-20201008114622" skipped="0" tests="14" time="0.032" timestamp="2020-10-08T11:46:23">
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_ipv4_with_maximum_ip_and_maximum_subnet" time="0.004" timestamp="2020-10-08T11:46:22">
+		<error message="unsupported operand type(s) for &amp;: 'int' and 'str'" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 660, in test_calculate_ipv4_with_maximum_ip_and_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('255.255.255.255', '255.255.255.254')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 114, in calculate_ipv4_subnet
+    binary_octet = bin(current_ip_octet_as_integer & current_netmask_as_integer)
+TypeError: unsupported operand type(s) for &: 'int' and 'str'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_ipv4_with_maximum_ip_and_one_below_maximum_subnet" time="0.002" timestamp="2020-10-08T11:46:22">
+		<error message="unsupported operand type(s) for &amp;: 'int' and 'str'" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 665, in test_calculate_ipv4_with_maximum_ip_and_one_below_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('255.255.255.255', '255.255.255.252')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 114, in calculate_ipv4_subnet
+    binary_octet = bin(current_ip_octet_as_integer & current_netmask_as_integer)
+TypeError: unsupported operand type(s) for &: 'int' and 'str'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_ipv4_with_maximum_ip_and_well_below_maximum_subnet" time="0.002" timestamp="2020-10-08T11:46:22">
+		<error message="unsupported operand type(s) for &amp;: 'int' and 'str'" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 670, in test_calculate_ipv4_with_maximum_ip_and_well_below_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('255.255.255.255', '255.255.240.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 114, in calculate_ipv4_subnet
+    binary_octet = bin(current_ip_octet_as_integer & current_netmask_as_integer)
+TypeError: unsupported operand type(s) for &: 'int' and 'str'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_ipv4_with_minimum_ip_and_minimum_subnet" time="0.002" timestamp="2020-10-08T11:46:22">
+		<error message="unsupported operand type(s) for &amp;: 'int' and 'str'" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 624, in test_calculate_ipv4_with_minimum_ip_and_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('0.0.0.0', '128.0.0.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 114, in calculate_ipv4_subnet
+    binary_octet = bin(current_ip_octet_as_integer & current_netmask_as_integer)
+TypeError: unsupported operand type(s) for &: 'int' and 'str'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_ipv4_with_minimum_ip_and_one_above_minimum_subnet" time="0.002" timestamp="2020-10-08T11:46:22">
+		<error message="unsupported operand type(s) for &amp;: 'int' and 'str'" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 629, in test_calculate_ipv4_with_minimum_ip_and_one_above_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('0.0.0.0', '192.0.0.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 114, in calculate_ipv4_subnet
+    binary_octet = bin(current_ip_octet_as_integer & current_netmask_as_integer)
+TypeError: unsupported operand type(s) for &: 'int' and 'str'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_ipv4_with_minimum_ip_and_well_above_minimum_subnet" time="0.002" timestamp="2020-10-08T11:46:22">
+		<error message="unsupported operand type(s) for &amp;: 'int' and 'str'" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 634, in test_calculate_ipv4_with_minimum_ip_and_well_above_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('0.0.0.0', '255.240.0.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 114, in calculate_ipv4_subnet
+    binary_octet = bin(current_ip_octet_as_integer & current_netmask_as_integer)
+TypeError: unsupported operand type(s) for &: 'int' and 'str'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_ipv4_with_one_above_minimum_ip_and_minimum_subnet" time="0.002" timestamp="2020-10-08T11:46:22">
+		<error message="unsupported operand type(s) for &amp;: 'int' and 'str'" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 639, in test_calculate_ipv4_with_one_above_minimum_ip_and_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('1.1.1.1', '0.0.0.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 114, in calculate_ipv4_subnet
+    binary_octet = bin(current_ip_octet_as_integer & current_netmask_as_integer)
+TypeError: unsupported operand type(s) for &: 'int' and 'str'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_ipv4_with_one_above_minimum_ip_and_one_above_minimum_subnet" time="0.002" timestamp="2020-10-08T11:46:22">
+		<error message="unsupported operand type(s) for &amp;: 'int' and 'str'" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 649, in test_calculate_ipv4_with_one_above_minimum_ip_and_one_above_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('1.1.1.1', '128.0.0.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 114, in calculate_ipv4_subnet
+    binary_octet = bin(current_ip_octet_as_integer & current_netmask_as_integer)
+TypeError: unsupported operand type(s) for &: 'int' and 'str'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_ipv4_with_one_below_maximum_ip_and_maximum_subnet" time="0.002" timestamp="2020-10-08T11:46:22">
+		<error message="unsupported operand type(s) for &amp;: 'int' and 'str'" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 675, in test_calculate_ipv4_with_one_below_maximum_ip_and_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('254.254.254.254', '255.255.255.254')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 114, in calculate_ipv4_subnet
+    binary_octet = bin(current_ip_octet_as_integer & current_netmask_as_integer)
+TypeError: unsupported operand type(s) for &: 'int' and 'str'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_ipv4_with_one_below_maximum_ip_and_one_below_maximum_subnet" time="0.003" timestamp="2020-10-08T11:46:22">
+		<error message="unsupported operand type(s) for &amp;: 'int' and 'str'" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 685, in test_calculate_ipv4_with_one_below_maximum_ip_and_one_below_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('254.254.254.254', '255.255.255.252')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 114, in calculate_ipv4_subnet
+    binary_octet = bin(current_ip_octet_as_integer & current_netmask_as_integer)
+TypeError: unsupported operand type(s) for &: 'int' and 'str'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_ipv4_with_well_above_minimum_ip_and_minimum_subnet" time="0.002" timestamp="2020-10-08T11:46:22">
+		<error message="unsupported operand type(s) for &amp;: 'int' and 'str'" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 644, in test_calculate_ipv4_with_well_above_minimum_ip_and_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('160.160.160.160', '0.0.0.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 114, in calculate_ipv4_subnet
+    binary_octet = bin(current_ip_octet_as_integer & current_netmask_as_integer)
+TypeError: unsupported operand type(s) for &: 'int' and 'str'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_ipv4_with_well_above_minimum_ip_and_well_above_minimum_subnet" time="0.002" timestamp="2020-10-08T11:46:22">
+		<error message="unsupported operand type(s) for &amp;: 'int' and 'str'" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 654, in test_calculate_ipv4_with_well_above_minimum_ip_and_well_above_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('160.160.160.160', '255.248.0.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 114, in calculate_ipv4_subnet
+    binary_octet = bin(current_ip_octet_as_integer & current_netmask_as_integer)
+TypeError: unsupported operand type(s) for &: 'int' and 'str'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_ipv4_with_well_below_maximum_ip_and_maximum_subnet" time="0.002" timestamp="2020-10-08T11:46:23">
+		<error message="unsupported operand type(s) for &amp;: 'int' and 'str'" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 680, in test_calculate_ipv4_with_well_below_maximum_ip_and_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('160.160.160.160', '255.255.255.254')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 114, in calculate_ipv4_subnet
+    binary_octet = bin(current_ip_octet_as_integer & current_netmask_as_integer)
+TypeError: unsupported operand type(s) for &: 'int' and 'str'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_ipv4_with_well_below_maximum_ip_and_well_below_maximum_subnet" time="0.002" timestamp="2020-10-08T11:46:23">
+		<error message="unsupported operand type(s) for &amp;: 'int' and 'str'" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 690, in test_calculate_ipv4_with_well_below_maximum_ip_and_well_below_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('160.160.160.160', '255.255.240.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 114, in calculate_ipv4_subnet
+    binary_octet = bin(current_ip_octet_as_integer & current_netmask_as_integer)
+TypeError: unsupported operand type(s) for &: 'int' and 'str'
+]]>		</error>
+	</testcase>
+</testsuite>

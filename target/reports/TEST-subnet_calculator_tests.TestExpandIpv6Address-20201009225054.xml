@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="1" file="subnet_calculator_tests.py" name="subnet_calculator_tests.TestExpandIpv6Address-20201009225054" skipped="0" tests="1" time="0.005" timestamp="2020-10-09T22:50:55">
+	<testcase classname="subnet_calculator_tests.TestExpandIpv6Address" name="test_no_empty_groups" time="0.005" timestamp="2020-10-09T22:50:55">
+		<failure message="'20f1:2a52:0000:0000:0000:0000:0000:2001' != ':20f1:2a52:0000:0000:0000:0000:0000:2001'
+- 20f1:2a52:0000:0000:0000:0000:0000:2001
++ :20f1:2a52:0000:0000:0000:0000:0000:2001
+? +
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 833, in test_no_empty_groups
+    self.assertEquals('20f1:2a52:0000:0000:0000:0000:0000:2001', expanded_ipv6_address)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '20f1:2a52:0000:0000:0000:0000:0000:2001' != ':20f1:2a52:0000:0000:0000:0000:0000:2001'
+- 20f1:2a52:0000:0000:0000:0000:0000:2001
++ :20f1:2a52:0000:0000:0000:0000:0000:2001
+? +
+
+]]>		</failure>
+	</testcase>
+</testsuite>

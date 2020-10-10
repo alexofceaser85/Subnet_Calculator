@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="14" failures="0" file="subnet_calculator_tests.py" name="subnet_calculator_tests.TestCalculateIpv4Subnet-20201009091032" skipped="0" tests="27" time="0.048" timestamp="2020-10-09T09:10:33">
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_maximum_ip_and_well_below_maximum_subnet" time="0.001" timestamp="2020-10-09T09:10:33"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_maximum_ip_and_maximum_subnet" time="0.001" timestamp="2020-10-09T09:10:33"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_maximum_ip_and_one_below_maximum_subnet" time="0.001" timestamp="2020-10-09T09:10:33"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_minimum_ip_and_minimum_subnet" time="0.001" timestamp="2020-10-09T09:10:33"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_minimum_ip_and_one_above_minimum_subnet" time="0.001" timestamp="2020-10-09T09:10:33"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_minimum_ip_and_well_above_minimum_subnet" time="0.001" timestamp="2020-10-09T09:10:33"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_one_above_minimum_ip_and_minimum_subnet" time="0.001" timestamp="2020-10-09T09:10:33"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_one_above_minimum_ip_and_one_above_minimum_subnet" time="0.001" timestamp="2020-10-09T09:10:33"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_one_below_maximum_ip_and_maximum_subnet" time="0.001" timestamp="2020-10-09T09:10:33"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_one_below_maximum_ip_and_one_below_maximum_subnet" time="0.001" timestamp="2020-10-09T09:10:33"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_well_above_minimum_ip_and_minimum_subnet" time="0.001" timestamp="2020-10-09T09:10:33"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_well_above_minimum_ip_and_well_above_minimum_subnet" time="0.001" timestamp="2020-10-09T09:10:33"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_well_below_maximum_ip_and_maximum_subnet" time="0.001" timestamp="2020-10-09T09:10:33"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_maximum_ip_and_well_below_maximum_subnet" time="0.006" timestamp="2020-10-09T09:10:33">
+		<error message="invalid literal for int() with base 2: ''" type="ValueError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 777, in test_calculate_subnet_in_bit_format_maximum_ip_and_well_below_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('255.255.255.255', '20')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 118, in calculate_ipv4_subnet
+    current_netmask_as_integer = int(split_netmask[current_octet_index], 2)
+ValueError: invalid literal for int() with base 2: ''
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_maximum_ip_and_maximum_subnet" time="0.002" timestamp="2020-10-09T09:10:33">
+		<error message="invalid literal for int() with base 2: ''" type="ValueError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 767, in test_calculate_subnet_in_bit_format_with_maximum_ip_and_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('255.255.255.255', '31')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 118, in calculate_ipv4_subnet
+    current_netmask_as_integer = int(split_netmask[current_octet_index], 2)
+ValueError: invalid literal for int() with base 2: ''
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_maximum_ip_and_one_below_maximum_subnet" time="0.002" timestamp="2020-10-09T09:10:33">
+		<error message="invalid literal for int() with base 2: ''" type="ValueError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 772, in test_calculate_subnet_in_bit_format_with_maximum_ip_and_one_below_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('255.255.255.255', '30')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 118, in calculate_ipv4_subnet
+    current_netmask_as_integer = int(split_netmask[current_octet_index], 2)
+ValueError: invalid literal for int() with base 2: ''
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_minimum_ip_and_minimum_subnet" time="0.002" timestamp="2020-10-09T09:10:33">
+		<error message="invalid literal for int() with base 2: ''" type="ValueError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 732, in test_calculate_subnet_in_bit_format_with_minimum_ip_and_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('0.0.0.0', '1')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 118, in calculate_ipv4_subnet
+    current_netmask_as_integer = int(split_netmask[current_octet_index], 2)
+ValueError: invalid literal for int() with base 2: ''
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_minimum_ip_and_one_above_minimum_subnet" time="0.002" timestamp="2020-10-09T09:10:33">
+		<error message="invalid literal for int() with base 2: ''" type="ValueError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 737, in test_calculate_subnet_in_bit_format_with_minimum_ip_and_one_above_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('0.0.0.0', '2')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 118, in calculate_ipv4_subnet
+    current_netmask_as_integer = int(split_netmask[current_octet_index], 2)
+ValueError: invalid literal for int() with base 2: ''
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_minimum_ip_and_well_above_minimum_subnet" time="0.002" timestamp="2020-10-09T09:10:33">
+		<error message="invalid literal for int() with base 2: ''" type="ValueError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 742, in test_calculate_subnet_in_bit_format_with_minimum_ip_and_well_above_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('0.0.0.0', '12')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 118, in calculate_ipv4_subnet
+    current_netmask_as_integer = int(split_netmask[current_octet_index], 2)
+ValueError: invalid literal for int() with base 2: ''
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_one_above_minimum_ip_and_minimum_subnet" time="0.002" timestamp="2020-10-09T09:10:33">
+		<error message="invalid literal for int() with base 2: ''" type="ValueError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 747, in test_calculate_subnet_in_bit_format_with_one_above_minimum_ip_and_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('1.1.1.1', '2')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 118, in calculate_ipv4_subnet
+    current_netmask_as_integer = int(split_netmask[current_octet_index], 2)
+ValueError: invalid literal for int() with base 2: ''
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_one_above_minimum_ip_and_one_above_minimum_subnet" time="0.002" timestamp="2020-10-09T09:10:33">
+		<error message="invalid literal for int() with base 2: ''" type="ValueError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 757, in test_calculate_subnet_in_bit_format_with_one_above_minimum_ip_and_one_above_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('1.1.1.1', '2')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 118, in calculate_ipv4_subnet
+    current_netmask_as_integer = int(split_netmask[current_octet_index], 2)
+ValueError: invalid literal for int() with base 2: ''
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_one_below_maximum_ip_and_maximum_subnet" time="0.002" timestamp="2020-10-09T09:10:33">
+		<error message="invalid literal for int() with base 2: ''" type="ValueError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 782, in test_calculate_subnet_in_bit_format_with_one_below_maximum_ip_and_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('254.254.254.254', '31')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 118, in calculate_ipv4_subnet
+    current_netmask_as_integer = int(split_netmask[current_octet_index], 2)
+ValueError: invalid literal for int() with base 2: ''
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_one_below_maximum_ip_and_one_below_maximum_subnet" time="0.002" timestamp="2020-10-09T09:10:33">
+		<error message="invalid literal for int() with base 2: ''" type="ValueError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 792, in test_calculate_subnet_in_bit_format_with_one_below_maximum_ip_and_one_below_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('254.254.254.254', '30')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 118, in calculate_ipv4_subnet
+    current_netmask_as_integer = int(split_netmask[current_octet_index], 2)
+ValueError: invalid literal for int() with base 2: ''
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_well_above_minimum_ip_and_minimum_subnet" time="0.002" timestamp="2020-10-09T09:10:33">
+		<error message="invalid literal for int() with base 2: ''" type="ValueError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 752, in test_calculate_subnet_in_bit_format_with_well_above_minimum_ip_and_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('160.160.160.160', '1')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 118, in calculate_ipv4_subnet
+    current_netmask_as_integer = int(split_netmask[current_octet_index], 2)
+ValueError: invalid literal for int() with base 2: ''
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_well_above_minimum_ip_and_well_above_minimum_subnet" time="0.002" timestamp="2020-10-09T09:10:33">
+		<error message="invalid literal for int() with base 2: ''" type="ValueError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 762, in test_calculate_subnet_in_bit_format_with_well_above_minimum_ip_and_well_above_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('160.160.160.160', '13')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 118, in calculate_ipv4_subnet
+    current_netmask_as_integer = int(split_netmask[current_octet_index], 2)
+ValueError: invalid literal for int() with base 2: ''
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_well_below_maximum_ip_and_maximum_subnet" time="0.002" timestamp="2020-10-09T09:10:33">
+		<error message="invalid literal for int() with base 2: ''" type="ValueError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 787, in test_calculate_subnet_in_bit_format_with_well_below_maximum_ip_and_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('160.160.160.160', '31')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 118, in calculate_ipv4_subnet
+    current_netmask_as_integer = int(split_netmask[current_octet_index], 2)
+ValueError: invalid literal for int() with base 2: ''
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_well_below_maximum_ip_and_well_below_maximum_subnet" time="0.002" timestamp="2020-10-09T09:10:33">
+		<error message="invalid literal for int() with base 2: ''" type="ValueError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 797, in test_calculate_subnet_in_ip_format_with_well_below_maximum_ip_and_well_below_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('160.160.160.160', '20')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 118, in calculate_ipv4_subnet
+    current_netmask_as_integer = int(split_netmask[current_octet_index], 2)
+ValueError: invalid literal for int() with base 2: ''
+]]>		</error>
+	</testcase>
+</testsuite>

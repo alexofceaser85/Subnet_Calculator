@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="7" file="subnet_calculator_tests.py" name="subnet_calculator_tests.TestConvertNetmaskBitsToBinary-20201009091447" skipped="0" tests="7" time="0.019" timestamp="2020-10-09T09:14:48">
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_maximum_ipv4_netmask" time="0.003" timestamp="2020-10-09T09:14:47">
+		<failure message="'11111111.11111111.11111111.11111110' != ''
+- 11111111.11111111.11111111.11111110
++ 
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 640, in test_maximum_ipv4_netmask
+    self.assertEquals('11111111.11111111.11111111.11111110', binary_netmask)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '11111111.11111111.11111111.11111110' != ''
+- 11111111.11111111.11111111.11111110
++ 
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_maximum_ipv6_netmask" time="0.003" timestamp="2020-10-09T09:14:47">
+		<failure message="'11111111.11111111.11111111.11111111' != ''
+- 11111111.11111111.11111111.11111111
++ 
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 655, in test_maximum_ipv6_netmask
+    self.assertEquals('11111111.11111111.11111111.11111111', binary_netmask)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '11111111.11111111.11111111.11111111' != ''
+- 11111111.11111111.11111111.11111111
++ 
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_minimum_netmask" time="0.003" timestamp="2020-10-09T09:14:47">
+		<failure message="'10000000.00000000.00000000.00000000' != ''
+- 10000000.00000000.00000000.00000000
++ 
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 625, in test_minimum_netmask
+    self.assertEquals('10000000.00000000.00000000.00000000', binary_netmask)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '10000000.00000000.00000000.00000000' != ''
+- 10000000.00000000.00000000.00000000
++ 
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_netmask_one_above_minimum" time="0.003" timestamp="2020-10-09T09:14:48">
+		<failure message="'11000000.00000000.00000000.00000000' != ''
+- 11000000.00000000.00000000.00000000
++ 
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 630, in test_netmask_one_above_minimum
+    self.assertEquals('11000000.00000000.00000000.00000000', binary_netmask)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '11000000.00000000.00000000.00000000' != ''
+- 11000000.00000000.00000000.00000000
++ 
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_netmask_well_above_minimum" time="0.003" timestamp="2020-10-09T09:14:48">
+		<failure message="'11111111.11110000.00000000.00000000' != ''
+- 11111111.11110000.00000000.00000000
++ 
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 635, in test_netmask_well_above_minimum
+    self.assertEquals('11111111.11110000.00000000.00000000', binary_netmask)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '11111111.11110000.00000000.00000000' != ''
+- 11111111.11110000.00000000.00000000
++ 
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_one_below_maximum_ipv4_netmask" time="0.003" timestamp="2020-10-09T09:14:48">
+		<failure message="'11111111.11111111.11111111.11111100' != ''
+- 11111111.11111111.11111111.11111100
++ 
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 645, in test_one_below_maximum_ipv4_netmask
+    self.assertEquals('11111111.11111111.11111111.11111100', binary_netmask)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '11111111.11111111.11111111.11111100' != ''
+- 11111111.11111111.11111111.11111100
++ 
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_well_below_maximum_ipv4_netmask" time="0.003" timestamp="2020-10-09T09:14:48">
+		<failure message="'11111111.11111111.00000000.00000000' != ''
+- 11111111.11111111.00000000.00000000
++ 
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 650, in test_well_below_maximum_ipv4_netmask
+    self.assertEquals('11111111.11111111.00000000.00000000', binary_netmask)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '11111111.11111111.00000000.00000000' != ''
+- 11111111.11111111.00000000.00000000
++ 
+
+]]>		</failure>
+	</testcase>
+</testsuite>
