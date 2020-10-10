@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="27" failures="0" file="subnet_calculator_tests.py" name="subnet_calculator_tests.TestCalculateIpv4Subnet-20201010092144" skipped="0" tests="27" time="0.064" timestamp="2020-10-10T09:21:44">
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_maximum_ip_and_well_below_maximum_subnet" time="0.004" timestamp="2020-10-10T09:21:44">
+		<error message="name 'NETMASK_MAX_PERIODS' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 873, in test_calculate_subnet_in_bit_format_maximum_ip_and_well_below_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('255.255.255.255', '11111111.11111111.11110000.00000000')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 123, in calculate_ipv4_subnet
+    if (validate_ipv4_netmask_ip_format(netmask)):
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 52, in validate_ipv4_netmask_ip_format
+    if (netmask.count('.') != NETMASK_MAX_PERIODS):
+NameError: name 'NETMASK_MAX_PERIODS' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_maximum_ip_and_maximum_subnet" time="0.003" timestamp="2020-10-10T09:21:44">
+		<error message="name 'NETMASK_MAX_PERIODS' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 863, in test_calculate_subnet_in_bit_format_with_maximum_ip_and_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('255.255.255.255', '11111111.11111111.11111111.11111110')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 123, in calculate_ipv4_subnet
+    if (validate_ipv4_netmask_ip_format(netmask)):
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 52, in validate_ipv4_netmask_ip_format
+    if (netmask.count('.') != NETMASK_MAX_PERIODS):
+NameError: name 'NETMASK_MAX_PERIODS' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_maximum_ip_and_one_below_maximum_subnet" time="0.002" timestamp="2020-10-10T09:21:44">
+		<error message="name 'NETMASK_MAX_PERIODS' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 868, in test_calculate_subnet_in_bit_format_with_maximum_ip_and_one_below_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('255.255.255.255', '11111111.11111111.11111111.11111100')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 123, in calculate_ipv4_subnet
+    if (validate_ipv4_netmask_ip_format(netmask)):
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 52, in validate_ipv4_netmask_ip_format
+    if (netmask.count('.') != NETMASK_MAX_PERIODS):
+NameError: name 'NETMASK_MAX_PERIODS' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_minimum_ip_and_minimum_subnet" time="0.002" timestamp="2020-10-10T09:21:44">
+		<error message="name 'NETMASK_MAX_PERIODS' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 828, in test_calculate_subnet_in_bit_format_with_minimum_ip_and_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('0.0.0.0', '10000000.00000000.00000000.00000000')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 123, in calculate_ipv4_subnet
+    if (validate_ipv4_netmask_ip_format(netmask)):
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 52, in validate_ipv4_netmask_ip_format
+    if (netmask.count('.') != NETMASK_MAX_PERIODS):
+NameError: name 'NETMASK_MAX_PERIODS' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_minimum_ip_and_one_above_minimum_subnet" time="0.002" timestamp="2020-10-10T09:21:44">
+		<error message="name 'NETMASK_MAX_PERIODS' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 833, in test_calculate_subnet_in_bit_format_with_minimum_ip_and_one_above_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('0.0.0.0', '11000000.00000000.00000000.00000000')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 123, in calculate_ipv4_subnet
+    if (validate_ipv4_netmask_ip_format(netmask)):
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 52, in validate_ipv4_netmask_ip_format
+    if (netmask.count('.') != NETMASK_MAX_PERIODS):
+NameError: name 'NETMASK_MAX_PERIODS' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_minimum_ip_and_well_above_minimum_subnet" time="0.002" timestamp="2020-10-10T09:21:44">
+		<error message="name 'NETMASK_MAX_PERIODS' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 838, in test_calculate_subnet_in_bit_format_with_minimum_ip_and_well_above_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('0.0.0.0', '11111111.11110000.00000000.00000000')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 123, in calculate_ipv4_subnet
+    if (validate_ipv4_netmask_ip_format(netmask)):
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 52, in validate_ipv4_netmask_ip_format
+    if (netmask.count('.') != NETMASK_MAX_PERIODS):
+NameError: name 'NETMASK_MAX_PERIODS' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_one_above_minimum_ip_and_minimum_subnet" time="0.002" timestamp="2020-10-10T09:21:44">
+		<error message="name 'NETMASK_MAX_PERIODS' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 843, in test_calculate_subnet_in_bit_format_with_one_above_minimum_ip_and_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('1.1.1.1', '10000000.00000000.00000000.00000000')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 123, in calculate_ipv4_subnet
+    if (validate_ipv4_netmask_ip_format(netmask)):
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 52, in validate_ipv4_netmask_ip_format
+    if (netmask.count('.') != NETMASK_MAX_PERIODS):
+NameError: name 'NETMASK_MAX_PERIODS' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_one_above_minimum_ip_and_one_above_minimum_subnet" time="0.002" timestamp="2020-10-10T09:21:44">
+		<error message="name 'NETMASK_MAX_PERIODS' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 853, in test_calculate_subnet_in_bit_format_with_one_above_minimum_ip_and_one_above_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('1.1.1.1', '11000000.00000000.00000000.00000000')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 123, in calculate_ipv4_subnet
+    if (validate_ipv4_netmask_ip_format(netmask)):
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 52, in validate_ipv4_netmask_ip_format
+    if (netmask.count('.') != NETMASK_MAX_PERIODS):
+NameError: name 'NETMASK_MAX_PERIODS' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_one_below_maximum_ip_and_maximum_subnet" time="0.003" timestamp="2020-10-10T09:21:44">
+		<error message="name 'NETMASK_MAX_PERIODS' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 878, in test_calculate_subnet_in_bit_format_with_one_below_maximum_ip_and_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('254.254.254.254', '11111111.11111111.11111111.11111110')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 123, in calculate_ipv4_subnet
+    if (validate_ipv4_netmask_ip_format(netmask)):
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 52, in validate_ipv4_netmask_ip_format
+    if (netmask.count('.') != NETMASK_MAX_PERIODS):
+NameError: name 'NETMASK_MAX_PERIODS' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_one_below_maximum_ip_and_one_below_maximum_subnet" time="0.002" timestamp="2020-10-10T09:21:44">
+		<error message="name 'NETMASK_MAX_PERIODS' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 888, in test_calculate_subnet_in_bit_format_with_one_below_maximum_ip_and_one_below_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('254.254.254.254', '11111111.11111111.11111111.11111100')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 123, in calculate_ipv4_subnet
+    if (validate_ipv4_netmask_ip_format(netmask)):
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 52, in validate_ipv4_netmask_ip_format
+    if (netmask.count('.') != NETMASK_MAX_PERIODS):
+NameError: name 'NETMASK_MAX_PERIODS' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_well_above_minimum_ip_and_minimum_subnet" time="0.002" timestamp="2020-10-10T09:21:44">
+		<error message="name 'NETMASK_MAX_PERIODS' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 848, in test_calculate_subnet_in_bit_format_with_well_above_minimum_ip_and_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('160.160.160.160', '10000000.00000000.00000000.00000000')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 123, in calculate_ipv4_subnet
+    if (validate_ipv4_netmask_ip_format(netmask)):
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 52, in validate_ipv4_netmask_ip_format
+    if (netmask.count('.') != NETMASK_MAX_PERIODS):
+NameError: name 'NETMASK_MAX_PERIODS' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_well_above_minimum_ip_and_well_above_minimum_subnet" time="0.002" timestamp="2020-10-10T09:21:44">
+		<error message="name 'NETMASK_MAX_PERIODS' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 858, in test_calculate_subnet_in_bit_format_with_well_above_minimum_ip_and_well_above_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('160.160.160.160', '11111111.11111000.00000000.00000000')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 123, in calculate_ipv4_subnet
+    if (validate_ipv4_netmask_ip_format(netmask)):
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 52, in validate_ipv4_netmask_ip_format
+    if (netmask.count('.') != NETMASK_MAX_PERIODS):
+NameError: name 'NETMASK_MAX_PERIODS' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_bit_format_with_well_below_maximum_ip_and_maximum_subnet" time="0.002" timestamp="2020-10-10T09:21:44">
+		<error message="name 'NETMASK_MAX_PERIODS' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 883, in test_calculate_subnet_in_bit_format_with_well_below_maximum_ip_and_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('160.160.160.160', '11111111.11111111.11111111.11111110')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 123, in calculate_ipv4_subnet
+    if (validate_ipv4_netmask_ip_format(netmask)):
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 52, in validate_ipv4_netmask_ip_format
+    if (netmask.count('.') != NETMASK_MAX_PERIODS):
+NameError: name 'NETMASK_MAX_PERIODS' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_maximum_ip_and_well_below_maximum_subnet" time="0.003" timestamp="2020-10-10T09:21:44">
+		<error message="name 'NETMASK_MAX_PERIODS' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 803, in test_calculate_subnet_in_ip_format_maximum_ip_and_well_below_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('255.255.255.255', '255.255.240.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 123, in calculate_ipv4_subnet
+    if (validate_ipv4_netmask_ip_format(netmask)):
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 52, in validate_ipv4_netmask_ip_format
+    if (netmask.count('.') != NETMASK_MAX_PERIODS):
+NameError: name 'NETMASK_MAX_PERIODS' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_maximum_ip_and_maximum_subnet" time="0.002" timestamp="2020-10-10T09:21:44">
+		<error message="name 'NETMASK_MAX_PERIODS' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 793, in test_calculate_subnet_in_ip_format_with_maximum_ip_and_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('255.255.255.255', '255.255.255.254')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 123, in calculate_ipv4_subnet
+    if (validate_ipv4_netmask_ip_format(netmask)):
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 52, in validate_ipv4_netmask_ip_format
+    if (netmask.count('.') != NETMASK_MAX_PERIODS):
+NameError: name 'NETMASK_MAX_PERIODS' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_maximum_ip_and_one_below_maximum_subnet" time="0.002" timestamp="2020-10-10T09:21:44">
+		<error message="name 'NETMASK_MAX_PERIODS' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 798, in test_calculate_subnet_in_ip_format_with_maximum_ip_and_one_below_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('255.255.255.255', '255.255.255.252')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 123, in calculate_ipv4_subnet
+    if (validate_ipv4_netmask_ip_format(netmask)):
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 52, in validate_ipv4_netmask_ip_format
+    if (netmask.count('.') != NETMASK_MAX_PERIODS):
+NameError: name 'NETMASK_MAX_PERIODS' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_minimum_ip_and_minimum_subnet" time="0.002" timestamp="2020-10-10T09:21:44">
+		<error message="name 'NETMASK_MAX_PERIODS' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 758, in test_calculate_subnet_in_ip_format_with_minimum_ip_and_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('0.0.0.0', '128.0.0.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 123, in calculate_ipv4_subnet
+    if (validate_ipv4_netmask_ip_format(netmask)):
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 52, in validate_ipv4_netmask_ip_format
+    if (netmask.count('.') != NETMASK_MAX_PERIODS):
+NameError: name 'NETMASK_MAX_PERIODS' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_minimum_ip_and_one_above_minimum_subnet" time="0.002" timestamp="2020-10-10T09:21:44">
+		<error message="name 'NETMASK_MAX_PERIODS' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 763, in test_calculate_subnet_in_ip_format_with_minimum_ip_and_one_above_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('0.0.0.0', '192.0.0.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 123, in calculate_ipv4_subnet
+    if (validate_ipv4_netmask_ip_format(netmask)):
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 52, in validate_ipv4_netmask_ip_format
+    if (netmask.count('.') != NETMASK_MAX_PERIODS):
+NameError: name 'NETMASK_MAX_PERIODS' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_minimum_ip_and_well_above_minimum_subnet" time="0.002" timestamp="2020-10-10T09:21:44">
+		<error message="name 'NETMASK_MAX_PERIODS' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 768, in test_calculate_subnet_in_ip_format_with_minimum_ip_and_well_above_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('0.0.0.0', '255.240.0.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 123, in calculate_ipv4_subnet
+    if (validate_ipv4_netmask_ip_format(netmask)):
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 52, in validate_ipv4_netmask_ip_format
+    if (netmask.count('.') != NETMASK_MAX_PERIODS):
+NameError: name 'NETMASK_MAX_PERIODS' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_one_above_minimum_ip_and_minimum_subnet" time="0.002" timestamp="2020-10-10T09:21:44">
+		<error message="name 'NETMASK_MAX_PERIODS' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 773, in test_calculate_subnet_in_ip_format_with_one_above_minimum_ip_and_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('1.1.1.1', '128.0.0.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 123, in calculate_ipv4_subnet
+    if (validate_ipv4_netmask_ip_format(netmask)):
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 52, in validate_ipv4_netmask_ip_format
+    if (netmask.count('.') != NETMASK_MAX_PERIODS):
+NameError: name 'NETMASK_MAX_PERIODS' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_one_above_minimum_ip_and_one_above_minimum_subnet" time="0.002" timestamp="2020-10-10T09:21:44">
+		<error message="name 'NETMASK_MAX_PERIODS' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 783, in test_calculate_subnet_in_ip_format_with_one_above_minimum_ip_and_one_above_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('1.1.1.1', '128.0.0.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 123, in calculate_ipv4_subnet
+    if (validate_ipv4_netmask_ip_format(netmask)):
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 52, in validate_ipv4_netmask_ip_format
+    if (netmask.count('.') != NETMASK_MAX_PERIODS):
+NameError: name 'NETMASK_MAX_PERIODS' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_one_below_maximum_ip_and_maximum_subnet" time="0.002" timestamp="2020-10-10T09:21:44">
+		<error message="name 'NETMASK_MAX_PERIODS' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 808, in test_calculate_subnet_in_ip_format_with_one_below_maximum_ip_and_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('254.254.254.254', '255.255.255.254')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 123, in calculate_ipv4_subnet
+    if (validate_ipv4_netmask_ip_format(netmask)):
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 52, in validate_ipv4_netmask_ip_format
+    if (netmask.count('.') != NETMASK_MAX_PERIODS):
+NameError: name 'NETMASK_MAX_PERIODS' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_one_below_maximum_ip_and_one_below_maximum_subnet" time="0.002" timestamp="2020-10-10T09:21:44">
+		<error message="name 'NETMASK_MAX_PERIODS' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 818, in test_calculate_subnet_in_ip_format_with_one_below_maximum_ip_and_one_below_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('254.254.254.254', '255.255.255.252')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 123, in calculate_ipv4_subnet
+    if (validate_ipv4_netmask_ip_format(netmask)):
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 52, in validate_ipv4_netmask_ip_format
+    if (netmask.count('.') != NETMASK_MAX_PERIODS):
+NameError: name 'NETMASK_MAX_PERIODS' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_well_above_minimum_ip_and_minimum_subnet" time="0.002" timestamp="2020-10-10T09:21:44">
+		<error message="name 'NETMASK_MAX_PERIODS' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 778, in test_calculate_subnet_in_ip_format_with_well_above_minimum_ip_and_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('160.160.160.160', '128.0.0.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 123, in calculate_ipv4_subnet
+    if (validate_ipv4_netmask_ip_format(netmask)):
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 52, in validate_ipv4_netmask_ip_format
+    if (netmask.count('.') != NETMASK_MAX_PERIODS):
+NameError: name 'NETMASK_MAX_PERIODS' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_well_above_minimum_ip_and_well_above_minimum_subnet" time="0.002" timestamp="2020-10-10T09:21:44">
+		<error message="name 'NETMASK_MAX_PERIODS' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 788, in test_calculate_subnet_in_ip_format_with_well_above_minimum_ip_and_well_above_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('160.160.160.160', '255.248.0.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 123, in calculate_ipv4_subnet
+    if (validate_ipv4_netmask_ip_format(netmask)):
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 52, in validate_ipv4_netmask_ip_format
+    if (netmask.count('.') != NETMASK_MAX_PERIODS):
+NameError: name 'NETMASK_MAX_PERIODS' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_well_below_maximum_ip_and_maximum_subnet" time="0.002" timestamp="2020-10-10T09:21:44">
+		<error message="name 'NETMASK_MAX_PERIODS' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 813, in test_calculate_subnet_in_ip_format_with_well_below_maximum_ip_and_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('160.160.160.160', '255.255.255.254')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 123, in calculate_ipv4_subnet
+    if (validate_ipv4_netmask_ip_format(netmask)):
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 52, in validate_ipv4_netmask_ip_format
+    if (netmask.count('.') != NETMASK_MAX_PERIODS):
+NameError: name 'NETMASK_MAX_PERIODS' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4Subnet" name="test_calculate_subnet_in_ip_format_with_well_below_maximum_ip_and_well_below_maximum_subnet" time="0.002" timestamp="2020-10-10T09:21:44">
+		<error message="name 'NETMASK_MAX_PERIODS' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 893, in test_calculate_subnet_in_ip_format_with_well_below_maximum_ip_and_well_below_maximum_subnet
+    subnet = subnet_calculator.calculate_ipv4_subnet('160.160.160.160', '11111111.11111111.11110000.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 123, in calculate_ipv4_subnet
+    if (validate_ipv4_netmask_ip_format(netmask)):
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 52, in validate_ipv4_netmask_ip_format
+    if (netmask.count('.') != NETMASK_MAX_PERIODS):
+NameError: name 'NETMASK_MAX_PERIODS' is not defined
+]]>		</error>
+	</testcase>
+</testsuite>

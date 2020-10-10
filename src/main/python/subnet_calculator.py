@@ -10,7 +10,8 @@ __version__ = "30-September-2020"
 IPV6_MAX_COLONS = 7
 IPV6_MAX_GROUPS = 8
 NETMASK_PERIOD_INDEX = 9
-NETMASK_MAX_PERIODS = 3
+IPV4_NETMASK_MAX_PERIODS = 3
+IPV6_NETMASK_MAX_PERIODS = 7
 IPV4_NETMASK_MAX_LENGTH = 35
 IPV6_NETMASK_MAX_LENGTH = 135
 
@@ -42,13 +43,13 @@ def validate_ipv6_address(ipv6_address):
 
     return False
 
-def validate_netmask_ip_format(netmask):
+def validate_ipv4_netmask_ip_format(netmask):
     """
     Checks if the given netmask is in a valid ipv4 format
     for example: 255.255.0.0 is valid but 16 is not.
     """
 
-    if (netmask.count('.') != NETMASK_MAX_PERIODS):
+    if (netmask.count('.') != IPV4_NETMASK_MAX_PERIODS):
         return False
 
     valid_netmask_ip_regex = r"^(((255)((\.255){0,2}(?:(((\.254)|(\.252)|(\.248)|(\.240)|(\.224)|(\.192)|(\.128)))){0,1}(\.0){0,2}))|(((254)|(252)|(248)|(240)|(224)|(192)|(128)|(0))(\.0){3}))$"
@@ -58,18 +59,31 @@ def validate_netmask_ip_format(netmask):
 
     return False
 
-def validate_netmask_bit_format(netmask):
+def validate_ipv4_netmask_bit_format(netmask):
     """
-    Checks if the given netmask is in a valid bit format
+    Checks if the given ipv4 netmask is in a valid bit format
     for example: 16 is valid but 255.255.0.0 is not
     """
-
-    valid_netmask_ip_regex = r"^(([1-9])|((1|2)[0-9])|(3[0-1]))$"
-
-    if (re.match(valid_netmask_ip_regex, netmask)):
+    valid_netmask_bit_regex = r"^(([1-9])|((1|2)[0-9])|(3[0-1]))$"
+    
+    if (re.match(valid_netmask_bit_regex, netmask)):
         return True
 
     return False
+
+def validate_ipv6_netmask_bit_format(netmask):
+
+    """
+    Checks if the given ipv6 netmask is in a valid bit format
+    for example: 64 is valid but 255.255.255.255.255.255.255.255 is not
+    """
+    valid_netmask_bit_regex = r"^(([1-9])|([1-9][0-9])|(1[0-2][0-8]))$"
+
+    if (re.match(valid_netmask_bit_regex, netmask)):
+        return True
+
+    return False
+
 
 def convert_netmask_bits_to_binary(netmask, max_length):
     """
@@ -106,7 +120,7 @@ def calculate_ipv4_subnet(ip_address, netmask):
     split_netmask = netmask.split('.')
     
     for octet in split_ip_address:        
-        if (validate_netmask_ip_format(netmask)):
+        if (validate_ipv4_netmask_ip_format(netmask)):
             current_netmask_as_integer = int(split_netmask[current_octet_index])
         else:
             current_netmask_as_integer = int(split_netmask[current_octet_index], 2)
@@ -118,6 +132,10 @@ def calculate_ipv4_subnet(ip_address, netmask):
     
     subnet_without_leading_period = subnet[1:]
     return subnet_without_leading_period
+
+#def calculate_ipv6_address(ip_address, netmask):
+
+    
 
 def expand_ipv6_address(ip_address):
     """

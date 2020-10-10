@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="1" file="subnet_calculator_tests.py" name="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat-20201010092310" skipped="0" tests="13" time="0.016" timestamp="2020-10-10T09:23:12">
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_empty_netmask" time="0.001" timestamp="2020-10-10T09:23:12"/>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_at_128" time="0.001" timestamp="2020-10-10T09:23:12"/>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_at_zero" time="0.001" timestamp="2020-10-10T09:23:12"/>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_one_above_128" time="0.001" timestamp="2020-10-10T09:23:12"/>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_one_above_zero" time="0.001" timestamp="2020-10-10T09:23:12"/>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_one_below_128" time="0.001" timestamp="2020-10-10T09:23:12"/>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_one_below_zero" time="0.001" timestamp="2020-10-10T09:23:12"/>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_well_above_zero" time="0.001" timestamp="2020-10-10T09:23:12"/>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_well_below_128" time="0.001" timestamp="2020-10-10T09:23:12"/>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_well_below_zero" time="0.001" timestamp="2020-10-10T09:23:12"/>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_with_letters" time="0.001" timestamp="2020-10-10T09:23:12"/>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_with_symbols" time="0.001" timestamp="2020-10-10T09:23:12"/>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_well_above_128" time="0.004" timestamp="2020-10-10T09:23:12">
+		<failure message="True is not false" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 679, in test_netmask_well_above_128
+    self.assertFalse(is_valid)
+  File "/usr/lib/python3.6/unittest/case.py", line 676, in assertFalse
+    raise self.failureException(msg)
+AssertionError: True is not false
+]]>		</failure>
+	</testcase>
+</testsuite>

@@ -422,204 +422,272 @@ class TestValidateIpv6Address(unittest.TestCase):
         is_valid = subnet_calculator.validate_ipv6_address('2001:4515:0000:0000:9999:4515:0042:-8329')
         self.assertFalse(is_valid)
 
-class TestValidateNetmaskIpFormat(unittest.TestCase):
+class TestIpv4ValidateNetmaskIpFormat(unittest.TestCase):
 
     def test_empty_netmask(self):
         
-        is_valid = subnet_calculator.validate_netmask_ip_format('')
+        is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('')
         self.assertFalse(is_valid)
 
     def test_netmask_with_no_digits_in_octet(self):
 
-        is_valid = subnet_calculator.validate_netmask_ip_format('....')
+        is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('....')
         self.assertFalse(is_valid)
 
     def test_netmask_with_octets_well_below_four(self):
 
-        is_valid = subnet_calculator.validate_netmask_ip_format('255')
+        is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('255')
         self.assertFalse(is_valid)
 
     def test_netmask_with_octets_one_below_four(self):
 
-        is_valid = subnet_calculator.validate_netmask_ip_format('255.255.255')
+        is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('255.255.255')
         self.assertFalse(is_valid)
 
     def test_netmask_with_octets_at_four(self):
 
-        is_valid = subnet_calculator.validate_netmask_ip_format('255.255.255.0')
+        is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('255.255.255.0')
         self.assertTrue(is_valid)
 
     def test_netmask_with_octets_one_above_four(self):
 
-        is_valid = subnet_calculator.validate_netmask_ip_format('255.255.255.0.0')
+        is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('255.255.255.0.0')
         self.assertFalse(is_valid)
 
     def test_netmask_with_octets_well_above_four(self):
 
-        is_valid = subnet_calculator.validate_netmask_ip_format('255.255.255.255.255.255.255.0')
+        is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('255.255.255.255.255.255.255.0')
         self.assertFalse(is_valid)
 
     def test_netmask_with_empty_octet(self):
 
-        is_valid = subnet_calculator.validate_netmask_ip_format('255..0.0')
+        is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('255..0.0')
         self.assertFalse(is_valid)
 
     def test_netmask_with_one_non_zero_after_one_zero(self):
 
-        is_valid = subnet_calculator.validate_netmask_ip_format('0.255.0.0')
+        is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('0.255.0.0')
         self.assertFalse(is_valid)
 
     def test_netmask_with_many_non_zeros_after_one_zero(self):
 
-        is_valid = subnet_calculator.validate_netmask_ip_format('0.255.255.255')
+        is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('0.255.255.255')
         self.assertFalse(is_valid)
 
     def test_netmask_with_one_non_zero_after_many_non_zeros(self):
 
-        is_valid = subnet_calculator.validate_netmask_ip_format('0.0.0.255')
+        is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('0.0.0.255')
         self.assertFalse(is_valid)
 
     def test_netmask_with_octet_less_than_255_before_255(self):
 
-        is_valid = subnet_calculator.validate_netmask_ip_format('0.255.0.0')
+        is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('0.255.0.0')
         self.assertFalse(is_valid)
 
     def test_netmask_with_octets_all_zero(self):
 
-        is_valid = subnet_calculator.validate_netmask_ip_format('0.0.0.0')
+        is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('0.0.0.0')
         self.assertTrue(is_valid)
 
     def test_netmask_with_octets_all_255(self):
 
-        is_valid = subnet_calculator.validate_netmask_ip_format('255.255.255.255')
+        is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('255.255.255.255')
         self.assertFalse(is_valid)
 
     def test_netmask_with_one_non_255_or_0_number(self):
 
-        is_valid = subnet_calculator.validate_netmask_ip_format('255.248.0.0')
+        is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('255.248.0.0')
         self.assertTrue(is_valid)
 
     def test_netmask_with_one_more_than_one_non_255_or_0_number(self):
 
-        is_valid = subnet_calculator.validate_netmask_ip_format('255.248.240.0')
+        is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('255.248.240.0')
         self.assertFalse(is_valid)
 
     def test_netmask_with_well_more_than_one_non_255_or_0_number(self):
 
-        is_valid = subnet_calculator.validate_netmask_ip_format('254.248.240.128')
+        is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('254.248.240.128')
         self.assertFalse(is_valid)
 
     def test_maximum_bit_netmask_ending_in_254(self):
 
-        is_valid = subnet_calculator.validate_netmask_ip_format('255.255.255.254')
+        is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('255.255.255.254')
         self.assertTrue(is_valid)
 
     def test_netmask_with_one_octet_with_valid_value_of_254(self):
 
-        is_valid = subnet_calculator.validate_netmask_ip_format('255.255.255.254')
+        is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('255.255.255.254')
         self.assertTrue(is_valid)
 
     def test_netmask_with_one_octet_with_valid_value_of_252(self):
 
-        is_valid = subnet_calculator.validate_netmask_ip_format('255.255.255.252')
+        is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('255.255.255.252')
         self.assertTrue(is_valid)
 
     def test_netmask_with_one_octet_with_valid_value_of_248(self):
 
-        is_valid = subnet_calculator.validate_netmask_ip_format('255.255.255.248')
+        is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('255.255.255.248')
         self.assertTrue(is_valid)
 
     def test_netmask_with_one_octet_with_valid_value_of_240(self):
 
-        is_valid = subnet_calculator.validate_netmask_ip_format('255.255.255.240')
+        is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('255.255.255.240')
         self.assertTrue(is_valid)
 
     def test_netmask_with_one_octet_with_valid_value_of_224(self):
 
-        is_valid = subnet_calculator.validate_netmask_ip_format('255.255.255.224')
+        is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('255.255.255.224')
         self.assertTrue(is_valid)
 
     def test_netmask_with_one_octet_with_valid_value_of_192(self):
 
-        is_valid = subnet_calculator.validate_netmask_ip_format('255.255.255.192')
+        is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('255.255.255.192')
         self.assertTrue(is_valid)
 
     def test_netmask_with_one_octet_with_valid_value_of_128(self):
 
-        is_valid = subnet_calculator.validate_netmask_ip_format('255.255.255.128')
+        is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('255.255.255.128')
         self.assertTrue(is_valid)
     
     def test_netmask_with_non_valid_octet_value(self):
 
-        is_valid = subnet_calculator.validate_netmask_ip_format('255.255.255.180')
+        is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('255.255.255.180')
         self.assertFalse(is_valid)
 
-class ValidateNetmaskBitFormat(unittest.TestCase):
+class ValidateIpv4NetmaskBitFormat(unittest.TestCase):
 
     def test_empty_netmask(self):
 
-        is_valid = subnet_calculator.validate_netmask_bit_format('')
+        is_valid = subnet_calculator.validate_ipv4_netmask_bit_format('')
         self.assertFalse(is_valid)
 
     def test_netmask_well_below_zero(self):
 
-        is_valid = subnet_calculator.validate_netmask_bit_format('-99')
+        is_valid = subnet_calculator.validate_ipv4_netmask_bit_format('-99')
         self.assertFalse(is_valid)
 
     def test_netmask_one_below_zero(self):
 
-        is_valid = subnet_calculator.validate_netmask_bit_format('-1')
+        is_valid = subnet_calculator.validate_ipv4_netmask_bit_format('-1')
         self.assertFalse(is_valid)
 
     def test_netmask_at_zero(self):
 
-        is_valid = subnet_calculator.validate_netmask_bit_format('0')
+        is_valid = subnet_calculator.validate_ipv4_netmask_bit_format('0')
         self.assertFalse(is_valid)
 
     def test_netmask_one_above_zero(self):
 
-        is_valid = subnet_calculator.validate_netmask_bit_format('1')
+        is_valid = subnet_calculator.validate_ipv4_netmask_bit_format('1')
         self.assertTrue(is_valid)
 
     def test_netmask_well_above_zero(self):
 
-        is_valid = subnet_calculator.validate_netmask_bit_format('12')
+        is_valid = subnet_calculator.validate_ipv4_netmask_bit_format('12')
         self.assertTrue(is_valid)
 
     def test_netmask_well_below_31(self):
 
-        is_valid = subnet_calculator.validate_netmask_bit_format('18')
+        is_valid = subnet_calculator.validate_ipv4_netmask_bit_format('18')
         self.assertTrue(is_valid)
 
     def test_netmask_one_below_31(self):
 
-        is_valid = subnet_calculator.validate_netmask_bit_format('30')
+        is_valid = subnet_calculator.validate_ipv4_netmask_bit_format('30')
         self.assertTrue(is_valid)
 
     def test_netmask_at_31(self):
 
-        is_valid = subnet_calculator.validate_netmask_bit_format('31')
+        is_valid = subnet_calculator.validate_ipv4_netmask_bit_format('31')
         self.assertTrue(is_valid)
 
     def test_netmask_one_above_31(self):
 
-        is_valid = subnet_calculator.validate_netmask_bit_format('32')
+        is_valid = subnet_calculator.validate_ipv4_netmask_bit_format('32')
         self.assertFalse(is_valid)
 
     def test_netmask_well_above_31(self):
 
-        is_valid = subnet_calculator.validate_netmask_bit_format('99')
+        is_valid = subnet_calculator.validate_ipv4_netmask_bit_format('99')
         self.assertFalse(is_valid)
 
     def test_netmask_with_letters(self):
 
-        is_valid = subnet_calculator.validate_netmask_bit_format('9f')
+        is_valid = subnet_calculator.validate_ipv4_netmask_bit_format('9f')
         self.assertFalse(is_valid)
 
     def test_netmask_with_symbols(self):
 
-        is_valid = subnet_calculator.validate_netmask_bit_format('9.0')
+        is_valid = subnet_calculator.validate_ipv4_netmask_bit_format('9.0')
         self.assertFalse(is_valid)
+
+class ValidateIpv6NetmaskBitFormat(unittest.TestCase):
+
+    def test_empty_netmask(self):
+
+        is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('')
+        self.assertFalse(is_valid)
+
+    def test_netmask_well_below_zero(self):
+
+        is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('-99')
+        self.assertFalse(is_valid)
+
+    def test_netmask_one_below_zero(self):
+
+        is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('-1')
+        self.assertFalse(is_valid)
+
+    def test_netmask_at_zero(self):
+
+        is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('0')
+        self.assertFalse(is_valid)
+
+    def test_netmask_one_above_zero(self):
+
+        is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('1')
+        self.assertTrue(is_valid)
+
+    def test_netmask_well_above_zero(self):
+
+        is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('30')
+        self.assertTrue(is_valid)
+
+    def test_netmask_well_below_128(self):
+
+        is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('100')
+        self.assertTrue(is_valid)
+
+    def test_netmask_one_below_128(self):
+
+        is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('127')
+        self.assertTrue(is_valid)
+
+    def test_netmask_at_128(self):
+
+        is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('128')
+        self.assertTrue(is_valid)
+
+    def test_netmask_one_above_128(self):
+
+        is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('129')
+        self.assertFalse(is_valid)
+
+    def test_netmask_well_above_128(self):
+
+        is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('200')
+        self.assertFalse(is_valid)
+
+    def test_netmask_with_letters(self):
+
+        is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('9f')
+        self.assertFalse(is_valid)
+
+    def test_netmask_with_symbols(self):
+
+        is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('9.0')
+        self.assertFalse(is_valid)
+
 
 class TestConvertNetmaskBitsToBinary(unittest.TestCase):
 

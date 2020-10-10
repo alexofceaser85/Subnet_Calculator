@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" file="subnet_calculator_tests.py" name="subnet_calculator_tests.TestValidateIpv6Address-20201009233017" skipped="0" tests="18" time="0.025" timestamp="2020-10-09T23:30:18">
+	<testcase classname="subnet_calculator_tests.TestValidateIpv6Address" name="test_abbreviated_zero_at_eight_groups" time="0.003" timestamp="2020-10-09T23:30:18"/>
+	<testcase classname="subnet_calculator_tests.TestValidateIpv6Address" name="test_abbreviated_zero_at_end_group" time="0.001" timestamp="2020-10-09T23:30:18"/>
+	<testcase classname="subnet_calculator_tests.TestValidateIpv6Address" name="test_abbreviated_zero_at_middle_group" time="0.001" timestamp="2020-10-09T23:30:18"/>
+	<testcase classname="subnet_calculator_tests.TestValidateIpv6Address" name="test_abbreviated_zero_one_above_eight_groups" time="0.001" timestamp="2020-10-09T23:30:18"/>
+	<testcase classname="subnet_calculator_tests.TestValidateIpv6Address" name="test_abbreviated_zero_well_above_eight_groups" time="0.001" timestamp="2020-10-09T23:30:18"/>
+	<testcase classname="subnet_calculator_tests.TestValidateIpv6Address" name="test_ipv6_with_a_middle_group_negative" time="0.001" timestamp="2020-10-09T23:30:18"/>
+	<testcase classname="subnet_calculator_tests.TestValidateIpv6Address" name="test_ipv6_with_first_group_negative" time="0.002" timestamp="2020-10-09T23:30:18"/>
+	<testcase classname="subnet_calculator_tests.TestValidateIpv6Address" name="test_ipv6_with_groups_at_eight" time="0.001" timestamp="2020-10-09T23:30:18"/>
+	<testcase classname="subnet_calculator_tests.TestValidateIpv6Address" name="test_ipv6_with_groups_one_above_eight" time="0.001" timestamp="2020-10-09T23:30:18"/>
+	<testcase classname="subnet_calculator_tests.TestValidateIpv6Address" name="test_ipv6_with_groups_one_below_eight" time="0.001" timestamp="2020-10-09T23:30:18"/>
+	<testcase classname="subnet_calculator_tests.TestValidateIpv6Address" name="test_ipv6_with_groups_well_above_eight" time="0.001" timestamp="2020-10-09T23:30:18"/>
+	<testcase classname="subnet_calculator_tests.TestValidateIpv6Address" name="test_ipv6_with_groups_well_below_eight" time="0.001" timestamp="2020-10-09T23:30:18"/>
+	<testcase classname="subnet_calculator_tests.TestValidateIpv6Address" name="test_ipv6_with_last_group_negative" time="0.001" timestamp="2020-10-09T23:30:18"/>
+	<testcase classname="subnet_calculator_tests.TestValidateIpv6Address" name="test_ipv6_with_letters_between_a_to_f_lowercase" time="0.001" timestamp="2020-10-09T23:30:18"/>
+	<testcase classname="subnet_calculator_tests.TestValidateIpv6Address" name="test_ipv6_with_letters_between_a_to_f_uppercase" time="0.001" timestamp="2020-10-09T23:30:18"/>
+	<testcase classname="subnet_calculator_tests.TestValidateIpv6Address" name="test_ipv6_with_letters_between_g_to_z_lowercase" time="0.001" timestamp="2020-10-09T23:30:18"/>
+	<testcase classname="subnet_calculator_tests.TestValidateIpv6Address" name="test_ipv6_with_letters_between_g_to_z_uppercase" time="0.001" timestamp="2020-10-09T23:30:18"/>
+	<testcase classname="subnet_calculator_tests.TestValidateIpv6Address" name="test_ipv6_with_no_groups" time="0.001" timestamp="2020-10-09T23:30:18"/>
+</testsuite>

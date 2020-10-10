@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="13" failures="0" file="subnet_calculator_tests.py" name="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat-20201010092440" skipped="0" tests="13" time="0.041" timestamp="2020-10-10T09:24:42">
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_empty_netmask" time="0.005" timestamp="2020-10-10T09:24:42">
+		<error message="unbalanced parenthesis at position 35" type="error">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 628, in test_empty_netmask
+    is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 82, in validate_ipv6_netmask_bit_format
+    if (re.match(valid_netmask_bit_regex, netmask)):
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/re.py", line 172, in match
+    return _compile(pattern, flags).match(string)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/re.py", line 301, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_compile.py", line 562, in compile
+    p = sre_parse.parse(p, flags)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_parse.py", line 869, in parse
+    raise source.error("unbalanced parenthesis")
+sre_constants.error: unbalanced parenthesis at position 35
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_at_128" time="0.003" timestamp="2020-10-10T09:24:42">
+		<error message="unbalanced parenthesis at position 35" type="error">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 668, in test_netmask_at_128
+    is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('128')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 82, in validate_ipv6_netmask_bit_format
+    if (re.match(valid_netmask_bit_regex, netmask)):
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/re.py", line 172, in match
+    return _compile(pattern, flags).match(string)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/re.py", line 301, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_compile.py", line 562, in compile
+    p = sre_parse.parse(p, flags)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_parse.py", line 869, in parse
+    raise source.error("unbalanced parenthesis")
+sre_constants.error: unbalanced parenthesis at position 35
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_at_zero" time="0.003" timestamp="2020-10-10T09:24:42">
+		<error message="unbalanced parenthesis at position 35" type="error">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 643, in test_netmask_at_zero
+    is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 82, in validate_ipv6_netmask_bit_format
+    if (re.match(valid_netmask_bit_regex, netmask)):
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/re.py", line 172, in match
+    return _compile(pattern, flags).match(string)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/re.py", line 301, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_compile.py", line 562, in compile
+    p = sre_parse.parse(p, flags)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_parse.py", line 869, in parse
+    raise source.error("unbalanced parenthesis")
+sre_constants.error: unbalanced parenthesis at position 35
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_one_above_128" time="0.003" timestamp="2020-10-10T09:24:42">
+		<error message="unbalanced parenthesis at position 35" type="error">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 673, in test_netmask_one_above_128
+    is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('129')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 82, in validate_ipv6_netmask_bit_format
+    if (re.match(valid_netmask_bit_regex, netmask)):
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/re.py", line 172, in match
+    return _compile(pattern, flags).match(string)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/re.py", line 301, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_compile.py", line 562, in compile
+    p = sre_parse.parse(p, flags)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_parse.py", line 869, in parse
+    raise source.error("unbalanced parenthesis")
+sre_constants.error: unbalanced parenthesis at position 35
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_one_above_zero" time="0.003" timestamp="2020-10-10T09:24:42">
+		<error message="unbalanced parenthesis at position 35" type="error">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 648, in test_netmask_one_above_zero
+    is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('1')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 82, in validate_ipv6_netmask_bit_format
+    if (re.match(valid_netmask_bit_regex, netmask)):
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/re.py", line 172, in match
+    return _compile(pattern, flags).match(string)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/re.py", line 301, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_compile.py", line 562, in compile
+    p = sre_parse.parse(p, flags)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_parse.py", line 869, in parse
+    raise source.error("unbalanced parenthesis")
+sre_constants.error: unbalanced parenthesis at position 35
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_one_below_128" time="0.003" timestamp="2020-10-10T09:24:42">
+		<error message="unbalanced parenthesis at position 35" type="error">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 663, in test_netmask_one_below_128
+    is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('127')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 82, in validate_ipv6_netmask_bit_format
+    if (re.match(valid_netmask_bit_regex, netmask)):
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/re.py", line 172, in match
+    return _compile(pattern, flags).match(string)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/re.py", line 301, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_compile.py", line 562, in compile
+    p = sre_parse.parse(p, flags)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_parse.py", line 869, in parse
+    raise source.error("unbalanced parenthesis")
+sre_constants.error: unbalanced parenthesis at position 35
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_one_below_zero" time="0.003" timestamp="2020-10-10T09:24:42">
+		<error message="unbalanced parenthesis at position 35" type="error">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 638, in test_netmask_one_below_zero
+    is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('-1')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 82, in validate_ipv6_netmask_bit_format
+    if (re.match(valid_netmask_bit_regex, netmask)):
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/re.py", line 172, in match
+    return _compile(pattern, flags).match(string)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/re.py", line 301, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_compile.py", line 562, in compile
+    p = sre_parse.parse(p, flags)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_parse.py", line 869, in parse
+    raise source.error("unbalanced parenthesis")
+sre_constants.error: unbalanced parenthesis at position 35
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_well_above_128" time="0.003" timestamp="2020-10-10T09:24:42">
+		<error message="unbalanced parenthesis at position 35" type="error">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 678, in test_netmask_well_above_128
+    is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('200')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 82, in validate_ipv6_netmask_bit_format
+    if (re.match(valid_netmask_bit_regex, netmask)):
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/re.py", line 172, in match
+    return _compile(pattern, flags).match(string)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/re.py", line 301, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_compile.py", line 562, in compile
+    p = sre_parse.parse(p, flags)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_parse.py", line 869, in parse
+    raise source.error("unbalanced parenthesis")
+sre_constants.error: unbalanced parenthesis at position 35
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_well_above_zero" time="0.003" timestamp="2020-10-10T09:24:42">
+		<error message="unbalanced parenthesis at position 35" type="error">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 653, in test_netmask_well_above_zero
+    is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('30')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 82, in validate_ipv6_netmask_bit_format
+    if (re.match(valid_netmask_bit_regex, netmask)):
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/re.py", line 172, in match
+    return _compile(pattern, flags).match(string)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/re.py", line 301, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_compile.py", line 562, in compile
+    p = sre_parse.parse(p, flags)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_parse.py", line 869, in parse
+    raise source.error("unbalanced parenthesis")
+sre_constants.error: unbalanced parenthesis at position 35
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_well_below_128" time="0.004" timestamp="2020-10-10T09:24:42">
+		<error message="unbalanced parenthesis at position 35" type="error">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 658, in test_netmask_well_below_128
+    is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('100')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 82, in validate_ipv6_netmask_bit_format
+    if (re.match(valid_netmask_bit_regex, netmask)):
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/re.py", line 172, in match
+    return _compile(pattern, flags).match(string)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/re.py", line 301, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_compile.py", line 562, in compile
+    p = sre_parse.parse(p, flags)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_parse.py", line 869, in parse
+    raise source.error("unbalanced parenthesis")
+sre_constants.error: unbalanced parenthesis at position 35
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_well_below_zero" time="0.003" timestamp="2020-10-10T09:24:42">
+		<error message="unbalanced parenthesis at position 35" type="error">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 633, in test_netmask_well_below_zero
+    is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('-99')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 82, in validate_ipv6_netmask_bit_format
+    if (re.match(valid_netmask_bit_regex, netmask)):
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/re.py", line 172, in match
+    return _compile(pattern, flags).match(string)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/re.py", line 301, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_compile.py", line 562, in compile
+    p = sre_parse.parse(p, flags)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_parse.py", line 869, in parse
+    raise source.error("unbalanced parenthesis")
+sre_constants.error: unbalanced parenthesis at position 35
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_with_letters" time="0.003" timestamp="2020-10-10T09:24:42">
+		<error message="unbalanced parenthesis at position 35" type="error">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 683, in test_netmask_with_letters
+    is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('9f')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 82, in validate_ipv6_netmask_bit_format
+    if (re.match(valid_netmask_bit_regex, netmask)):
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/re.py", line 172, in match
+    return _compile(pattern, flags).match(string)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/re.py", line 301, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_compile.py", line 562, in compile
+    p = sre_parse.parse(p, flags)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_parse.py", line 869, in parse
+    raise source.error("unbalanced parenthesis")
+sre_constants.error: unbalanced parenthesis at position 35
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_with_symbols" time="0.003" timestamp="2020-10-10T09:24:42">
+		<error message="unbalanced parenthesis at position 35" type="error">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 688, in test_netmask_with_symbols
+    is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('9.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 82, in validate_ipv6_netmask_bit_format
+    if (re.match(valid_netmask_bit_regex, netmask)):
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/re.py", line 172, in match
+    return _compile(pattern, flags).match(string)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/re.py", line 301, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_compile.py", line 562, in compile
+    p = sre_parse.parse(p, flags)
+  File "/home/student/Documents/cs3280project2/target/venv/build/cpython-3.6.9.final.0/lib/python3.6/sre_parse.py", line 869, in parse
+    raise source.error("unbalanced parenthesis")
+sre_constants.error: unbalanced parenthesis at position 35
+]]>		</error>
+	</testcase>
+</testsuite>
