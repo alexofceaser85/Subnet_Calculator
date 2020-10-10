@@ -9,6 +9,8 @@ __version__ = "30-September-2020"
 
 IPV6_MAX_COLONS = 7
 IPV6_MAX_GROUPS = 8
+IPV4_MAX_BINARY_DIGITS = 8
+IPV6_MAX_BINARY_DIGITS = 16
 IPV4_NETMASK_MAX_PERIODS = 3
 IPV6_NETMASK_MAX_PERIODS = 7
 IPV4_NETMASK_MAX_LENGTH = 35
@@ -182,3 +184,65 @@ def calculate_ipv6_subnet(ip_address, netmask):
     subnet_without_leading_period = subnet[1:]
     return subnet_without_leading_period
 
+def calculate_binary_opposite(binary_string, max_length_for_leading_zeros):
+    """
+    returns the opposite of the binary string given
+    i.e: 101 is 010
+    """
+    binary_opposite_string = ''
+
+    for number in binary_string:
+
+        if(number == '0'):
+            binary_opposite_string += '1'
+
+            if (len(binary_string) < max_length_for_leading_zeros):
+                while(len(binary_opposite_string) < max_length_for_leading_zeros):
+                    binary_opposite_string += '1'
+
+        elif(number == '1'):
+            binary_opposite_string += '0'
+        else:
+            binary_opposite_string += number
+
+    opposite_binary_no_indicator = binary_opposite_string.replace('1b', '')
+
+    return opposite_binary_no_indicator
+
+def calculate_upper_ipv4_range(ip_address, netmask):
+    """
+    calculates the upper ipv4 range
+    """
+    netmask_group = netmask.split('.')
+    ip_address_group = ip_address.split('.')
+    upper_range = ''
+    group_index = 0
+
+    for group in netmask_group:
+        opposite_binary = calculate_binary_opposite(bin(int(group)), 8)
+        ip_address_binary = bin(int(ip_address_group[group_index])).replace('0b', '')
+        character_index = 0
+        current_binary = ''
+        
+        while (len(ip_address_binary) < 8):
+            ip_address_binary += '0'
+        
+        for character in ip_address_binary:
+        
+            if (ip_address_binary[character_index] == '1' and opposite):
+                current_binary += '1'
+            else:
+                current_binary += '0'
+            character_index += 1
+       
+        print(opposite_binary)
+        print(ip_address_binary)
+        print(current_binary)
+        upper_range += '.' + str(int(current_binary, 2))
+        group_index += 1
+
+    print(upper_range)
+    return upper_range[1:]
+
+if (__name__ == '__main__'):
+    calculate_upper_ipv4_range('160.160.160.160', '255.255.192.0')

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="2" file="subnet_calculator_tests.py" name="subnet_calculator_tests.TestCalculateBinaryOpposite-20201010184338" skipped="0" tests="5" time="0.011" timestamp="2020-10-10T18:43:38">
+	<testcase classname="subnet_calculator_tests.TestCalculateBinaryOpposite" name="test_large_binary_string" time="0.001" timestamp="2020-10-10T18:43:38"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateBinaryOpposite" name="test_one_one" time="0.001" timestamp="2020-10-10T18:43:38"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateBinaryOpposite" name="test_seperated_binary_string" time="0.001" timestamp="2020-10-10T18:43:38"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateBinaryOpposite" name="test_one_zero" time="0.004" timestamp="2020-10-10T18:43:38">
+		<failure message="'1' != '11111111'
+- 1
++ 11111111
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1000, in test_one_zero
+    self.assertEquals('1', binary_opposite)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '1' != '11111111'
+- 1
++ 11111111
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateBinaryOpposite" name="test_small_binary_string" time="0.004" timestamp="2020-10-10T18:43:38">
+		<failure message="'010110' != '011111110110'
+- 010110
++ 011111110110
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1010, in test_small_binary_string
+    self.assertEquals('010110', binary_opposite)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '010110' != '011111110110'
+- 010110
++ 011111110110
+
+]]>		</failure>
+	</testcase>
+</testsuite>
