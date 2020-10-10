@@ -9,7 +9,6 @@ __version__ = "30-September-2020"
 
 IPV6_MAX_COLONS = 7
 IPV6_MAX_GROUPS = 8
-NETMASK_PERIOD_INDEX = 9
 IPV4_NETMASK_MAX_PERIODS = 3
 IPV6_NETMASK_MAX_PERIODS = 7
 IPV4_NETMASK_MAX_LENGTH = 35
@@ -85,38 +84,38 @@ def validate_ipv6_netmask_bit_format(netmask):
     return False
 
 
-def convert_netmask_bits_to_binary(netmask, max_length):
+def convert_netmask_bits_to_binary(netmask, max_length, period_index):
     """
     Converts netmask bits to a binary string
     """
 
-    netmask_bits_index = max_length
+    netmask_bits_index = 0
     current_netmask_bits = int(netmask)
     binary_netmask = ''
 
-    while(netmask_bits_index != 0):
+    while(netmask_bits_index <= max_length):
 
-        if (netmask_bits_index % NETMASK_PERIOD_INDEX == 0):
+        if (netmask_bits_index % period_index == 0):
             binary_netmask += '.'
-            netmask_bits_index -= 1
+            netmask_bits_index += 1
         elif (current_netmask_bits != 0):
             binary_netmask += '1'
             current_netmask_bits -= 1
-            netmask_bits_index -= 1
+            netmask_bits_index += 1
         else:
             binary_netmask += '0'
-            netmask_bits_index -= 1
-
-    return binary_netmask
+            netmask_bits_index += 1
+    
+    binary_netmask_no_leading_period = binary_netmask[1:]
+    return binary_netmask_no_leading_period
 
 def calculate_ipv4_subnet(ip_address, netmask):
     """
-    calculates an ip address given that it is in valid ipv4 or binary format
+    calculates an ip address given that it is in valid ipv4 format
     """
     split_ip_address = ip_address.split('.')
     subnet = ""
     current_octet_index = 0
-
     split_netmask = netmask.split('.')
     
     for octet in split_ip_address:        
@@ -133,9 +132,7 @@ def calculate_ipv4_subnet(ip_address, netmask):
     subnet_without_leading_period = subnet[1:]
     return subnet_without_leading_period
 
-#def calculate_ipv6_address(ip_address, netmask):
 
-    
 
 def expand_ipv6_address(ip_address):
     """
@@ -160,3 +157,28 @@ def expand_ipv6_address(ip_address):
     expanded_ipv6_without_leading_colon = expanded_ipv6[1:]
     
     return expanded_ipv6_without_leading_colon
+
+def calculate_ipv6_subnet(ip_address, netmask):
+
+    """
+    calculates an ip address given it is in valid ipv6 format
+    """
+
+    expanded_ipv6_address = expand_ipv6_address(ip_address)
+    split_ip_address = expanded_ipv6_address.split(':')
+    split_netmask = netmask.split('.')
+    current_group_index = 0
+    subnet = ""
+
+    for group in split_ip_address:
+        current_netmask_as_integer = int(split_netmask[current_group_index], 2)
+        binary_group = bin(int(group, 16) & current_netmask_as_integer)
+        binary_group_without_indicator = binary_group.replace('0b', '')
+        subnet_as_hexadecimal = hex(int(binary_group_without_indicator, 2))
+        hexadecimal_without_indicator = subnet_as_hexadecimal[2:] 
+        subnet += ':' + hexadecimal_without_indicator
+        current_group_index += 1
+    
+    subnet_without_leading_period = subnet[1:]
+    return subnet_without_leading_period
+

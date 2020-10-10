@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="6" file="subnet_calculator_tests.py" name="subnet_calculator_tests.TestConvertNetmaskBitsToBinary-20201010095901" skipped="0" tests="12" time="0.233" timestamp="2020-10-10T09:59:02">
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_maximum_ipv4_netmask" time="0.001" timestamp="2020-10-10T09:59:02"/>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_minimum_netmask" time="0.008" timestamp="2020-10-10T09:59:02"/>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_netmask_one_above_minimum" time="0.001" timestamp="2020-10-10T09:59:02"/>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_netmask_well_above_minimum" time="0.001" timestamp="2020-10-10T09:59:02"/>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_one_below_maximum_ipv4_netmask" time="0.001" timestamp="2020-10-10T09:59:02"/>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_well_below_maximum_ipv4_netmask" time="0.006" timestamp="2020-10-10T09:59:02"/>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_maximum_ipv6_netmask" time="0.038" timestamp="2020-10-10T09:59:02">
+		<failure message="'11111111.11111111.11111111.11111111.11111111.111[91 chars]1111' != '1111111.1111111111111111.1111111111111111.111111[91 chars]0000'
+- 11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111
+?                  -                 -                 -                 -                 -                 -                 - ^^^^^^^^^^^^^^^^
++ 1111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111110000000
+? ++++++++++++++++                                                                                                                        ^^^^^^^
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 743, in test_maximum_ipv6_netmask
+    self.assertEquals('11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111', binary_netmask)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '11111111.11111111.11111111.11111111.11111111.111[91 chars]1111' != '1111111.1111111111111111.1111111111111111.111111[91 chars]0000'
+- 11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111
+?                  -                 -                 -                 -                 -                 -                 - ^^^^^^^^^^^^^^^^
++ 1111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111110000000
+? ++++++++++++++++                                                                                                                        ^^^^^^^
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_minimum_ipv6_netmask" time="0.054" timestamp="2020-10-10T09:59:02">
+		<failure message="'10000000.00000000.00000000.00000000.00000000.000[91 chars]0000' != '1000000.0000000000000000.0000000000000000.000000[91 chars]0000'
+- 10000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000
+?         ^                 -                 -                 -                 -                 -                 -                 -
++ 1000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000
+?        + ^^^^^^^
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 728, in test_minimum_ipv6_netmask
+    self.assertEquals('10000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000', binary_netmask)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '10000000.00000000.00000000.00000000.00000000.000[91 chars]0000' != '1000000.0000000000000000.0000000000000000.000000[91 chars]0000'
+- 10000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000
+?         ^                 -                 -                 -                 -                 -                 -                 -
++ 1000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000
+?        + ^^^^^^^
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_one_above_minimum_ipv6_netmask" time="0.043" timestamp="2020-10-10T09:59:02">
+		<failure message="'11000000.00000000.00000000.00000000.00000000.000[91 chars]0000' != '1100000.0000000000000000.0000000000000000.000000[91 chars]0000'
+- 11000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000
+?         ^                 -                 -                 -                 -                 -                 -                 -
++ 1100000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000
+?        + ^^^^^^^
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 733, in test_one_above_minimum_ipv6_netmask
+    self.assertEquals('11000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000', binary_netmask)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '11000000.00000000.00000000.00000000.00000000.000[91 chars]0000' != '1100000.0000000000000000.0000000000000000.000000[91 chars]0000'
+- 11000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000
+?         ^                 -                 -                 -                 -                 -                 -                 -
++ 1100000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000
+?        + ^^^^^^^
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_one_below_maximum_ipv6_netmask" time="0.031" timestamp="2020-10-10T09:59:02">
+		<failure message="'11111111.11111111.11111111.11111111.11111111.111[91 chars]1110' != '1111111.1111111111111111.1111111111111111.111111[91 chars]0000'
+- 11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111110
+?                  -                 -                 -                 -                 -                 -                 ^^^^^^^^^^^^^^^^^
++ 1111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111100000000
+? ++++++++++++++++                                                                                                                       ^^^^^^^
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 748, in test_one_below_maximum_ipv6_netmask
+    self.assertEquals('11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111110', binary_netmask)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '11111111.11111111.11111111.11111111.11111111.111[91 chars]1110' != '1111111.1111111111111111.1111111111111111.111111[91 chars]0000'
+- 11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111110
+?                  -                 -                 -                 -                 -                 -                 ^^^^^^^^^^^^^^^^^
++ 1111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111100000000
+? ++++++++++++++++                                                                                                                       ^^^^^^^
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_well_above_minimum_ipv6_netmask" time="0.026" timestamp="2020-10-10T09:59:02">
+		<failure message="'11111111.11111111.11111111.11111111.11111111.111[91 chars]0000' != '1111111.1111111111111111.1111111111111111.111111[91 chars]0000'
+- 11111111.11111111.11111111.11111111.11111111.11111111.11111110.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000
+?                  -                 -         ---------------- ^                 -                 -                 -                 -
++ 1111111.1111111111111111.1111111111111111.1111111111111111.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000
+? ++++++++++++++++                                            ^^^^^^^
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 738, in test_well_above_minimum_ipv6_netmask
+    self.assertEquals('11111111.11111111.11111111.11111111.11111111.11111111.11111110.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000', binary_netmask)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '11111111.11111111.11111111.11111111.11111111.111[91 chars]0000' != '1111111.1111111111111111.1111111111111111.111111[91 chars]0000'
+- 11111111.11111111.11111111.11111111.11111111.11111111.11111110.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000
+?                  -                 -         ---------------- ^                 -                 -                 -                 -
++ 1111111.1111111111111111.1111111111111111.1111111111111111.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000
+? ++++++++++++++++                                            ^^^^^^^
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_well_below_maximum_ipv6_netmask" time="0.023" timestamp="2020-10-10T09:59:02">
+		<failure message="'1111111111111111.1111111111111111.11111111111111[83 chars]0000' != '1111111.1111111111111111.1111111111111111.111111[91 chars]0000'
+- 1111111111111111.1111111111111111.1111111111111111.1111111111111111.0000000000000000.0000000000000000.0000000000000000.0000000000000000
+?                                                             ^^^^^^^
++ 1111111.1111111111111111.1111111111111111.1111111111111111.1111111110000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000
+? ++++++++                                                            ^^^^^^^
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 753, in test_well_below_maximum_ipv6_netmask
+    self.assertEquals('1111111111111111.1111111111111111.1111111111111111.1111111111111111.0000000000000000.0000000000000000.0000000000000000.0000000000000000', binary_netmask)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '1111111111111111.1111111111111111.11111111111111[83 chars]0000' != '1111111.1111111111111111.1111111111111111.111111[91 chars]0000'
+- 1111111111111111.1111111111111111.1111111111111111.1111111111111111.0000000000000000.0000000000000000.0000000000000000.0000000000000000
+?                                                             ^^^^^^^
++ 1111111.1111111111111111.1111111111111111.1111111111111111.1111111110000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000
+? ++++++++                                                            ^^^^^^^
+
+]]>		</failure>
+	</testcase>
+</testsuite>

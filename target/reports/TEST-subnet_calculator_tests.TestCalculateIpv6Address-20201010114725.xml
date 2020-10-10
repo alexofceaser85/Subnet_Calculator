@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" file="subnet_calculator_tests.py" name="subnet_calculator_tests.TestCalculateIpv6Address-20201010114725" skipped="0" tests="1" time="0.001" timestamp="2020-10-10T11:47:26">
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv6Address" name="test_calculate_subnet_in_bit_format_with_minimum_ip_and_minimum_subnet" time="0.001" timestamp="2020-10-10T11:47:26"/>
+</testsuite>

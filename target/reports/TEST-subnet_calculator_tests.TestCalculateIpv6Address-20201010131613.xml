@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="9" file="subnet_calculator_tests.py" name="subnet_calculator_tests.TestCalculateIpv6Address-20201010131613" skipped="0" tests="14" time="0.034" timestamp="2020-10-10T13:16:14">
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv6Address" name="test_calculate_subnet_in_bit_format_with_minimum_ip_and_minimum_subnet" time="0.001" timestamp="2020-10-10T13:16:14"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv6Address" name="test_calculate_subnet_in_bit_format_with_minimum_ip_and_one_above_minimum_subnet" time="0.001" timestamp="2020-10-10T13:16:14"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv6Address" name="test_calculate_subnet_in_bit_format_with_minimum_ip_and_well_above_minimum_subnet" time="0.001" timestamp="2020-10-10T13:16:14"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv6Address" name="test_calculate_subnet_in_bit_format_with_one_above_minimum_ip_and_minimum_subnet" time="0.001" timestamp="2020-10-10T13:16:14"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv6Address" name="test_calculate_subnet_in_bit_format_with_one_above_minimum_ip_and_one_above_minimum_subnet" time="0.001" timestamp="2020-10-10T13:16:14"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv6Address" name="test_calculate_subnet_in_bit_format_maximum_ip_and_well_below_maximum_subnet" time="0.004" timestamp="2020-10-10T13:16:14">
+		<failure message="'ffff:ffff:ffff:ffff:fff0:0000:0000:0000' != '65535:65535:65535:65535:65535:65535:65535:65535'
+- ffff:ffff:ffff:ffff:fff0:0000:0000:0000
++ 65535:65535:65535:65535:65535:65535:65535:65535
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 947, in test_calculate_subnet_in_bit_format_maximum_ip_and_well_below_maximum_subnet
+    self.assertEquals('ffff:ffff:ffff:ffff:fff0:0000:0000:0000', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: 'ffff:ffff:ffff:ffff:fff0:0000:0000:0000' != '65535:65535:65535:65535:65535:65535:65535:65535'
+- ffff:ffff:ffff:ffff:fff0:0000:0000:0000
++ 65535:65535:65535:65535:65535:65535:65535:65535
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv6Address" name="test_calculate_subnet_in_bit_format_with_maximum_ip_and_maximum_subnet" time="0.003" timestamp="2020-10-10T13:16:14">
+		<failure message="'ffff:ffff:ffff:ffff:ffff:ffff:ffff:fffe' != '65535:65535:65535:65535:65535:65535:65535:65535'
+- ffff:ffff:ffff:ffff:ffff:ffff:ffff:fffe
++ 65535:65535:65535:65535:65535:65535:65535:65535
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 937, in test_calculate_subnet_in_bit_format_with_maximum_ip_and_maximum_subnet
+    self.assertEquals('ffff:ffff:ffff:ffff:ffff:ffff:ffff:fffe', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: 'ffff:ffff:ffff:ffff:ffff:ffff:ffff:fffe' != '65535:65535:65535:65535:65535:65535:65535:65535'
+- ffff:ffff:ffff:ffff:ffff:ffff:ffff:fffe
++ 65535:65535:65535:65535:65535:65535:65535:65535
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv6Address" name="test_calculate_subnet_in_bit_format_with_maximum_ip_and_one_below_maximum_subnet" time="0.003" timestamp="2020-10-10T13:16:14">
+		<failure message="'ffff:ffff:ffff:ffff:ffff:ffff:ffff:fffe' != '65535:65535:65535:65535:65535:65535:65535:65535'
+- ffff:ffff:ffff:ffff:ffff:ffff:ffff:fffe
++ 65535:65535:65535:65535:65535:65535:65535:65535
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 942, in test_calculate_subnet_in_bit_format_with_maximum_ip_and_one_below_maximum_subnet
+    self.assertEquals('ffff:ffff:ffff:ffff:ffff:ffff:ffff:fffe', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: 'ffff:ffff:ffff:ffff:ffff:ffff:ffff:fffe' != '65535:65535:65535:65535:65535:65535:65535:65535'
+- ffff:ffff:ffff:ffff:ffff:ffff:ffff:fffe
++ 65535:65535:65535:65535:65535:65535:65535:65535
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv6Address" name="test_calculate_subnet_in_bit_format_with_one_below_maximum_ip_and_maximum_subnet" time="0.003" timestamp="2020-10-10T13:16:14">
+		<failure message="'eeee:eeee:eeee:eeee:eeee:eeee:eeee:eeee' != '61166:61166:61166:61166:61166:61166:61166:61166'
+- eeee:eeee:eeee:eeee:eeee:eeee:eeee:eeee
++ 61166:61166:61166:61166:61166:61166:61166:61166
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 952, in test_calculate_subnet_in_bit_format_with_one_below_maximum_ip_and_maximum_subnet
+    self.assertEquals('eeee:eeee:eeee:eeee:eeee:eeee:eeee:eeee', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: 'eeee:eeee:eeee:eeee:eeee:eeee:eeee:eeee' != '61166:61166:61166:61166:61166:61166:61166:61166'
+- eeee:eeee:eeee:eeee:eeee:eeee:eeee:eeee
++ 61166:61166:61166:61166:61166:61166:61166:61166
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv6Address" name="test_calculate_subnet_in_bit_format_with_one_below_maximum_ip_and_one_below_maximum_subnet" time="0.003" timestamp="2020-10-10T13:16:14">
+		<failure message="'eeee:eeee:eeee:eeee:eeee:eeee:eeee:eeec' != '61166:61166:61166:61166:61166:61166:61166:61166'
+- eeee:eeee:eeee:eeee:eeee:eeee:eeee:eeec
++ 61166:61166:61166:61166:61166:61166:61166:61166
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 962, in test_calculate_subnet_in_bit_format_with_one_below_maximum_ip_and_one_below_maximum_subnet
+    self.assertEquals('eeee:eeee:eeee:eeee:eeee:eeee:eeee:eeec', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: 'eeee:eeee:eeee:eeee:eeee:eeee:eeee:eeec' != '61166:61166:61166:61166:61166:61166:61166:61166'
+- eeee:eeee:eeee:eeee:eeee:eeee:eeee:eeec
++ 61166:61166:61166:61166:61166:61166:61166:61166
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv6Address" name="test_calculate_subnet_in_bit_format_with_well_above_minimum_ip_and_minimum_subnet" time="0.003" timestamp="2020-10-10T13:16:14">
+		<failure message="'0:0:0:0:0:0:0:0' != '0:0:32768:32768:0:32768:32768:32768'
+- 0:0:0:0:0:0:0:0
++ 0:0:32768:32768:0:32768:32768:32768
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 922, in test_calculate_subnet_in_bit_format_with_well_above_minimum_ip_and_minimum_subnet
+    self.assertEquals('0:0:0:0:0:0:0:0', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '0:0:0:0:0:0:0:0' != '0:0:32768:32768:0:32768:32768:32768'
+- 0:0:0:0:0:0:0:0
++ 0:0:32768:32768:0:32768:32768:32768
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv6Address" name="test_calculate_subnet_in_bit_format_with_well_above_minimum_ip_and_well_above_minimum_subnet" time="0.003" timestamp="2020-10-10T13:16:14">
+		<failure message="'11f5:1a41:9c31:e1a0:0:0:0:0' != '4597:6721:39985:57761:5121:41125:49857:43473'
+- 11f5:1a41:9c31:e1a0:0:0:0:0
++ 4597:6721:39985:57761:5121:41125:49857:43473
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 932, in test_calculate_subnet_in_bit_format_with_well_above_minimum_ip_and_well_above_minimum_subnet
+    self.assertEquals('11f5:1a41:9c31:e1a0:0:0:0:0', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '11f5:1a41:9c31:e1a0:0:0:0:0' != '4597:6721:39985:57761:5121:41125:49857:43473'
+- 11f5:1a41:9c31:e1a0:0:0:0:0
++ 4597:6721:39985:57761:5121:41125:49857:43473
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv6Address" name="test_calculate_subnet_in_bit_format_with_well_below_maximum_ip_and_maximum_subnet" time="0.003" timestamp="2020-10-10T13:16:14">
+		<failure message="'55d5:a4ff:c585:d5c7:b999:c58c:ffd5:d784' != '21973:42239:50565:54727:47513:50572:65493:55172'
+- 55d5:a4ff:c585:d5c7:b999:c58c:ffd5:d784
++ 21973:42239:50565:54727:47513:50572:65493:55172
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 957, in test_calculate_subnet_in_bit_format_with_well_below_maximum_ip_and_maximum_subnet
+    self.assertEquals('55d5:a4ff:c585:d5c7:b999:c58c:ffd5:d784', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '55d5:a4ff:c585:d5c7:b999:c58c:ffd5:d784' != '21973:42239:50565:54727:47513:50572:65493:55172'
+- 55d5:a4ff:c585:d5c7:b999:c58c:ffd5:d784
++ 21973:42239:50565:54727:47513:50572:65493:55172
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv6Address" name="test_calculate_subnet_in_ip_format_with_well_below_maximum_ip_and_well_below_maximum_subnet" time="0.004" timestamp="2020-10-10T13:16:14">
+		<failure message="'55f5:a4ff:c585:d5c7:b999:c580:0000:0000' != '21973:42239:50565:54727:47513:50572:65493:55172'
+- 55f5:a4ff:c585:d5c7:b999:c580:0000:0000
++ 21973:42239:50565:54727:47513:50572:65493:55172
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 967, in test_calculate_subnet_in_ip_format_with_well_below_maximum_ip_and_well_below_maximum_subnet
+    self.assertEquals('55f5:a4ff:c585:d5c7:b999:c580:0000:0000', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '55f5:a4ff:c585:d5c7:b999:c580:0000:0000' != '21973:42239:50565:54727:47513:50572:65493:55172'
+- 55f5:a4ff:c585:d5c7:b999:c580:0000:0000
++ 21973:42239:50565:54727:47513:50572:65493:55172
+
+]]>		</failure>
+	</testcase>
+</testsuite>

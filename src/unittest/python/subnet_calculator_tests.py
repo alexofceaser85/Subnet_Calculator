@@ -4,8 +4,9 @@ import unittest
 import subnet_calculator
 
 IPV4_NETMASK_MAX_LENGTH = 35
-IPV6_NETMASK_MAX_LENGTH = 143
-
+IPV6_NETMASK_MAX_LENGTH = 135
+IPV4_NETMASK_PERIOD_INDEX = 9
+IPV6_NETMASK_PERIOD_INDEX = 17
 
 class TestValidateIpv4Address(unittest.TestCase):
 
@@ -693,63 +694,63 @@ class TestConvertNetmaskBitsToBinary(unittest.TestCase):
 
     def test_minimum_netmask(self):
 
-        binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('1', IPV4_NETMASK_MAX_LENGTH)
+        binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('1', IPV4_NETMASK_MAX_LENGTH, IPV4_NETMASK_PERIOD_INDEX)
         self.assertEquals('10000000.00000000.00000000.00000000', binary_netmask)
 
     def test_netmask_one_above_minimum(self):
 
-        binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('2', IPV4_NETMASK_MAX_LENGTH)
+        binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('2', IPV4_NETMASK_MAX_LENGTH, IPV4_NETMASK_PERIOD_INDEX)
         self.assertEquals('11000000.00000000.00000000.00000000', binary_netmask)
 
     def test_netmask_well_above_minimum(self):
 
-        binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('12', IPV4_NETMASK_MAX_LENGTH)
+        binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('12', IPV4_NETMASK_MAX_LENGTH, IPV4_NETMASK_PERIOD_INDEX)
         self.assertEquals('11111111.11110000.00000000.00000000', binary_netmask)
 
     def test_maximum_ipv4_netmask(self):
 
-        binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('31', IPV4_NETMASK_MAX_LENGTH)
+        binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('31', IPV4_NETMASK_MAX_LENGTH, IPV4_NETMASK_PERIOD_INDEX)
         self.assertEquals('11111111.11111111.11111111.11111110', binary_netmask)
 
     def test_one_below_maximum_ipv4_netmask(self):
 
-        binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('30', IPV4_NETMASK_MAX_LENGTH)
+        binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('30', IPV4_NETMASK_MAX_LENGTH, IPV4_NETMASK_PERIOD_INDEX)
         self.assertEquals('11111111.11111111.11111111.11111100', binary_netmask)
 
     def test_well_below_maximum_ipv4_netmask(self):
 
-        binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('16', IPV4_NETMASK_MAX_LENGTH)
+        binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('16', IPV4_NETMASK_MAX_LENGTH, IPV4_NETMASK_PERIOD_INDEX)
         self.assertEquals('11111111.11111111.00000000.00000000', binary_netmask)
 
     def test_minimum_ipv6_netmask(self):
 
-        binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('1', IPV6_NETMASK_MAX_LENGTH)
-        self.assertEquals('10000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000', binary_netmask)
+        binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('1', IPV6_NETMASK_MAX_LENGTH, IPV6_NETMASK_PERIOD_INDEX)
+        self.assertEquals('1000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000', binary_netmask)
 
     def test_one_above_minimum_ipv6_netmask(self):
 
-        binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('2', IPV6_NETMASK_MAX_LENGTH)
-        self.assertEquals('11000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000', binary_netmask)
+        binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('2', IPV6_NETMASK_MAX_LENGTH, IPV6_NETMASK_PERIOD_INDEX)
+        self.assertEquals('1100000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000', binary_netmask)
 
     def test_well_above_minimum_ipv6_netmask(self):
 
-        binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('55', IPV6_NETMASK_MAX_LENGTH)
-        self.assertEquals('11111111.11111111.11111111.11111111.11111111.11111111.11111110.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000', binary_netmask)
+        binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('55', IPV6_NETMASK_MAX_LENGTH, IPV6_NETMASK_PERIOD_INDEX)
+        self.assertEquals('1111111111111111.1111111111111111.1111111111111111.1111111000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000', binary_netmask)
 
     def test_maximum_ipv6_netmask(self):
 
-        binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('128', IPV6_NETMASK_MAX_LENGTH)
-        self.assertEquals('11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111', binary_netmask)
+        binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('128', IPV6_NETMASK_MAX_LENGTH, IPV6_NETMASK_PERIOD_INDEX)
+        self.assertEquals('1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111', binary_netmask)
 
     def test_one_below_maximum_ipv6_netmask(self):
 
-        binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('127', IPV6_NETMASK_MAX_LENGTH)
-        self.assertEquals('11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111110', binary_netmask)
+        binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('127', IPV6_NETMASK_MAX_LENGTH, IPV6_NETMASK_PERIOD_INDEX)
+        self.assertEquals('1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111110', binary_netmask)
 
     def test_well_below_maximum_ipv6_netmask(self):
 
-        binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('64', IPV6_NETMASK_MAX_LENGTH)
-        self.assertEquals('11111111.11111111.11111111.11111111.11111111.11111111.11111111.11111111.00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000', binary_netmask)
+        binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('64', IPV6_NETMASK_MAX_LENGTH, IPV6_NETMASK_PERIOD_INDEX)
+        self.assertEquals('1111111111111111.1111111111111111.1111111111111111.1111111111111111.0000000000000000.0000000000000000.0000000000000000.0000000000000000', binary_netmask)
 
 class TestCalculateIpv4Subnet(unittest.TestCase):
 
@@ -893,6 +894,78 @@ class TestCalculateIpv4Subnet(unittest.TestCase):
         subnet = subnet_calculator.calculate_ipv4_subnet('160.160.160.160', '11111111.11111111.11110000.0')
         self.assertEquals('160.160.160.0', subnet)
 
+class TestCalculateIpv6Address(unittest.TestCase):
+
+    def test_calculate_subnet_in_bit_format_with_minimum_ip_and_minimum_subnet(self):
+
+        subnet = subnet_calculator.calculate_ipv6_subnet('0000:0000:0000:0000:0000:0000:0000:0000', '1000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000')
+        self.assertEquals('0:0:0:0:0:0:0:0', subnet)
+    
+    def test_calculate_subnet_in_bit_format_with_minimum_ip_and_one_above_minimum_subnet(self):
+
+        subnet = subnet_calculator.calculate_ipv6_subnet('0000:0000:0000:0000:0000:0000:0000:0000', '1100000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000')
+        self.assertEquals('0:0:0:0:0:0:0:0', subnet)
+
+    def test_calculate_subnet_in_bit_format_with_minimum_ip_and_well_above_minimum_subnet(self):
+
+        subnet = subnet_calculator.calculate_ipv6_subnet('0000:0000:0000:0000:0000:0000:0000:0000', '1111111111111111.1111111100000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000')
+        self.assertEquals('0:0:0:0:0:0:0:0', subnet)
+
+    def test_calculate_subnet_in_bit_format_with_one_above_minimum_ip_and_minimum_subnet(self):
+
+        subnet = subnet_calculator.calculate_ipv6_subnet('1111:1111:1111:1111:1111:1111:1111:1111', '1000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000')
+        self.assertEquals('0:0:0:0:0:0:0:0', subnet)
+
+    def test_calculate_subnet_in_bit_format_with_well_above_minimum_ip_and_minimum_subnet(self):
+
+        subnet = subnet_calculator.calculate_ipv6_subnet('11f5:1a41:9c31:e1a1:1401:a0a5:c2c1:a9d1', '1000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000')
+        self.assertEquals('0:0:0:0:0:0:0:0', subnet)
+
+    def test_calculate_subnet_in_bit_format_with_one_above_minimum_ip_and_one_above_minimum_subnet(self):
+
+        subnet = subnet_calculator.calculate_ipv6_subnet('1111:1111:1111:1111:1111:1111:1111:1111', '1100000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000')
+        self.assertEquals('0:0:0:0:0:0:0:0', subnet)
+
+    def test_calculate_subnet_in_bit_format_with_well_above_minimum_ip_and_well_above_minimum_subnet(self):
+
+        subnet = subnet_calculator.calculate_ipv6_subnet('11f5:1a41:9c31:e1a1:1401:a0a5:c2c1:a9d1', '1111111111111111.1111111111111111.1111111111111111.1111111111110000.0000000000000000.0000000000000000.0000000000000000.0000000000000000')
+        self.assertEquals('11f5:1a41:9c31:e1a0:0:0:0:0', subnet)
+
+    def test_calculate_subnet_in_bit_format_with_maximum_ip_and_maximum_subnet(self):
+
+        subnet = subnet_calculator.calculate_ipv6_subnet('ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff', '1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111110')
+        self.assertEquals('ffff:ffff:ffff:ffff:ffff:ffff:ffff:fffe', subnet)
+
+    def test_calculate_subnet_in_bit_format_with_maximum_ip_and_one_below_maximum_subnet(self):
+
+        subnet = subnet_calculator.calculate_ipv6_subnet('ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff', '1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111100')
+        self.assertEquals('ffff:ffff:ffff:ffff:ffff:ffff:ffff:fffc', subnet)
+
+    def test_calculate_subnet_in_bit_format_maximum_ip_and_well_below_maximum_subnet(self):
+
+        subnet = subnet_calculator.calculate_ipv6_subnet('ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff', '1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111110000.0000000000000000.0000000000000000.0000000000000000')
+        self.assertEquals('ffff:ffff:ffff:ffff:fff0:0:0:0', subnet)
+
+    def test_calculate_subnet_in_bit_format_with_one_below_maximum_ip_and_maximum_subnet(self):
+
+        subnet = subnet_calculator.calculate_ipv6_subnet('eeee:eeee:eeee:eeee:eeee:eeee:eeee:eeee', '1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111110')
+        self.assertEquals('eeee:eeee:eeee:eeee:eeee:eeee:eeee:eeee', subnet)
+
+    def test_calculate_subnet_in_bit_format_with_well_below_maximum_ip_and_maximum_subnet(self):
+
+        subnet = subnet_calculator.calculate_ipv6_subnet('55d5:a4ff:c585:d5c7:b999:c58c:ffd5:d784', '1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111110')
+        self.assertEquals('55d5:a4ff:c585:d5c7:b999:c58c:ffd5:d784', subnet)
+
+    def test_calculate_subnet_in_bit_format_with_one_below_maximum_ip_and_one_below_maximum_subnet(self):
+
+        subnet = subnet_calculator.calculate_ipv6_subnet('eeee:eeee:eeee:eeee:eeee:eeee:eeee:eeee', '1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111100')
+        self.assertEquals('eeee:eeee:eeee:eeee:eeee:eeee:eeee:eeec', subnet)
+
+    def test_calculate_subnet_in_ip_format_with_well_below_maximum_ip_and_well_below_maximum_subnet(self):
+
+        subnet = subnet_calculator.calculate_ipv6_subnet('55d5:a4ff:c585:d5c7:b999:c58c:ffd5:d784', '1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111000000.0000000000000000.0000000000000000')
+        self.assertEquals('55d5:a4ff:c585:d5c7:b999:c580:0:0', subnet)
+    
 class TestExpandIpv6Address(unittest.TestCase):
 
     def test_no_empty_groups(self):

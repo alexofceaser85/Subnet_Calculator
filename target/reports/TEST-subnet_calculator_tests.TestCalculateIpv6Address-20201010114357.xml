@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="1" failures="0" file="subnet_calculator_tests.py" name="subnet_calculator_tests.TestCalculateIpv6Address-20201010114357" skipped="0" tests="1" time="0.003" timestamp="2020-10-10T11:43:57">
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv6Address" name="test_calculate_subnet_in_bit_format_with_minimum_ip_and_minimum_subnet" time="0.003" timestamp="2020-10-10T11:43:57">
+		<error message="module 'subnet_calculator' has no attribute 'calculate_ipv6_subnet'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 901, in test_calculate_subnet_in_bit_format_with_minimum_ip_and_minimum_subnet
+    subnet = subnet_calculator.calculate_ipv6_subnet('0000:0000:0000:0000:0000:0000:0000:0000', '1000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000')
+AttributeError: module 'subnet_calculator' has no attribute 'calculate_ipv6_subnet'
+]]>		</error>
+	</testcase>
+</testsuite>

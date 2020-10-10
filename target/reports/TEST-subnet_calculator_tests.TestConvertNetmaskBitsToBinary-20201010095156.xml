@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="12" failures="0" file="subnet_calculator_tests.py" name="subnet_calculator_tests.TestConvertNetmaskBitsToBinary-20201010095156" skipped="0" tests="12" time="0.027" timestamp="2020-10-10T09:51:56">
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_maximum_ipv4_netmask" time="0.003" timestamp="2020-10-10T09:51:56">
+		<error message="name 'NETMASK_PERIOD_INDEX' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 712, in test_maximum_ipv4_netmask
+    binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('31', IPV4_NETMASK_MAX_LENGTH, IPV4_NETMASK_PERIOD_INDEX)
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 98, in convert_netmask_bits_to_binary
+    if (netmask_bits_index % NETMASK_PERIOD_INDEX == 0):
+NameError: name 'NETMASK_PERIOD_INDEX' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_maximum_ipv6_netmask" time="0.002" timestamp="2020-10-10T09:51:56">
+		<error message="name 'NETMASK_PERIOD_INDEX' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 742, in test_maximum_ipv6_netmask
+    binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('128', IPV6_NETMASK_MAX_LENGTH, IPV6_NETMASK_PERIOD_INDEX)
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 98, in convert_netmask_bits_to_binary
+    if (netmask_bits_index % NETMASK_PERIOD_INDEX == 0):
+NameError: name 'NETMASK_PERIOD_INDEX' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_minimum_ipv6_netmask" time="0.002" timestamp="2020-10-10T09:51:56">
+		<error message="name 'NETMASK_PERIOD_INDEX' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 727, in test_minimum_ipv6_netmask
+    binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('1', IPV6_NETMASK_MAX_LENGTH, IPV6_NETMASK_PERIOD_INDEX)
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 98, in convert_netmask_bits_to_binary
+    if (netmask_bits_index % NETMASK_PERIOD_INDEX == 0):
+NameError: name 'NETMASK_PERIOD_INDEX' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_minimum_netmask" time="0.002" timestamp="2020-10-10T09:51:56">
+		<error message="name 'NETMASK_PERIOD_INDEX' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 697, in test_minimum_netmask
+    binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('1', IPV4_NETMASK_MAX_LENGTH, IPV4_NETMASK_PERIOD_INDEX)
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 98, in convert_netmask_bits_to_binary
+    if (netmask_bits_index % NETMASK_PERIOD_INDEX == 0):
+NameError: name 'NETMASK_PERIOD_INDEX' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_netmask_one_above_minimum" time="0.002" timestamp="2020-10-10T09:51:56">
+		<error message="name 'NETMASK_PERIOD_INDEX' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 702, in test_netmask_one_above_minimum
+    binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('2', IPV4_NETMASK_MAX_LENGTH, IPV4_NETMASK_PERIOD_INDEX)
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 98, in convert_netmask_bits_to_binary
+    if (netmask_bits_index % NETMASK_PERIOD_INDEX == 0):
+NameError: name 'NETMASK_PERIOD_INDEX' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_netmask_well_above_minimum" time="0.002" timestamp="2020-10-10T09:51:56">
+		<error message="name 'NETMASK_PERIOD_INDEX' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 707, in test_netmask_well_above_minimum
+    binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('12', IPV4_NETMASK_MAX_LENGTH, IPV4_NETMASK_PERIOD_INDEX)
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 98, in convert_netmask_bits_to_binary
+    if (netmask_bits_index % NETMASK_PERIOD_INDEX == 0):
+NameError: name 'NETMASK_PERIOD_INDEX' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_one_above_minimum_ipv6_netmask" time="0.002" timestamp="2020-10-10T09:51:56">
+		<error message="name 'IPV6_NETMASK_MAX_LENGTH_IPV6_NETMASK_PERIOD_INDEX' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 732, in test_one_above_minimum_ipv6_netmask
+    binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('2', IPV6_NETMASK_MAX_LENGTH_IPV6_NETMASK_PERIOD_INDEX)
+NameError: name 'IPV6_NETMASK_MAX_LENGTH_IPV6_NETMASK_PERIOD_INDEX' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_one_below_maximum_ipv4_netmask" time="0.002" timestamp="2020-10-10T09:51:56">
+		<error message="name 'NETMASK_PERIOD_INDEX' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 717, in test_one_below_maximum_ipv4_netmask
+    binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('30', IPV4_NETMASK_MAX_LENGTH, IPV4_NETMASK_PERIOD_INDEX)
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 98, in convert_netmask_bits_to_binary
+    if (netmask_bits_index % NETMASK_PERIOD_INDEX == 0):
+NameError: name 'NETMASK_PERIOD_INDEX' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_one_below_maximum_ipv6_netmask" time="0.002" timestamp="2020-10-10T09:51:56">
+		<error message="name 'NETMASK_PERIOD_INDEX' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 747, in test_one_below_maximum_ipv6_netmask
+    binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('127', IPV6_NETMASK_MAX_LENGTH, IPV6_NETMASK_PERIOD_INDEX)
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 98, in convert_netmask_bits_to_binary
+    if (netmask_bits_index % NETMASK_PERIOD_INDEX == 0):
+NameError: name 'NETMASK_PERIOD_INDEX' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_well_above_minimum_ipv6_netmask" time="0.002" timestamp="2020-10-10T09:51:56">
+		<error message="name 'NETMASK_PERIOD_INDEX' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 737, in test_well_above_minimum_ipv6_netmask
+    binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('55', IPV6_NETMASK_MAX_LENGTH, IPV6_NETMASK_PERIOD_INDEX)
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 98, in convert_netmask_bits_to_binary
+    if (netmask_bits_index % NETMASK_PERIOD_INDEX == 0):
+NameError: name 'NETMASK_PERIOD_INDEX' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_well_below_maximum_ipv4_netmask" time="0.002" timestamp="2020-10-10T09:51:56">
+		<error message="name 'NETMASK_PERIOD_INDEX' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 722, in test_well_below_maximum_ipv4_netmask
+    binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('16', IPV4_NETMASK_MAX_LENGTH, IPV4_NETMASK_PERIOD_INDEX)
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 98, in convert_netmask_bits_to_binary
+    if (netmask_bits_index % NETMASK_PERIOD_INDEX == 0):
+NameError: name 'NETMASK_PERIOD_INDEX' is not defined
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_well_below_maximum_ipv6_netmask" time="0.002" timestamp="2020-10-10T09:51:56">
+		<error message="name 'NETMASK_PERIOD_INDEX' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 752, in test_well_below_maximum_ipv6_netmask
+    binary_netmask = subnet_calculator.convert_netmask_bits_to_binary('64', IPV6_NETMASK_MAX_LENGTH, IPV6_NETMASK_PERIOD_INDEX)
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 98, in convert_netmask_bits_to_binary
+    if (netmask_bits_index % NETMASK_PERIOD_INDEX == 0):
+NameError: name 'NETMASK_PERIOD_INDEX' is not defined
+]]>		</error>
+	</testcase>
+</testsuite>
