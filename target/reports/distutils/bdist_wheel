@@ -13,6 +13,12 @@ copying __init__.py -> build/lib
 copying subnet_calculator.py -> build/lib
 not copying __init__.py (output up-to-date)
 not copying subnet_calculator.py (output up-to-date)
+running build_scripts
+creating build/scripts-3.6
+copying and adjusting scripts/cs3280project2.py -> build/scripts-3.6
+copying and adjusting scripts/service.py -> build/scripts-3.6
+changing mode of build/scripts-3.6/cs3280project2.py from 644 to 755
+changing mode of build/scripts-3.6/service.py from 644 to 755
 installing to build/bdist.linux-x86_64/wheel
 running install
 running install_lib
@@ -37,10 +43,18 @@ Copying top_level.txt to build/bdist.linux-x86_64/wheel/cs3280project2-1.0.dev0-
 Copying namespace_packages.txt to build/bdist.linux-x86_64/wheel/cs3280project2-1.0.dev0-py3.6.egg-info/namespace_packages.txt
 Copying zip-safe to build/bdist.linux-x86_64/wheel/cs3280project2-1.0.dev0-py3.6.egg-info/zip-safe
 running install_scripts
+creating build/bdist.linux-x86_64/wheel/cs3280project2-1.0.dev0.data
+creating build/bdist.linux-x86_64/wheel/cs3280project2-1.0.dev0.data/scripts
+copying build/scripts-3.6/cs3280project2.py -> build/bdist.linux-x86_64/wheel/cs3280project2-1.0.dev0.data/scripts
+copying build/scripts-3.6/service.py -> build/bdist.linux-x86_64/wheel/cs3280project2-1.0.dev0.data/scripts
+changing mode of build/bdist.linux-x86_64/wheel/cs3280project2-1.0.dev0.data/scripts/cs3280project2.py to 755
+changing mode of build/bdist.linux-x86_64/wheel/cs3280project2-1.0.dev0.data/scripts/service.py to 755
 creating build/bdist.linux-x86_64/wheel/cs3280project2-1.0.dev0.dist-info/WHEEL
 creating 'dist/cs3280project2-1.0.dev0-py3-none-any.whl' and adding 'build/bdist.linux-x86_64/wheel' to it
 adding '__init__.py'
 adding 'subnet_calculator.py'
+adding 'cs3280project2-1.0.dev0.data/scripts/cs3280project2.py'
+adding 'cs3280project2-1.0.dev0.data/scripts/service.py'
 adding 'cs3280project2-1.0.dev0.dist-info/METADATA'
 adding 'cs3280project2-1.0.dev0.dist-info/WHEEL'
 adding 'cs3280project2-1.0.dev0.dist-info/namespace_packages.txt'

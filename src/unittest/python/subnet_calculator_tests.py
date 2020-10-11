@@ -1178,5 +1178,40 @@ class CalculateUpperIpv6Range(unittest.TestCase):
         subnet = subnet_calculator.calculate_upper_ipv6_range('ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff','1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111')
         self.assertEquals('ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff', subnet)
 
+class CalculateLowerIpv4Range(unittest.TestCase):
+
+    def test_calculate_lower_in_bit_format_minimum_ip_and_minimum_subnet(self):
+
+        subnet = subnet_calculator.calculate_lower_ipv4_range('0.0.0.0', '10000000.00000000.00000000.00000000')
+        self.assertEquals('0.0.0.1', subnet)
+
+    def test_calculate_lower_in_bit_format_one_above_minimum_ip_and_one_above_minimum_subnet(self):
+
+        subnet = subnet_calculator.calculate_lower_ipv4_range('1.1.1.1', '11000000.00000000.00000000.00000000')
+        self.assertEquals('0.0.0.1', subnet)
+
+    def test_calculate_lower_in_bit_format_well_above_minimum_ip_and_well_above_minimum_subnet(self):
+
+        subnet = subnet_calculator.calculate_lower_ipv4_range('160.160.160.100', '11111111.11111100.00000000.00000000')
+        self.assertEquals('160.160.0.1', subnet)
+
+    def test_calculate_lower_in_bit_format_maximum_ip_and_maximum_subnet(self):
+
+        subnet = subnet_calculator.calculate_lower_ipv4_range('255.255.255.255', '11111111.11111111.11111111.11111110')
+        self.assertEquals('255.255.255.255', subnet)
+
+    def test_calculate_lower_in_bit_format_one_below_maximum_ip_and_one_below_maximum_subnet(self):
+
+        subnet = subnet_calculator.calculate_lower_ipv4_range('254.254.254.254', '11111111.11111111.11111111.11111100')
+        self.assertEquals('254.254.254.253', subnet)
+
+    def test_calculate_lower_in_bit_format_well_below_maximum_ip_and_well_below_maximum_subnet(self):
+
+        subnet = subnet_calculator.calculate_lower_ipv4_range('254.128.0.0', '11111111.11111111.11100000.00000000')
+        self.assertEquals('254.128.0.1', subnet)
+
+
+
+
 if __name__ == '__main__':
     unittest.main()

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" file="subnet_calculator_tests.py" name="subnet_calculator_tests.TestExpandIpv6Address-20201011142511" skipped="0" tests="4" time="0.005" timestamp="2020-10-11T14:25:12">
+	<testcase classname="subnet_calculator_tests.TestExpandIpv6Address" name="test_many_empty_groups" time="0.001" timestamp="2020-10-11T14:25:12"/>
+	<testcase classname="subnet_calculator_tests.TestExpandIpv6Address" name="test_no_empty_groups" time="0.001" timestamp="2020-10-11T14:25:12"/>
+	<testcase classname="subnet_calculator_tests.TestExpandIpv6Address" name="test_one_empty_group" time="0.001" timestamp="2020-10-11T14:25:12"/>
+	<testcase classname="subnet_calculator_tests.TestExpandIpv6Address" name="test_only_empty_groups" time="0.001" timestamp="2020-10-11T14:25:12"/>
+</testsuite>

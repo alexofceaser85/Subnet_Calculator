@@ -41,7 +41,10 @@ if __name__ == '__main__':
         url = '',
         project_urls = {},
 
-        scripts = [],
+        scripts = [
+            'scripts/cs3280project2.py',
+            'scripts/service.py'
+        ],
         packages = ['.'],
         namespace_packages = [],
         py_modules = [

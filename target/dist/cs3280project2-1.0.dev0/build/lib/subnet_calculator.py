@@ -73,7 +73,6 @@ def validate_ipv4_netmask_bit_format(netmask):
     return False
 
 def validate_ipv6_netmask_bit_format(netmask):
-
     """
     Checks if the given ipv6 netmask is in a valid bit format
     for example: 64 is valid but 255.255.255.255.255.255.255.255 is not
@@ -90,7 +89,6 @@ def convert_netmask_bits_to_binary(netmask, max_length, period_index):
     """
     Converts netmask bits to a binary string
     """
-
     netmask_bits_index = 0
     current_netmask_bits = int(netmask)
     binary_netmask = ''
@@ -134,13 +132,10 @@ def calculate_ipv4_subnet(ip_address, netmask):
     subnet_without_leading_period = subnet[1:]
     return subnet_without_leading_period
 
-
-
 def expand_ipv6_address(ip_address):
     """
     searches the ipv6 address for shortened zero groups (::) and expands them to include the zeros in the groups
     """
-
     split_ip_address = ip_address.split(':')
     group_index = 0
     expanded_ipv6 = ''
@@ -275,4 +270,37 @@ def calculate_upper_ipv6_range(ip_address, netmask):
     upper_range_no_leading_period = upper_range[1:]
     return upper_range_no_leading_period
 
+def calculate_lower_ipv4_range(ip_address, netmask):
+    """
+    calculates the lower range of an ipv4 address
+    """
+    netmask_group = netmask.split('.')
+    ip_address_group = calculate_ipv4_subnet(ip_address, netmask).split('.')
+    upper_range = ''
+    group_index = 0
+
+    for group in netmask_group:
+        current_netmask_as_integer = 0
+
+        ip_address_binary = bin(int(ip_address_group[group_index])).replace('0b', '')
+        current_binary = ''
+        character_index = 0
+        
+        while (len(ip_address_binary) < 8):
+            ip_address_binary += '0'
+        
+        for character in ip_address_binary:
+            if(group_index == (len(ip_address_group) - 1) and (character_index == (len(ip_address_binary) - 1))):
+                current_binary += '1'
+            else:
+                current_binary += ip_address_binary[character_index]
+
+            character_index += 1
+        upper_range += '.' + str(int(current_binary, 2))
+        group_index += 1
+        upper_range_no_leading_period = upper_range[1:]
+    return upper_range_no_leading_period
+
+if __name__ == '__main__':
+    calculate_lower_ipv4_range('128.128.171.1', '11111111.11111111.11110000.00000000')
 

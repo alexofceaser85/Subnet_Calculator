@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" file="subnet_calculator_tests.py" name="subnet_calculator_tests.CalculateLowerIpv4Range-20201011184839" skipped="0" tests="1" time="0.003" timestamp="2020-10-11T18:48:40">
+	<testcase classname="subnet_calculator_tests.CalculateLowerIpv4Range" name="test_calculate_lower_in_bit_format_minimum_ip_and_minimum_subnet" time="0.003" timestamp="2020-10-11T18:48:40"/>
+</testsuite>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="1" failures="0" file="service_tests.py" name="service_tests.TestRun-20201011141426" skipped="0" tests="1" time="0.003" timestamp="2020-10-11T14:14:28">
+	<testcase classname="service_tests.TestRun" name="test" time="0.003" timestamp="2020-10-11T14:14:28">
+		<error message="test() takes 0 positional arguments but 1 was given" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+TypeError: test() takes 0 positional arguments but 1 was given
+]]>		</error>
+	</testcase>
+</testsuite>

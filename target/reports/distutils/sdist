@@ -24,6 +24,7 @@ warning: Check: missing meta-data: either (author and author_email) or (maintain
 
 creating cs3280project2-1.0.dev0
 creating cs3280project2-1.0.dev0/cs3280project2.egg-info
+creating cs3280project2-1.0.dev0/scripts
 copying files to cs3280project2-1.0.dev0...
 copying __init__.py -> cs3280project2-1.0.dev0
 copying setup.py -> cs3280project2-1.0.dev0
@@ -34,6 +35,8 @@ copying cs3280project2.egg-info/dependency_links.txt -> cs3280project2-1.0.dev0/
 copying cs3280project2.egg-info/namespace_packages.txt -> cs3280project2-1.0.dev0/cs3280project2.egg-info
 copying cs3280project2.egg-info/top_level.txt -> cs3280project2-1.0.dev0/cs3280project2.egg-info
 copying cs3280project2.egg-info/zip-safe -> cs3280project2-1.0.dev0/cs3280project2.egg-info
+copying scripts/cs3280project2.py -> cs3280project2-1.0.dev0/scripts
+copying scripts/service.py -> cs3280project2-1.0.dev0/scripts
 not copying cs3280project2.egg-info/SOURCES.txt (output up-to-date)
 Reading configuration from cs3280project2-1.0.dev0/setup.cfg
 Adding new section [egg_info] to cs3280project2-1.0.dev0/setup.cfg

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="1" failures="0" file="service_tests.py" name="service_tests.TestRun-20201011141519" skipped="0" tests="1" time="0.003" timestamp="2020-10-11T14:15:22">
+	<testcase classname="service_tests.TestRun" name="test" time="0.003" timestamp="2020-10-11T14:15:22">
+		<error message="name 'run' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/service_tests.py", line 9, in test
+    x = run('<h1>hello</h1>')
+NameError: name 'run' is not defined
+]]>		</error>
+	</testcase>
+</testsuite>
