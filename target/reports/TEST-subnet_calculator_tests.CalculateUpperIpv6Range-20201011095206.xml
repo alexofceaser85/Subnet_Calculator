@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="2" file="subnet_calculator_tests.py" name="subnet_calculator_tests.CalculateUpperIpv6Range-20201011095206" skipped="0" tests="6" time="0.021" timestamp="2020-10-11T09:52:06">
+	<testcase classname="subnet_calculator_tests.CalculateUpperIpv6Range" name="test_calculate_upper_at_maximum_ip_and_at_maximum_subnet" time="0.002" timestamp="2020-10-11T09:52:06"/>
+	<testcase classname="subnet_calculator_tests.CalculateUpperIpv6Range" name="test_calculate_upper_range_at_minimum_ip_and_minimum_subnet" time="0.002" timestamp="2020-10-11T09:52:06"/>
+	<testcase classname="subnet_calculator_tests.CalculateUpperIpv6Range" name="test_calculate_upper_range_one_above_minimum_ip_and_one_above_minimum_subnet" time="0.002" timestamp="2020-10-11T09:52:06"/>
+	<testcase classname="subnet_calculator_tests.CalculateUpperIpv6Range" name="test_calculate_upper_range_well_above_minimum_ip_and_well_above_minimum_subnet" time="0.003" timestamp="2020-10-11T09:52:06"/>
+	<testcase classname="subnet_calculator_tests.CalculateUpperIpv6Range" name="test_calculate_upper_one_below_maximum_ip_and_one_below_maximum_subnet" time="0.009" timestamp="2020-10-11T09:52:06">
+		<failure message="'fe88:df57:d56c:c557:57c5:ffff:ffff:ffff' != 'fe88:df57:d56c:c557:af8a:ffff:ffff:ffff'
+- fe88:df57:d56c:c557:57c5:ffff:ffff:ffff
+?                     ^^^^
++ fe88:df57:d56c:c557:af8a:ffff:ffff:ffff
+?                     ^^^^
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1174, in test_calculate_upper_one_below_maximum_ip_and_one_below_maximum_subnet
+    self.assertEquals('fe88:df57:d56c:c557:57c5:ffff:ffff:ffff', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: 'fe88:df57:d56c:c557:57c5:ffff:ffff:ffff' != 'fe88:df57:d56c:c557:af8a:ffff:ffff:ffff'
+- fe88:df57:d56c:c557:57c5:ffff:ffff:ffff
+?                     ^^^^
++ fe88:df57:d56c:c557:af8a:ffff:ffff:ffff
+?                     ^^^^
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.CalculateUpperIpv6Range" name="test_calculate_upper_well_below_maximum_ip_and_well_below_maximum_subnet" time="0.004" timestamp="2020-10-11T09:52:06">
+		<failure message="'fe88:df57:d56c:c557:57c5:ffff:ffff:ffff' != 'fe88:df57:d56c:c557:af8a:ffff:ffff:ffff'
+- fe88:df57:d56c:c557:57c5:ffff:ffff:ffff
+?                     ^^^^
++ fe88:df57:d56c:c557:af8a:ffff:ffff:ffff
+?                     ^^^^
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1169, in test_calculate_upper_well_below_maximum_ip_and_well_below_maximum_subnet
+    self.assertEquals('fe88:df57:d56c:c557:57c5:ffff:ffff:ffff', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: 'fe88:df57:d56c:c557:57c5:ffff:ffff:ffff' != 'fe88:df57:d56c:c557:af8a:ffff:ffff:ffff'
+- fe88:df57:d56c:c557:57c5:ffff:ffff:ffff
+?                     ^^^^
++ fe88:df57:d56c:c557:af8a:ffff:ffff:ffff
+?                     ^^^^
+
+]]>		</failure>
+	</testcase>
+</testsuite>

@@ -161,11 +161,9 @@ def expand_ipv6_address(ip_address):
     return expanded_ipv6_without_leading_colon
 
 def calculate_ipv6_subnet(ip_address, netmask):
-
     """
     calculates an ip address given it is in valid ipv6 format
     """
-
     expanded_ipv6_address = expand_ipv6_address(ip_address)
     split_ip_address = expanded_ipv6_address.split(':')
     split_netmask = netmask.split('.')
@@ -242,5 +240,39 @@ def calculate_upper_ipv4_range(ip_address, netmask):
             character_index += 1
         upper_range += '.' + str(int(current_binary, 2))
         group_index += 1
+        upper_range_no_leading_period = upper_range[1:]
+    return upper_range_no_leading_period
 
-    return upper_range[1:]
+def calculate_upper_ipv6_range(ip_address, netmask):
+    """
+    calculates the upper ipv6 range
+    """
+    netmask_group = netmask.split('.')
+    ip_address_group = calculate_ipv6_subnet(ip_address, netmask).split(':')
+    upper_range = ''
+    group_index = 0
+
+    for group in netmask_group:
+        current_netmask_as_integer = 0
+        opposite_binary = calculate_binary_opposite(bin(int(group, 2)), 16)
+        ip_address_binary = bin(int(ip_address_group[group_index], 16)).replace('0b', '')
+        current_binary = ''
+        character_index = 0
+
+        if('1' not in ip_address_binary):
+            while (len(ip_address_binary) < 16):
+                ip_address_binary += '0'
+
+        for character in ip_address_binary:
+            if(opposite_binary[character_index] == '1'):
+                current_binary += '1'
+            else:
+                current_binary += ip_address_binary[character_index]
+
+            character_index += 1
+        upper_range += ':' + hex(int(current_binary, 2)).replace('0x', '')
+        group_index += 1
+    upper_range_no_leading_period = upper_range[1:]
+    return upper_range_no_leading_period
+
+

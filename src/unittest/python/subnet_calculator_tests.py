@@ -1146,6 +1146,37 @@ class TestCalculateIpv4UpperRange(unittest.TestCase):
         subnet = subnet_calculator.calculate_upper_ipv4_range('160.160.160.160', '11111111.11111111.11110000.00000000')
         self.assertEquals('160.160.175.254', subnet)
 
+class CalculateUpperIpv6Range(unittest.TestCase):
+
+    def test_calculate_upper_range_at_minimum_ip_and_minimum_subnet(self):
+
+        subnet = subnet_calculator.calculate_upper_ipv6_range('0000::0000','1000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000')
+        self.assertEquals('7fff:ffff:ffff:ffff:ffff:ffff:ffff:ffff', subnet)
+
+    def test_calculate_upper_range_one_above_minimum_ip_and_one_above_minimum_subnet(self):
+
+        subnet = subnet_calculator.calculate_upper_ipv6_range('1111:1111:1111:1111:1111:1111:1111:1111','1100000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000')
+        self.assertEquals('3fff:ffff:ffff:ffff:ffff:ffff:ffff:ffff', subnet)
+
+    def test_calculate_upper_range_well_above_minimum_ip_and_well_above_minimum_subnet(self):
+
+        subnet = subnet_calculator.calculate_upper_ipv6_range('fe80:cd12:d45c:c150:1235:0000:211e:729c','1111111111111111.1111111111111111.1111111111111111.1111111111111000.0000000000000000.0000000000000000.0000000000000000.0000000000000000')
+        self.assertEquals('fe80:cd12:d45c:c157:ffff:ffff:ffff:ffff', subnet)
+
+    def test_calculate_upper_well_below_maximum_ip_and_well_below_maximum_subnet(self):
+
+        subnet = subnet_calculator.calculate_upper_ipv6_range('fe88:df57:d56c:c557:57c5:7c55:588e:789c','1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.0000000000000000.0000000000000000.0000000000000000')
+        self.assertEquals('fe88:df57:d56c:c557:57c5:ffff:ffff:ffff', subnet)
+
+    def test_calculate_upper_one_below_maximum_ip_and_one_below_maximum_subnet(self):
+
+        subnet = subnet_calculator.calculate_upper_ipv6_range('fe88:df57:d56c:c557:57c5:7c55:588e:789c','1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.0000000000000000.0000000000000000.0000000000000000')
+        self.assertEquals('fe88:df57:d56c:c557:57c5:ffff:ffff:ffff', subnet)
+
+    def test_calculate_upper_at_maximum_ip_and_at_maximum_subnet(self):
+
+        subnet = subnet_calculator.calculate_upper_ipv6_range('ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff','1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111')
+        self.assertEquals('ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff', subnet)
 
 if __name__ == '__main__':
     unittest.main()

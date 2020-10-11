@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" file="subnet_calculator_tests.py" name="subnet_calculator_tests.CalculateUpperIpv6Range-20201011092802" skipped="0" tests="2" time="0.014" timestamp="2020-10-11T09:28:02">
+	<testcase classname="subnet_calculator_tests.CalculateUpperIpv6Range" name="test_calculate_upper_range_at_minimum_ip_and_minimum_subnet" time="0.002" timestamp="2020-10-11T09:28:02"/>
+	<testcase classname="subnet_calculator_tests.CalculateUpperIpv6Range" name="test_calculate_upper_range_one_above_minimum_ip_and_one_above_minimum_subnet" time="0.012" timestamp="2020-10-11T09:28:02"/>
+</testsuite>
