@@ -9,6 +9,8 @@ __version__ = "30-September-2020"
 
 IPV6_MAX_COLONS = 7
 IPV6_MAX_GROUPS = 8
+IPV4_MAX_BINARY_DIGITS = 8
+IPV6_MAX_BINARY_DIGITS = 16
 IPV4_NETMASK_MAX_PERIODS = 3
 IPV6_NETMASK_MAX_PERIODS = 7
 IPV4_NETMASK_MAX_LENGTH = 35
@@ -182,3 +184,63 @@ def calculate_ipv6_subnet(ip_address, netmask):
     subnet_without_leading_period = subnet[1:]
     return subnet_without_leading_period
 
+def calculate_binary_opposite(binary_string, max_length_for_leading_zeros):
+    """
+    returns the opposite of the binary string given
+    i.e: 101 is 010
+    """
+    binary_opposite_string = ''
+
+    for number in binary_string:
+
+        if(number == '0'):
+            binary_opposite_string += '1'
+
+            if (len(binary_string) < max_length_for_leading_zeros):
+                while(len(binary_opposite_string) < max_length_for_leading_zeros):
+                    binary_opposite_string += '1'
+
+        elif(number == '1'):
+            binary_opposite_string += '0'
+        else:
+            binary_opposite_string += number
+
+    opposite_binary_no_indicator = binary_opposite_string.replace('1b', '')
+    return opposite_binary_no_indicator
+
+def calculate_upper_ipv4_range(ip_address, netmask):
+    """
+    calculates the upper ipv4 range
+    """
+    netmask_group = netmask.split('.')
+    ip_address_group = calculate_ipv4_subnet(ip_address, netmask).split('.')
+    upper_range = ''
+    group_index = 0
+
+    for group in netmask_group:
+        current_netmask_as_integer = 0
+
+        if (validate_ipv4_netmask_ip_format(netmask)):
+            opposite_binary = calculate_binary_opposite(bin(int(group)), 8)
+        else:
+            opposite_binary = calculate_binary_opposite(bin(int(group, 2)), 8)
+        ip_address_binary = bin(int(ip_address_group[group_index])).replace('0b', '')
+        current_binary = ''
+        character_index = 0
+
+        while (len(ip_address_binary) < 8):
+            ip_address_binary += '0'
+       
+        for character in ip_address_binary:
+            if(group_index == (len(netmask_group) - 1) and (character_index == (len(ip_address_binary) - 1))):
+                current_binary += '0'
+            elif(opposite_binary[character_index] == '1'):
+                current_binary += '1'
+            else:
+                current_binary += ip_address_binary[character_index]
+            
+            character_index += 1
+        upper_range += '.' + str(int(current_binary, 2))
+        group_index += 1
+
+    return upper_range[1:]

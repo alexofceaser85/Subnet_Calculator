@@ -206,7 +206,6 @@ def calculate_binary_opposite(binary_string, max_length_for_leading_zeros):
             binary_opposite_string += number
 
     opposite_binary_no_indicator = binary_opposite_string.replace('1b', '')
-
     return opposite_binary_no_indicator
 
 def calculate_upper_ipv4_range(ip_address, netmask):
@@ -214,35 +213,34 @@ def calculate_upper_ipv4_range(ip_address, netmask):
     calculates the upper ipv4 range
     """
     netmask_group = netmask.split('.')
-    ip_address_group = ip_address.split('.')
+    ip_address_group = calculate_ipv4_subnet(ip_address, netmask).split('.')
     upper_range = ''
     group_index = 0
 
     for group in netmask_group:
-        opposite_binary = calculate_binary_opposite(bin(int(group)), 8)
+        current_netmask_as_integer = 0
+
+        if (validate_ipv4_netmask_ip_format(netmask)):
+            opposite_binary = calculate_binary_opposite(bin(int(group)), 8)
+        else:
+            opposite_binary = calculate_binary_opposite(bin(int(group, 2)), 8)
         ip_address_binary = bin(int(ip_address_group[group_index])).replace('0b', '')
-        character_index = 0
         current_binary = ''
-        
+        character_index = 0
+
         while (len(ip_address_binary) < 8):
             ip_address_binary += '0'
-        
+       
         for character in ip_address_binary:
-        
-            if (ip_address_binary[character_index] == '1' and opposite):
+            if(group_index == (len(netmask_group) - 1) and (character_index == (len(ip_address_binary) - 1))):
+                current_binary += '0'
+            elif(opposite_binary[character_index] == '1'):
                 current_binary += '1'
             else:
-                current_binary += '0'
+                current_binary += ip_address_binary[character_index]
+            
             character_index += 1
-       
-        print(opposite_binary)
-        print(ip_address_binary)
-        print(current_binary)
         upper_range += '.' + str(int(current_binary, 2))
         group_index += 1
 
-    print(upper_range)
     return upper_range[1:]
-
-if (__name__ == '__main__'):
-    calculate_upper_ipv4_range('160.160.160.160', '255.255.192.0')

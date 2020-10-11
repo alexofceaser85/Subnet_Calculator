@@ -1054,7 +1054,7 @@ class TestCalculateIpv4UpperRange(unittest.TestCase):
     def test_calculate_range_in_ip_format_with_maximum_ip_and_maximum_subnet(self):
 
         subnet = subnet_calculator.calculate_upper_ipv4_range('255.255.255.255', '255.255.255.254')
-        self.assertEquals('none', subnet)
+        self.assertEquals('255.255.255.254', subnet)
 
     def test_calculate_range_in_ip_format_with_maximum_ip_and_one_below_maximum_subnet(self):
 
@@ -1064,17 +1064,17 @@ class TestCalculateIpv4UpperRange(unittest.TestCase):
     def test_calculate_range_in_ip_format_maximum_ip_and_well_below_maximum_subnet(self):
 
         subnet = subnet_calculator.calculate_upper_ipv4_range('255.255.255.255', '255.255.240.0')
-        self.assertEquals('255.255.240.0', subnet)
+        self.assertEquals('255.255.255.254', subnet)
 
     def test_calculate_range_in_ip_format_with_one_below_maximum_ip_and_maximum_subnet(self):
 
         subnet = subnet_calculator.calculate_upper_ipv4_range('254.254.254.254', '255.255.255.254')
-        self.assertEquals('254.254.240.0', subnet)
+        self.assertEquals('254.254.254.254', subnet)
 
     def test_calculate_range_in_ip_format_with_well_below_maximum_ip_and_maximum_subnet(self):
 
         subnet = subnet_calculator.calculate_upper_ipv4_range('160.160.160.160', '255.255.255.254')
-        self.assertEquals('none', subnet)
+        self.assertEquals('160.160.160.160', subnet)
 
     def test_calculate_range_in_ip_format_with_one_below_maximum_ip_and_one_below_maximum_subnet(self):
 
@@ -1084,7 +1084,7 @@ class TestCalculateIpv4UpperRange(unittest.TestCase):
     def test_calculate_range_in_ip_format_with_well_below_maximum_ip_and_well_below_maximum_subnet(self):
 
         subnet = subnet_calculator.calculate_upper_ipv4_range('160.160.160.160', '255.255.240.0')
-        self.assertEquals('160.160.160.0', subnet)
+        self.assertEquals('160.160.175.254', subnet)
 
     def test_calculate_range_in_bit_format_with_minimum_ip_and_well_above_minimum_subnet(self):
 
@@ -1108,13 +1108,13 @@ class TestCalculateIpv4UpperRange(unittest.TestCase):
 
     def test_calculate_range_in_bit_format_with_well_above_minimum_ip_and_well_above_minimum_subnet(self):
 
-        subnet = subnet_calculator.calculate_upper_ipv4_range('160.160.160.160', '11111111.11111000.00000000.00000000')
+        subnet = subnet_calculator.calculate_upper_ipv4_range('160.160.160.160', '11111111.11110000.00000000.00000000')
         self.assertEquals('160.175.255.254', subnet)
 
     def test_calculate_range_in_bit_format_with_maximum_ip_and_maximum_subnet(self):
 
         subnet = subnet_calculator.calculate_upper_ipv4_range('255.255.255.255', '11111111.11111111.11111111.11111110')
-        self.assertEquals('none', subnet)
+        self.assertEquals('255.255.255.254', subnet)
 
     def test_calculate_range_in_bit_format_with_maximum_ip_and_one_below_maximum_subnet(self):
 
@@ -1129,12 +1129,12 @@ class TestCalculateIpv4UpperRange(unittest.TestCase):
     def test_calculate_range_in_bit_format_with_one_below_maximum_ip_and_maximum_subnet(self):
 
         subnet = subnet_calculator.calculate_upper_ipv4_range('254.254.254.254', '11111111.11111111.11111111.11111110')
-        self.assertEquals('none', subnet)
+        self.assertEquals('254.254.254.254', subnet)
 
     def test_calculate_range_in_bit_format_with_well_below_maximum_ip_and_maximum_subnet(self):
 
         subnet = subnet_calculator.calculate_upper_ipv4_range('160.160.160.160', '11111111.11111111.11111111.11111110')
-        self.assertEquals('none', subnet)
+        self.assertEquals('160.160.160.160', subnet)
 
     def test_calculate_range_in_bit_format_with_one_below_maximum_ip_and_one_below_maximum_subnet(self):
 

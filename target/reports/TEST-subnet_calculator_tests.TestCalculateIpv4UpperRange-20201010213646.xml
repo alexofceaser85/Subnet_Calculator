@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="21" file="subnet_calculator_tests.py" name="subnet_calculator_tests.TestCalculateIpv4UpperRange-20201010213646" skipped="0" tests="25" time="0.163" timestamp="2020-10-10T21:36:47">
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_ip_format_with_minimum_ip_and_minimum_subnet" time="0.002" timestamp="2020-10-10T21:36:47"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_ip_format_with_minimum_ip_and_one_above_minimum_subnet" time="0.002" timestamp="2020-10-10T21:36:47"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_ip_format_with_minimum_ip_and_well_above_minimum_subnet" time="0.007" timestamp="2020-10-10T21:36:47"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_ip_format_with_one_above_minimum_ip_and_minimum_subnet" time="0.002" timestamp="2020-10-10T21:36:47"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_bit_format_maximum_ip_and_well_below_maximum_subnet" time="0.006" timestamp="2020-10-10T21:36:47">
+		<failure message="'255.255.255.254' != '86.86.86.254'
+- 255.255.255.254
++ 86.86.86.254
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1127, in test_calculate_range_in_bit_format_maximum_ip_and_well_below_maximum_subnet
+    self.assertEquals('255.255.255.254', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '255.255.255.254' != '86.86.86.254'
+- 255.255.255.254
++ 86.86.86.254
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_bit_format_with_maximum_ip_and_maximum_subnet" time="0.004" timestamp="2020-10-10T21:36:47">
+		<failure message="'none' != '86.86.86.86'
+- none
++ 86.86.86.86
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1117, in test_calculate_range_in_bit_format_with_maximum_ip_and_maximum_subnet
+    self.assertEquals('none', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: 'none' != '86.86.86.86'
+- none
++ 86.86.86.86
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_bit_format_with_maximum_ip_and_one_below_maximum_subnet" time="0.004" timestamp="2020-10-10T21:36:47">
+		<failure message="'255.255.255.254' != '86.86.86.86'
+- 255.255.255.254
++ 86.86.86.86
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1122, in test_calculate_range_in_bit_format_with_maximum_ip_and_one_below_maximum_subnet
+    self.assertEquals('255.255.255.254', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '255.255.255.254' != '86.86.86.86'
+- 255.255.255.254
++ 86.86.86.86
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_bit_format_with_minimum_ip_and_well_above_minimum_subnet" time="0.004" timestamp="2020-10-10T21:36:47">
+		<failure message="'0.15.255.254' != '86.86.255.254'
+- 0.15.255.254
++ 86.86.255.254
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1092, in test_calculate_range_in_bit_format_with_minimum_ip_and_well_above_minimum_subnet
+    self.assertEquals('0.15.255.254', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '0.15.255.254' != '86.86.255.254'
+- 0.15.255.254
++ 86.86.255.254
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_bit_format_with_one_above_minimum_ip_and_minimum_subnet" time="0.013" timestamp="2020-10-10T21:36:47">
+		<failure message="'127.255.255.254' != '103.255.255.254'
+- 127.255.255.254
+?  ^^
++ 103.255.255.254
+?  ^^
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1097, in test_calculate_range_in_bit_format_with_one_above_minimum_ip_and_minimum_subnet
+    self.assertEquals('127.255.255.254', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '127.255.255.254' != '103.255.255.254'
+- 127.255.255.254
+?  ^^
++ 103.255.255.254
+?  ^^
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_bit_format_with_one_above_minimum_ip_and_one_above_minimum_subnet" time="0.005" timestamp="2020-10-10T21:36:47">
+		<failure message="'63.255.255.254' != '88.255.255.254'
+- 63.255.255.254
+? ^^
++ 88.255.255.254
+? ^^
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1107, in test_calculate_range_in_bit_format_with_one_above_minimum_ip_and_one_above_minimum_subnet
+    self.assertEquals('63.255.255.254', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '63.255.255.254' != '88.255.255.254'
+- 63.255.255.254
+? ^^
++ 88.255.255.254
+? ^^
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_bit_format_with_one_below_maximum_ip_and_maximum_subnet" time="0.012" timestamp="2020-10-10T21:36:47">
+		<failure message="'none' != '86.86.86.86'
+- none
++ 86.86.86.86
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1132, in test_calculate_range_in_bit_format_with_one_below_maximum_ip_and_maximum_subnet
+    self.assertEquals('none', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: 'none' != '86.86.86.86'
+- none
++ 86.86.86.86
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_bit_format_with_one_below_maximum_ip_and_one_below_maximum_subnet" time="0.005" timestamp="2020-10-10T21:36:47">
+		<failure message="'254.254.254.254' != '86.86.86.86'
+- 254.254.254.254
++ 86.86.86.86
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1142, in test_calculate_range_in_bit_format_with_one_below_maximum_ip_and_one_below_maximum_subnet
+    self.assertEquals('254.254.254.254', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '254.254.254.254' != '86.86.86.86'
+- 254.254.254.254
++ 86.86.86.86
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_bit_format_with_well_above_minimum_ip_and_minimum_subnet" time="0.009" timestamp="2020-10-10T21:36:47">
+		<failure message="'255.255.255.254' != '103.255.255.254'
+- 255.255.255.254
+? ^^^
++ 103.255.255.254
+? ^^^
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1102, in test_calculate_range_in_bit_format_with_well_above_minimum_ip_and_minimum_subnet
+    self.assertEquals('255.255.255.254', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '255.255.255.254' != '103.255.255.254'
+- 255.255.255.254
+? ^^^
++ 103.255.255.254
+? ^^^
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_bit_format_with_well_above_minimum_ip_and_well_above_minimum_subnet" time="0.005" timestamp="2020-10-10T21:36:47">
+		<failure message="'160.175.255.254' != '86.86.255.254'
+- 160.175.255.254
++ 86.86.255.254
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1112, in test_calculate_range_in_bit_format_with_well_above_minimum_ip_and_well_above_minimum_subnet
+    self.assertEquals('160.175.255.254', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '160.175.255.254' != '86.86.255.254'
+- 160.175.255.254
++ 86.86.255.254
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_bit_format_with_well_below_maximum_ip_and_maximum_subnet" time="0.011" timestamp="2020-10-10T21:36:47">
+		<failure message="'none' != '86.86.86.86'
+- none
++ 86.86.86.86
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1137, in test_calculate_range_in_bit_format_with_well_below_maximum_ip_and_maximum_subnet
+    self.assertEquals('none', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: 'none' != '86.86.86.86'
+- none
++ 86.86.86.86
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_bit_format_with_well_below_maximum_ip_and_well_below_maximum_subnet" time="0.006" timestamp="2020-10-10T21:36:47">
+		<failure message="'160.160.175.254' != '86.86.86.254'
+- 160.160.175.254
++ 86.86.86.254
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1147, in test_calculate_range_in_bit_format_with_well_below_maximum_ip_and_well_below_maximum_subnet
+    self.assertEquals('160.160.175.254', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '160.160.175.254' != '86.86.86.254'
+- 160.160.175.254
++ 86.86.86.254
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_ip_format_maximum_ip_and_well_below_maximum_subnet" time="0.008" timestamp="2020-10-10T21:36:47">
+		<failure message="'255.255.240.0' != '255.255.15.254'
+- 255.255.240.0
+?           ---
++ 255.255.15.254
+?         +++ +
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1067, in test_calculate_range_in_ip_format_maximum_ip_and_well_below_maximum_subnet
+    self.assertEquals('255.255.240.0', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '255.255.240.0' != '255.255.15.254'
+- 255.255.240.0
+?           ---
++ 255.255.15.254
+?         +++ +
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_ip_format_with_maximum_ip_and_maximum_subnet" time="0.005" timestamp="2020-10-10T21:36:47">
+		<failure message="'none' != '255.255.255.0'
+- none
++ 255.255.255.0
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1057, in test_calculate_range_in_ip_format_with_maximum_ip_and_maximum_subnet
+    self.assertEquals('none', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: 'none' != '255.255.255.0'
+- none
++ 255.255.255.0
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_ip_format_with_maximum_ip_and_one_below_maximum_subnet" time="0.011" timestamp="2020-10-10T21:36:47">
+		<failure message="'255.255.255.254' != '255.255.255.2'
+- 255.255.255.254
+?              --
++ 255.255.255.2
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1062, in test_calculate_range_in_ip_format_with_maximum_ip_and_one_below_maximum_subnet
+    self.assertEquals('255.255.255.254', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '255.255.255.254' != '255.255.255.2'
+- 255.255.255.254
+?              --
++ 255.255.255.2
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_ip_format_with_one_below_maximum_ip_and_maximum_subnet" time="0.008" timestamp="2020-10-10T21:36:47">
+		<failure message="'254.254.254.254' != '254.254.254.0'
+- 254.254.254.254
+?             ^^^
++ 254.254.254.0
+?             ^
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1072, in test_calculate_range_in_ip_format_with_one_below_maximum_ip_and_maximum_subnet
+    self.assertEquals('254.254.254.254', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '254.254.254.254' != '254.254.254.0'
+- 254.254.254.254
+?             ^^^
++ 254.254.254.0
+?             ^
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_ip_format_with_one_below_maximum_ip_and_one_below_maximum_subnet" time="0.011" timestamp="2020-10-10T21:36:47">
+		<failure message="'254.254.254.254' != '254.254.254.2'
+- 254.254.254.254
+?              --
++ 254.254.254.2
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1082, in test_calculate_range_in_ip_format_with_one_below_maximum_ip_and_one_below_maximum_subnet
+    self.assertEquals('254.254.254.254', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '254.254.254.254' != '254.254.254.2'
+- 254.254.254.254
+?              --
++ 254.254.254.2
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_ip_format_with_well_above_minimum_ip_and_minimum_subnet" time="0.005" timestamp="2020-10-10T21:36:47">
+		<failure message="'255.255.255.254' != '127.255.255.254'
+- 255.255.255.254
+?  ^^
++ 127.255.255.254
+? + ^
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1047, in test_calculate_range_in_ip_format_with_well_above_minimum_ip_and_minimum_subnet
+    self.assertEquals('255.255.255.254', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '255.255.255.254' != '127.255.255.254'
+- 255.255.255.254
+?  ^^
++ 127.255.255.254
+? + ^
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_ip_format_with_well_above_minimum_ip_and_well_above_minimum_subnet" time="0.005" timestamp="2020-10-10T21:36:47">
+		<failure message="'160.167.255.254' != '160.7.255.254'
+- 160.167.255.254
+?     --
++ 160.7.255.254
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1052, in test_calculate_range_in_ip_format_with_well_above_minimum_ip_and_well_above_minimum_subnet
+    self.assertEquals('160.167.255.254', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '160.167.255.254' != '160.7.255.254'
+- 160.167.255.254
+?     --
++ 160.7.255.254
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_ip_format_with_well_below_maximum_ip_and_maximum_subnet" time="0.006" timestamp="2020-10-10T21:36:47">
+		<failure message="'160.160.160.160' != '160.160.160.0'
+- 160.160.160.160
+?             --
++ 160.160.160.0
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1077, in test_calculate_range_in_ip_format_with_well_below_maximum_ip_and_maximum_subnet
+    self.assertEquals('160.160.160.160', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '160.160.160.160' != '160.160.160.0'
+- 160.160.160.160
+?             --
++ 160.160.160.0
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_ip_format_with_well_below_maximum_ip_and_well_below_maximum_subnet" time="0.005" timestamp="2020-10-10T21:36:47">
+		<failure message="'160.160.175.254' != '160.160.15.254'
+- 160.160.175.254
+?          -
++ 160.160.15.254
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1087, in test_calculate_range_in_ip_format_with_well_below_maximum_ip_and_well_below_maximum_subnet
+    self.assertEquals('160.160.175.254', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '160.160.175.254' != '160.160.15.254'
+- 160.160.175.254
+?          -
++ 160.160.15.254
+
+]]>		</failure>
+	</testcase>
+</testsuite>

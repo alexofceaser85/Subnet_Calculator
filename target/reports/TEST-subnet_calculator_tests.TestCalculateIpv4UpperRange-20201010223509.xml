@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="13" failures="4" file="subnet_calculator_tests.py" name="subnet_calculator_tests.TestCalculateIpv4UpperRange-20201010223509" skipped="0" tests="25" time="0.089" timestamp="2020-10-10T22:35:10">
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_bit_format_maximum_ip_and_well_below_maximum_subnet" time="0.001" timestamp="2020-10-10T22:35:10"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_bit_format_with_maximum_ip_and_one_below_maximum_subnet" time="0.001" timestamp="2020-10-10T22:35:10"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_bit_format_with_minimum_ip_and_well_above_minimum_subnet" time="0.002" timestamp="2020-10-10T22:35:10"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_bit_format_with_one_above_minimum_ip_and_minimum_subnet" time="0.015" timestamp="2020-10-10T22:35:10"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_bit_format_with_one_above_minimum_ip_and_one_above_minimum_subnet" time="0.001" timestamp="2020-10-10T22:35:10"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_bit_format_with_one_below_maximum_ip_and_one_below_maximum_subnet" time="0.002" timestamp="2020-10-10T22:35:10"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_bit_format_with_well_above_minimum_ip_and_minimum_subnet" time="0.005" timestamp="2020-10-10T22:35:10"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_bit_format_with_well_below_maximum_ip_and_well_below_maximum_subnet" time="0.001" timestamp="2020-10-10T22:35:10"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_bit_format_with_maximum_ip_and_maximum_subnet" time="0.008" timestamp="2020-10-10T22:35:10">
+		<failure message="'none' != '255.255.255.254'
+- none
++ 255.255.255.254
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1117, in test_calculate_range_in_bit_format_with_maximum_ip_and_maximum_subnet
+    self.assertEquals('none', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: 'none' != '255.255.255.254'
+- none
++ 255.255.255.254
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_bit_format_with_one_below_maximum_ip_and_maximum_subnet" time="0.009" timestamp="2020-10-10T22:35:10">
+		<failure message="'none' != '254.254.254.254'
+- none
++ 254.254.254.254
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1132, in test_calculate_range_in_bit_format_with_one_below_maximum_ip_and_maximum_subnet
+    self.assertEquals('none', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: 'none' != '254.254.254.254'
+- none
++ 254.254.254.254
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_bit_format_with_well_above_minimum_ip_and_well_above_minimum_subnet" time="0.004" timestamp="2020-10-10T22:35:10">
+		<failure message="'160.175.255.254' != '160.167.255.254'
+- 160.175.255.254
+?       -
++ 160.167.255.254
+?      +
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1112, in test_calculate_range_in_bit_format_with_well_above_minimum_ip_and_well_above_minimum_subnet
+    self.assertEquals('160.175.255.254', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '160.175.255.254' != '160.167.255.254'
+- 160.175.255.254
+?       -
++ 160.167.255.254
+?      +
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_bit_format_with_well_below_maximum_ip_and_maximum_subnet" time="0.006" timestamp="2020-10-10T22:35:10">
+		<failure message="'none' != '160.160.160.160'
+- none
++ 160.160.160.160
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1137, in test_calculate_range_in_bit_format_with_well_below_maximum_ip_and_maximum_subnet
+    self.assertEquals('none', subnet)
+  File "/usr/lib/python3.6/unittest/case.py", line 1321, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: 'none' != '160.160.160.160'
+- none
++ 160.160.160.160
+
+]]>		</failure>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_ip_format_maximum_ip_and_well_below_maximum_subnet" time="0.003" timestamp="2020-10-10T22:35:10">
+		<error message="invalid literal for int() with base 2: '255'" type="ValueError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1066, in test_calculate_range_in_ip_format_maximum_ip_and_well_below_maximum_subnet
+    subnet = subnet_calculator.calculate_upper_ipv4_range('255.255.255.255', '255.255.240.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 227, in calculate_upper_ipv4_range
+    opposite_binary = calculate_binary_opposite(bin(int(group, 2)), 8)
+ValueError: invalid literal for int() with base 2: '255'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_ip_format_with_maximum_ip_and_maximum_subnet" time="0.002" timestamp="2020-10-10T22:35:10">
+		<error message="invalid literal for int() with base 2: '255'" type="ValueError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1056, in test_calculate_range_in_ip_format_with_maximum_ip_and_maximum_subnet
+    subnet = subnet_calculator.calculate_upper_ipv4_range('255.255.255.255', '255.255.255.254')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 227, in calculate_upper_ipv4_range
+    opposite_binary = calculate_binary_opposite(bin(int(group, 2)), 8)
+ValueError: invalid literal for int() with base 2: '255'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_ip_format_with_maximum_ip_and_one_below_maximum_subnet" time="0.003" timestamp="2020-10-10T22:35:10">
+		<error message="invalid literal for int() with base 2: '255'" type="ValueError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1061, in test_calculate_range_in_ip_format_with_maximum_ip_and_one_below_maximum_subnet
+    subnet = subnet_calculator.calculate_upper_ipv4_range('255.255.255.255', '255.255.255.252')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 227, in calculate_upper_ipv4_range
+    opposite_binary = calculate_binary_opposite(bin(int(group, 2)), 8)
+ValueError: invalid literal for int() with base 2: '255'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_ip_format_with_minimum_ip_and_minimum_subnet" time="0.002" timestamp="2020-10-10T22:35:10">
+		<error message="invalid literal for int() with base 2: '128'" type="ValueError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1026, in test_calculate_range_in_ip_format_with_minimum_ip_and_minimum_subnet
+    subnet = subnet_calculator.calculate_upper_ipv4_range('0.0.0.0', '128.0.0.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 227, in calculate_upper_ipv4_range
+    opposite_binary = calculate_binary_opposite(bin(int(group, 2)), 8)
+ValueError: invalid literal for int() with base 2: '128'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_ip_format_with_minimum_ip_and_one_above_minimum_subnet" time="0.002" timestamp="2020-10-10T22:35:10">
+		<error message="invalid literal for int() with base 2: '192'" type="ValueError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1031, in test_calculate_range_in_ip_format_with_minimum_ip_and_one_above_minimum_subnet
+    subnet = subnet_calculator.calculate_upper_ipv4_range('0.0.0.0', '192.0.0.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 227, in calculate_upper_ipv4_range
+    opposite_binary = calculate_binary_opposite(bin(int(group, 2)), 8)
+ValueError: invalid literal for int() with base 2: '192'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_ip_format_with_minimum_ip_and_well_above_minimum_subnet" time="0.002" timestamp="2020-10-10T22:35:10">
+		<error message="invalid literal for int() with base 2: '255'" type="ValueError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1036, in test_calculate_range_in_ip_format_with_minimum_ip_and_well_above_minimum_subnet
+    subnet = subnet_calculator.calculate_upper_ipv4_range('0.0.0.0', '255.240.0.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 227, in calculate_upper_ipv4_range
+    opposite_binary = calculate_binary_opposite(bin(int(group, 2)), 8)
+ValueError: invalid literal for int() with base 2: '255'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_ip_format_with_one_above_minimum_ip_and_minimum_subnet" time="0.002" timestamp="2020-10-10T22:35:10">
+		<error message="invalid literal for int() with base 2: '128'" type="ValueError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1041, in test_calculate_range_in_ip_format_with_one_above_minimum_ip_and_minimum_subnet
+    subnet = subnet_calculator.calculate_upper_ipv4_range('1.1.1.1', '128.0.0.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 227, in calculate_upper_ipv4_range
+    opposite_binary = calculate_binary_opposite(bin(int(group, 2)), 8)
+ValueError: invalid literal for int() with base 2: '128'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_ip_format_with_one_below_maximum_ip_and_maximum_subnet" time="0.002" timestamp="2020-10-10T22:35:10">
+		<error message="invalid literal for int() with base 2: '255'" type="ValueError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1071, in test_calculate_range_in_ip_format_with_one_below_maximum_ip_and_maximum_subnet
+    subnet = subnet_calculator.calculate_upper_ipv4_range('254.254.254.254', '255.255.255.254')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 227, in calculate_upper_ipv4_range
+    opposite_binary = calculate_binary_opposite(bin(int(group, 2)), 8)
+ValueError: invalid literal for int() with base 2: '255'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_ip_format_with_one_below_maximum_ip_and_one_below_maximum_subnet" time="0.003" timestamp="2020-10-10T22:35:10">
+		<error message="invalid literal for int() with base 2: '255'" type="ValueError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1081, in test_calculate_range_in_ip_format_with_one_below_maximum_ip_and_one_below_maximum_subnet
+    subnet = subnet_calculator.calculate_upper_ipv4_range('254.254.254.254', '255.255.255.252')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 227, in calculate_upper_ipv4_range
+    opposite_binary = calculate_binary_opposite(bin(int(group, 2)), 8)
+ValueError: invalid literal for int() with base 2: '255'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_ip_format_with_well_above_minimum_ip_and_minimum_subnet" time="0.003" timestamp="2020-10-10T22:35:10">
+		<error message="invalid literal for int() with base 2: '128'" type="ValueError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1046, in test_calculate_range_in_ip_format_with_well_above_minimum_ip_and_minimum_subnet
+    subnet = subnet_calculator.calculate_upper_ipv4_range('160.160.160.160', '128.0.0.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 227, in calculate_upper_ipv4_range
+    opposite_binary = calculate_binary_opposite(bin(int(group, 2)), 8)
+ValueError: invalid literal for int() with base 2: '128'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_ip_format_with_well_above_minimum_ip_and_well_above_minimum_subnet" time="0.002" timestamp="2020-10-10T22:35:10">
+		<error message="invalid literal for int() with base 2: '255'" type="ValueError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1051, in test_calculate_range_in_ip_format_with_well_above_minimum_ip_and_well_above_minimum_subnet
+    subnet = subnet_calculator.calculate_upper_ipv4_range('160.160.160.160', '255.248.0.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 227, in calculate_upper_ipv4_range
+    opposite_binary = calculate_binary_opposite(bin(int(group, 2)), 8)
+ValueError: invalid literal for int() with base 2: '255'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_ip_format_with_well_below_maximum_ip_and_maximum_subnet" time="0.002" timestamp="2020-10-10T22:35:10">
+		<error message="invalid literal for int() with base 2: '255'" type="ValueError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1076, in test_calculate_range_in_ip_format_with_well_below_maximum_ip_and_maximum_subnet
+    subnet = subnet_calculator.calculate_upper_ipv4_range('160.160.160.160', '255.255.255.254')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 227, in calculate_upper_ipv4_range
+    opposite_binary = calculate_binary_opposite(bin(int(group, 2)), 8)
+ValueError: invalid literal for int() with base 2: '255'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestCalculateIpv4UpperRange" name="test_calculate_range_in_ip_format_with_well_below_maximum_ip_and_well_below_maximum_subnet" time="0.002" timestamp="2020-10-10T22:35:10">
+		<error message="invalid literal for int() with base 2: '255'" type="ValueError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1086, in test_calculate_range_in_ip_format_with_well_below_maximum_ip_and_well_below_maximum_subnet
+    subnet = subnet_calculator.calculate_upper_ipv4_range('160.160.160.160', '255.255.240.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 227, in calculate_upper_ipv4_range
+    opposite_binary = calculate_binary_opposite(bin(int(group, 2)), 8)
+ValueError: invalid literal for int() with base 2: '255'
+]]>		</error>
+	</testcase>
+</testsuite>
