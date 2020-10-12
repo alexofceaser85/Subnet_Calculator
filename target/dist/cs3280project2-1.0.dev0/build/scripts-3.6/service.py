@@ -79,7 +79,7 @@ def set_ip_html_information(ip_address, subnet_mask):
     if subnet_calculator.validate_ipv4_address(ip_address):
         html += '<p>ipv4 address: ' + ip_address + '\n<p>'
 
-        if subnet_calculator.validate_ipv4_netmask_ip_format(subnet_mask):
+        if subnet_calculator.validate_ipv4_netmask_as_ip(subnet_mask):
             subnet = subnet_calculator.calculate_ipv4_subnet(ip_address, subnet_mask)
             lower_range = subnet_calculator.calculate_lower_ipv4_range(ip_address, subnet_mask)
             upper_range = subnet_calculator.calculate_upper_ipv4_range(ip_address, subnet_mask)
@@ -87,7 +87,7 @@ def set_ip_html_information(ip_address, subnet_mask):
             html += '<p>subnet mask: ' + subnet_mask + '\n</p>'
             html += '<p>ipv4 subnet: ' + subnet + '\n</p>'
             html += '<p>ipv4 range: ' + lower_range + ' - ' + upper_range + '\n</p>'
-        elif subnet_calculator.validate_ipv4_netmask_bit_format(subnet_mask):
+        elif subnet_calculator.validate_ipv4_netmask_as_bit(subnet_mask):
             binary_mask = subnet_calculator.convert_netmask_bits_to_binary(subnet_mask, 35, 9)
             subnet = subnet_calculator.calculate_ipv4_subnet(ip_address, binary_mask)
             lower_range = subnet_calculator.calculate_lower_ipv4_range(ip_address, binary_mask)
@@ -102,7 +102,7 @@ def set_ip_html_information(ip_address, subnet_mask):
     elif subnet_calculator.validate_ipv6_address(ip_address):
         html += '<p>ipv6 address: ' + ip_address + '\n</p>'
 
-        if subnet_calculator.validate_ipv6_netmask_bit_format(subnet_mask):
+        if subnet_calculator.validate_ipv6_netmask_as_bit(subnet_mask):
             binary_mask = subnet_calculator.convert_netmask_bits_to_binary(subnet_mask, 135, 17)
             subnet = subnet_calculator.calculate_ipv6_subnet(ip_address, binary_mask)
             lower_range = subnet_calculator.calculate_lower_ipv6_range(ip_address, binary_mask)
