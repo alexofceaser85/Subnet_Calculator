@@ -3,56 +3,50 @@
 This holds the code responsible for running a base http server
 """
 
-from http.server import HTTPServer, BaseHTTPRequestHandler
 from http import server
 import threading
 import webbrowser
 import sys
-import subnet_calculator
 import urllib
+import subnet_calculator
 
 __author__ = "Alex DeCesare"
 __version__ = "11-October-2020"
 
 MAX_URL_QUERIES = 2
-ip_address = ''
-subnet_mask = ''
-lower_ip_range = ''
-upper_ip_range = ''
-subnet = ''
 
-def run(http_server = None, server_class=HTTPServer, handler_class=BaseHTTPRequestHandler):
+def run():
     """
     runs the http server
     """
-    ip = 'localhost'
+    ip_address = 'localhost'
     port = 3280
-    open_browser = True
-    Handler = generate_handler()
+    handler = generate_handler()
 
-    srv = server.HTTPServer((ip, port), Handler)
+    srv = server.HTTPServer((ip_address, port), handler)
     sys.stdout.flush()
 
-    def b():
-        return webbrowser.open('http://{}:{}'.format(ip, port))
-    threading.Thread(target=b).start()
-        
+    def start_browser():
+        """
+        opens the browser
+        """
+        return webbrowser.open('http://{}:{}'.format(ip_address, port))
+    threading.Thread(target=start_browser).start()
+
     try:
         srv.serve_forever()
     except (KeyboardInterrupt, SystemExit):
         print('stopped server')
 
     srv.server_close()
-def generate_handler(files=None):
+def generate_handler():
     """
     generates the http handler
     """
-
-    if files is None:
-        files = {}
-
     class Handler(server.BaseHTTPRequestHandler):
-
+        """
+        The base http request header
+        """
         def do_GET(self):
             """
             sets the information for the GET request
@@ -61,7 +55,8 @@ def generate_handler(files=None):
             url = urllib.parse.urlparse(self.path)
             url_queries = url.query.split('&')
 
-            if ((len(url_queries) == MAX_URL_QUERIES) and (self.path == '/subnet?' + url_queries[0] + '&' + url_queries[1])):
+            valid_path = '/subnet?' + url_queries[0] + '&' + url_queries[1]
+            if ((len(url_queries) == MAX_URL_QUERIES) and (self.path == valid_path)):
                 self.send_response(200)
                 self.send_header('Content-type', 'text/html')
                 self.end_headers()
@@ -69,7 +64,7 @@ def generate_handler(files=None):
                 subnet_mask = url_queries[1]
                 html = set_ip_html_information(ip_address, subnet_mask)
                 self.wfile.write(html.encode())
-            elif (self.path.startswith('/subnet?') == False):
+            elif not self.path.startswith('/subnet?'):
                 self.send_response(404)
             else:
                 self.send_error(400)
@@ -81,29 +76,41 @@ def set_ip_html_information(ip_address, subnet_mask):
     """
     html = ''
 
-    if(subnet_calculator.validate_ipv4_address(ip_address)):
+    if subnet_calculator.validate_ipv4_address(ip_address):
         html += '<p>ipv4 address: ' + ip_address + '\n<p>'
 
-        if(subnet_calculator.validate_ipv4_netmask_ip_format(subnet_mask)):
+        if subnet_calculator.validate_ipv4_netmask_ip_format(subnet_mask):
+            subnet = subnet_calculator.calculate_ipv4_subnet(ip_address, subnet_mask)
+            lower_range = subnet_calculator.calculate_lower_ipv4_range(ip_address, subnet_mask)
+            upper_range = subnet_calculator.calculate_upper_ipv4_range(ip_address, subnet_mask)
+
             html += '<p>subnet mask: ' + subnet_mask + '\n</p>'
-            html += '<p>ipv4 subnet: ' + subnet_calculator.calculate_ipv4_subnet(ip_address, subnet_mask) + '\n</p>'
-            html += '<p>ipv4 range: ' + subnet_calculator.calculate_lower_ipv4_range(ip_address, subnet_mask) + ' - ' + subnet_calculator.calculate_upper_ipv4_range(ip_address, subnet_mask) + '\n</p>'
-        elif (subnet_calculator.validate_ipv4_netmask_bit_format(subnet_mask)):
-            html += '<p>subnet mask: ' + subnet_mask + '\n</p>'
+            html += '<p>ipv4 subnet: ' + subnet + '\n</p>'
+            html += '<p>ipv4 range: ' + lower_range + ' - ' + upper_range + '\n</p>'
+        elif subnet_calculator.validate_ipv4_netmask_bit_format(subnet_mask):
             binary_mask = subnet_calculator.convert_netmask_bits_to_binary(subnet_mask, 35, 9)
-            html += '<p>ipv4 subnet: ' + subnet_calculator.calculate_ipv4_subnet(ip_address, binary_mask) + '\n</p>'
-            html += '<p>ipv4 range: ' + subnet_calculator.calculate_lower_ipv4_range(ip_address, binary_mask) + ' - ' + subnet_calculator.calculate_upper_ipv4_range(ip_address, binary_mask) + '\n</p>'
+            subnet = subnet_calculator.calculate_ipv4_subnet(ip_address, binary_mask)
+            lower_range = subnet_calculator.calculate_lower_ipv4_range(ip_address, binary_mask)
+            upper_range = subnet_calculator.calculate_upper_ipv4_range(ip_address, binary_mask)
+
+            html += '<p>subnet mask: ' + subnet_mask + '\n</p>'
+            html += '<p>ipv4 subnet: ' + subnet + '\n</p>'
+            html += '<p>ipv4 range: ' + lower_range + ' - ' + upper_range + '\n</p>'
 
         else:
-            html += '<p>invalid net mask, please enter a netmask in either an ipv4 format or a bit format\n</p>'
-    elif(subnet_calculator.validate_ipv6_address(ip_address)):
+            html += '<p>invalid net mask, enter a netmask in either ipv4 or bit format\n</p>'
+    elif subnet_calculator.validate_ipv6_address(ip_address):
         html += '<p>ipv6 address: ' + ip_address + '\n</p>'
 
-        if(subnet_calculator.validate_ipv6_netmask_bit_format(subnet_mask)):
-            html +='<p>subnet mask: ' + subnet_mask + '\n</p>'
+        if subnet_calculator.validate_ipv6_netmask_bit_format(subnet_mask):
             binary_mask = subnet_calculator.convert_netmask_bits_to_binary(subnet_mask, 135, 17)
-            html += '<p>ipv6 subnet: ' + subnet_calculator.calculate_ipv6_subnet(ip_address, binary_mask) + '\n</p>'
-            html += '<p>ipv6 range: ' + subnet_calculator.calculate_lower_ipv6_range(ip_address, binary_mask) + ' - ' + subnet_calculator.calculate_upper_ipv6_range(ip_address, binary_mask) + '\n</p>'
+            subnet = subnet_calculator.calculate_ipv6_subnet(ip_address, binary_mask)
+            lower_range = subnet_calculator.calculate_lower_ipv6_range(ip_address, binary_mask)
+            upper_range = subnet_calculator.calculate_upper_ipv6_range(ip_address, binary_mask)
+
+            html += '<p>subnet mask: ' + subnet_mask + '\n</p>'
+            html += '<p>ipv6 subnet: ' + subnet + '\n</p>'
+            html += '<p>ipv6 range: ' + lower_range + ' - ' + upper_range + '\n</p>'
         else:
             html += '<p>invalid netmask, please enter a netmask in bit format\n</p>'
     else:
@@ -111,5 +118,5 @@ def set_ip_html_information(ip_address, subnet_mask):
 
     return html
 
-if (__name__ == '__main__'):
+if __name__ == '__main__':
     run()

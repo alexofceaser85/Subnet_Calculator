@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" file="subnet_calculator_tests.py" name="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat-20201011230741" skipped="0" tests="13" time="0.016" timestamp="2020-10-11T23:07:44">
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_empty_netmask" time="0.002" timestamp="2020-10-11T23:07:44"/>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_at_128" time="0.001" timestamp="2020-10-11T23:07:44"/>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_at_zero" time="0.001" timestamp="2020-10-11T23:07:44"/>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_one_above_128" time="0.001" timestamp="2020-10-11T23:07:44"/>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_one_above_zero" time="0.002" timestamp="2020-10-11T23:07:44"/>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_one_below_128" time="0.001" timestamp="2020-10-11T23:07:44"/>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_one_below_zero" time="0.001" timestamp="2020-10-11T23:07:44"/>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_well_above_128" time="0.001" timestamp="2020-10-11T23:07:44"/>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_well_above_zero" time="0.001" timestamp="2020-10-11T23:07:44"/>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_well_below_128" time="0.001" timestamp="2020-10-11T23:07:44"/>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_well_below_zero" time="0.001" timestamp="2020-10-11T23:07:44"/>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_with_letters" time="0.001" timestamp="2020-10-11T23:07:44"/>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_with_symbols" time="0.001" timestamp="2020-10-11T23:07:44"/>
+</testsuite>

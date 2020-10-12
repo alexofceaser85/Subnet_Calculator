@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="6" failures="0" file="subnet_calculator_tests.py" name="subnet_calculator_tests.CalculateUpperIpv6Range-20201011231924" skipped="0" tests="6" time="0.019" timestamp="2020-10-11T23:19:24">
+	<testcase classname="subnet_calculator_tests.CalculateUpperIpv6Range" name="test_calculate_upper_at_maximum_ip_and_at_maximum_subnet" time="0.006" timestamp="2020-10-11T23:19:24">
+		<error message="string index out of range" type="IndexError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1177, in test_calculate_upper_at_maximum_ip_and_at_maximum_subnet
+    subnet = subnet_calculator.calculate_upper_ipv6_range('ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff','1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 276, in calculate_upper_ipv6_range
+    if opposite_binary[character_index] == '1':
+IndexError: string index out of range
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.CalculateUpperIpv6Range" name="test_calculate_upper_one_below_maximum_ip_and_one_below_maximum_subnet" time="0.004" timestamp="2020-10-11T23:19:24">
+		<error message="string index out of range" type="IndexError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1172, in test_calculate_upper_one_below_maximum_ip_and_one_below_maximum_subnet
+    subnet = subnet_calculator.calculate_upper_ipv6_range('eeee:eeee:eeee:eeee:eeee:eeee:eeee:eeee','1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111100')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 276, in calculate_upper_ipv6_range
+    if opposite_binary[character_index] == '1':
+IndexError: string index out of range
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.CalculateUpperIpv6Range" name="test_calculate_upper_range_at_minimum_ip_and_minimum_subnet" time="0.002" timestamp="2020-10-11T23:19:24">
+		<error message="string index out of range" type="IndexError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1152, in test_calculate_upper_range_at_minimum_ip_and_minimum_subnet
+    subnet = subnet_calculator.calculate_upper_ipv6_range('0000::0000','1000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 276, in calculate_upper_ipv6_range
+    if opposite_binary[character_index] == '1':
+IndexError: string index out of range
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.CalculateUpperIpv6Range" name="test_calculate_upper_range_one_above_minimum_ip_and_one_above_minimum_subnet" time="0.002" timestamp="2020-10-11T23:19:24">
+		<error message="string index out of range" type="IndexError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1157, in test_calculate_upper_range_one_above_minimum_ip_and_one_above_minimum_subnet
+    subnet = subnet_calculator.calculate_upper_ipv6_range('1111:1111:1111:1111:1111:1111:1111:1111','1100000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 276, in calculate_upper_ipv6_range
+    if opposite_binary[character_index] == '1':
+IndexError: string index out of range
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.CalculateUpperIpv6Range" name="test_calculate_upper_range_well_above_minimum_ip_and_well_above_minimum_subnet" time="0.002" timestamp="2020-10-11T23:19:24">
+		<error message="string index out of range" type="IndexError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1162, in test_calculate_upper_range_well_above_minimum_ip_and_well_above_minimum_subnet
+    subnet = subnet_calculator.calculate_upper_ipv6_range('fe80:cd12:d45c:c150:1235:0000:211e:729c','1111111111111111.1111111111111111.1111111111111111.1111111111111000.0000000000000000.0000000000000000.0000000000000000.0000000000000000')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 276, in calculate_upper_ipv6_range
+    if opposite_binary[character_index] == '1':
+IndexError: string index out of range
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.CalculateUpperIpv6Range" name="test_calculate_upper_well_below_maximum_ip_and_well_below_maximum_subnet" time="0.002" timestamp="2020-10-11T23:19:24">
+		<error message="string index out of range" type="IndexError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1167, in test_calculate_upper_well_below_maximum_ip_and_well_below_maximum_subnet
+    subnet = subnet_calculator.calculate_upper_ipv6_range('fe88:df57:d56c:c557:57c5:7c55:588e:789c','1111111111111111.1111111111111111.1111111111111111.1111111111111111.1111111111111111.0000000000000000.0000000000000000.0000000000000000')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 276, in calculate_upper_ipv6_range
+    if opposite_binary[character_index] == '1':
+IndexError: string index out of range
+]]>		</error>
+	</testcase>
+</testsuite>
