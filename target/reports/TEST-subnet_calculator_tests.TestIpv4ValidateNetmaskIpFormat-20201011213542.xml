@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="26" failures="0" file="subnet_calculator_tests.py" name="subnet_calculator_tests.TestIpv4ValidateNetmaskIpFormat-20201011213542" skipped="0" tests="26" time="0.070" timestamp="2020-10-11T21:35:44">
+	<testcase classname="subnet_calculator_tests.TestIpv4ValidateNetmaskIpFormat" name="test_empty_netmask" time="0.004" timestamp="2020-10-11T21:35:44">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 430, in test_empty_netmask
+    is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestIpv4ValidateNetmaskIpFormat" name="test_maximum_bit_netmask_ending_in_254" time="0.003" timestamp="2020-10-11T21:35:44">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 515, in test_maximum_bit_netmask_ending_in_254
+    is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('255.255.255.254')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestIpv4ValidateNetmaskIpFormat" name="test_netmask_with_empty_octet" time="0.004" timestamp="2020-10-11T21:35:44">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 465, in test_netmask_with_empty_octet
+    is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('255..0.0')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestIpv4ValidateNetmaskIpFormat" name="test_netmask_with_many_non_zeros_after_one_zero" time="0.002" timestamp="2020-10-11T21:35:44">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 475, in test_netmask_with_many_non_zeros_after_one_zero
+    is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('0.255.255.255')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestIpv4ValidateNetmaskIpFormat" name="test_netmask_with_no_digits_in_octet" time="0.003" timestamp="2020-10-11T21:35:44">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 435, in test_netmask_with_no_digits_in_octet
+    is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('....')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestIpv4ValidateNetmaskIpFormat" name="test_netmask_with_non_valid_octet_value" time="0.002" timestamp="2020-10-11T21:35:44">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 555, in test_netmask_with_non_valid_octet_value
+    is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('255.255.255.180')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestIpv4ValidateNetmaskIpFormat" name="test_netmask_with_octet_less_than_255_before_255" time="0.002" timestamp="2020-10-11T21:35:44">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 485, in test_netmask_with_octet_less_than_255_before_255
+    is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('0.255.0.0')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestIpv4ValidateNetmaskIpFormat" name="test_netmask_with_octets_all_255" time="0.002" timestamp="2020-10-11T21:35:44">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 495, in test_netmask_with_octets_all_255
+    is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('255.255.255.255')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestIpv4ValidateNetmaskIpFormat" name="test_netmask_with_octets_all_zero" time="0.002" timestamp="2020-10-11T21:35:44">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 490, in test_netmask_with_octets_all_zero
+    is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('0.0.0.0')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestIpv4ValidateNetmaskIpFormat" name="test_netmask_with_octets_at_four" time="0.002" timestamp="2020-10-11T21:35:44">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 450, in test_netmask_with_octets_at_four
+    is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('255.255.255.0')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestIpv4ValidateNetmaskIpFormat" name="test_netmask_with_octets_one_above_four" time="0.002" timestamp="2020-10-11T21:35:44">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 455, in test_netmask_with_octets_one_above_four
+    is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('255.255.255.0.0')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestIpv4ValidateNetmaskIpFormat" name="test_netmask_with_octets_one_below_four" time="0.003" timestamp="2020-10-11T21:35:44">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 445, in test_netmask_with_octets_one_below_four
+    is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('255.255.255')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestIpv4ValidateNetmaskIpFormat" name="test_netmask_with_octets_well_above_four" time="0.003" timestamp="2020-10-11T21:35:44">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 460, in test_netmask_with_octets_well_above_four
+    is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('255.255.255.255.255.255.255.0')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestIpv4ValidateNetmaskIpFormat" name="test_netmask_with_octets_well_below_four" time="0.003" timestamp="2020-10-11T21:35:44">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 440, in test_netmask_with_octets_well_below_four
+    is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('255')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestIpv4ValidateNetmaskIpFormat" name="test_netmask_with_one_more_than_one_non_255_or_0_number" time="0.003" timestamp="2020-10-11T21:35:44">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 505, in test_netmask_with_one_more_than_one_non_255_or_0_number
+    is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('255.248.240.0')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestIpv4ValidateNetmaskIpFormat" name="test_netmask_with_one_non_255_or_0_number" time="0.004" timestamp="2020-10-11T21:35:44">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 500, in test_netmask_with_one_non_255_or_0_number
+    is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('255.248.0.0')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestIpv4ValidateNetmaskIpFormat" name="test_netmask_with_one_non_zero_after_many_non_zeros" time="0.003" timestamp="2020-10-11T21:35:44">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 480, in test_netmask_with_one_non_zero_after_many_non_zeros
+    is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('0.0.0.255')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestIpv4ValidateNetmaskIpFormat" name="test_netmask_with_one_non_zero_after_one_zero" time="0.002" timestamp="2020-10-11T21:35:44">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 470, in test_netmask_with_one_non_zero_after_one_zero
+    is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('0.255.0.0')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestIpv4ValidateNetmaskIpFormat" name="test_netmask_with_one_octet_with_valid_value_of_128" time="0.003" timestamp="2020-10-11T21:35:44">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 550, in test_netmask_with_one_octet_with_valid_value_of_128
+    is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('255.255.255.128')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestIpv4ValidateNetmaskIpFormat" name="test_netmask_with_one_octet_with_valid_value_of_192" time="0.003" timestamp="2020-10-11T21:35:44">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 545, in test_netmask_with_one_octet_with_valid_value_of_192
+    is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('255.255.255.192')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestIpv4ValidateNetmaskIpFormat" name="test_netmask_with_one_octet_with_valid_value_of_224" time="0.002" timestamp="2020-10-11T21:35:44">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 540, in test_netmask_with_one_octet_with_valid_value_of_224
+    is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('255.255.255.224')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestIpv4ValidateNetmaskIpFormat" name="test_netmask_with_one_octet_with_valid_value_of_240" time="0.003" timestamp="2020-10-11T21:35:44">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 535, in test_netmask_with_one_octet_with_valid_value_of_240
+    is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('255.255.255.240')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestIpv4ValidateNetmaskIpFormat" name="test_netmask_with_one_octet_with_valid_value_of_248" time="0.002" timestamp="2020-10-11T21:35:44">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 530, in test_netmask_with_one_octet_with_valid_value_of_248
+    is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('255.255.255.248')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestIpv4ValidateNetmaskIpFormat" name="test_netmask_with_one_octet_with_valid_value_of_252" time="0.003" timestamp="2020-10-11T21:35:44">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 525, in test_netmask_with_one_octet_with_valid_value_of_252
+    is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('255.255.255.252')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestIpv4ValidateNetmaskIpFormat" name="test_netmask_with_one_octet_with_valid_value_of_254" time="0.003" timestamp="2020-10-11T21:35:44">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 520, in test_netmask_with_one_octet_with_valid_value_of_254
+    is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('255.255.255.254')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.TestIpv4ValidateNetmaskIpFormat" name="test_netmask_with_well_more_than_one_non_255_or_0_number" time="0.002" timestamp="2020-10-11T21:35:44">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 510, in test_netmask_with_well_more_than_one_non_255_or_0_number
+    is_valid = subnet_calculator.validate_ipv4_netmask_ip_format('254.248.240.128')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv4_netmask_ip_format'
+]]>		</error>
+	</testcase>
+</testsuite>

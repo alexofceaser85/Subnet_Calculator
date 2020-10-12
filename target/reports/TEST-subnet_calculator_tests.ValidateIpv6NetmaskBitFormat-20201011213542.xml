@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="13" failures="0" file="subnet_calculator_tests.py" name="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat-20201011213542" skipped="0" tests="13" time="0.040" timestamp="2020-10-11T21:35:45">
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_empty_netmask" time="0.003" timestamp="2020-10-11T21:35:45">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv6_netmask_bit_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 629, in test_empty_netmask
+    is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv6_netmask_bit_format'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_at_128" time="0.003" timestamp="2020-10-11T21:35:45">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv6_netmask_bit_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 669, in test_netmask_at_128
+    is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('128')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv6_netmask_bit_format'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_at_zero" time="0.003" timestamp="2020-10-11T21:35:45">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv6_netmask_bit_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 644, in test_netmask_at_zero
+    is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('0')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv6_netmask_bit_format'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_one_above_128" time="0.005" timestamp="2020-10-11T21:35:45">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv6_netmask_bit_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 674, in test_netmask_one_above_128
+    is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('129')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv6_netmask_bit_format'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_one_above_zero" time="0.002" timestamp="2020-10-11T21:35:45">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv6_netmask_bit_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 649, in test_netmask_one_above_zero
+    is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('1')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv6_netmask_bit_format'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_one_below_128" time="0.003" timestamp="2020-10-11T21:35:45">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv6_netmask_bit_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 664, in test_netmask_one_below_128
+    is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('127')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv6_netmask_bit_format'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_one_below_zero" time="0.004" timestamp="2020-10-11T21:35:45">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv6_netmask_bit_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 639, in test_netmask_one_below_zero
+    is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('-1')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv6_netmask_bit_format'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_well_above_128" time="0.003" timestamp="2020-10-11T21:35:45">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv6_netmask_bit_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 679, in test_netmask_well_above_128
+    is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('200')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv6_netmask_bit_format'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_well_above_zero" time="0.003" timestamp="2020-10-11T21:35:45">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv6_netmask_bit_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 654, in test_netmask_well_above_zero
+    is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('30')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv6_netmask_bit_format'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_well_below_128" time="0.003" timestamp="2020-10-11T21:35:45">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv6_netmask_bit_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 659, in test_netmask_well_below_128
+    is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('100')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv6_netmask_bit_format'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_well_below_zero" time="0.004" timestamp="2020-10-11T21:35:45">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv6_netmask_bit_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 634, in test_netmask_well_below_zero
+    is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('-99')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv6_netmask_bit_format'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_with_letters" time="0.003" timestamp="2020-10-11T21:35:45">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv6_netmask_bit_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 684, in test_netmask_with_letters
+    is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('9f')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv6_netmask_bit_format'
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.ValidateIpv6NetmaskBitFormat" name="test_netmask_with_symbols" time="0.002" timestamp="2020-10-11T21:35:45">
+		<error message="module 'subnet_calculator' has no attribute 'validate_ipv6_netmask_bit_format'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 689, in test_netmask_with_symbols
+    is_valid = subnet_calculator.validate_ipv6_netmask_bit_format('9.0')
+AttributeError: module 'subnet_calculator' has no attribute 'validate_ipv6_netmask_bit_format'
+]]>		</error>
+	</testcase>
+</testsuite>

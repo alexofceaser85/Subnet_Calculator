@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="12" failures="0" file="subnet_calculator_tests.py" name="subnet_calculator_tests.CalculateLowerIpv4Range-20201011201604" skipped="0" tests="12" time="0.039" timestamp="2020-10-11T20:16:05">
+	<testcase classname="subnet_calculator_tests.CalculateLowerIpv4Range" name="test_calculate_lower_in_bit_format_maximum_ip_and_maximum_subnet" time="0.007" timestamp="2020-10-11T20:16:05">
+		<error message="local variable 'lower_range' referenced before assignment" type="UnboundLocalError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1200, in test_calculate_lower_in_bit_format_maximum_ip_and_maximum_subnet
+    subnet = subnet_calculator.calculate_lower_ipv4_range('255.255.255.255', '11111111.11111111.11111111.11111110')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 299, in calculate_lower_ipv4_range
+    lower_range += '.' + str(int(current_binary, 2))
+UnboundLocalError: local variable 'lower_range' referenced before assignment
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.CalculateLowerIpv4Range" name="test_calculate_lower_in_bit_format_minimum_ip_and_minimum_subnet" time="0.004" timestamp="2020-10-11T20:16:05">
+		<error message="local variable 'lower_range' referenced before assignment" type="UnboundLocalError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1185, in test_calculate_lower_in_bit_format_minimum_ip_and_minimum_subnet
+    subnet = subnet_calculator.calculate_lower_ipv4_range('0.0.0.0', '10000000.00000000.00000000.00000000')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 299, in calculate_lower_ipv4_range
+    lower_range += '.' + str(int(current_binary, 2))
+UnboundLocalError: local variable 'lower_range' referenced before assignment
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.CalculateLowerIpv4Range" name="test_calculate_lower_in_bit_format_one_above_minimum_ip_and_one_above_minimum_subnet" time="0.005" timestamp="2020-10-11T20:16:05">
+		<error message="local variable 'lower_range' referenced before assignment" type="UnboundLocalError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1190, in test_calculate_lower_in_bit_format_one_above_minimum_ip_and_one_above_minimum_subnet
+    subnet = subnet_calculator.calculate_lower_ipv4_range('1.1.1.1', '11000000.00000000.00000000.00000000')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 299, in calculate_lower_ipv4_range
+    lower_range += '.' + str(int(current_binary, 2))
+UnboundLocalError: local variable 'lower_range' referenced before assignment
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.CalculateLowerIpv4Range" name="test_calculate_lower_in_bit_format_one_below_maximum_ip_and_one_below_maximum_subnet" time="0.003" timestamp="2020-10-11T20:16:05">
+		<error message="local variable 'lower_range' referenced before assignment" type="UnboundLocalError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1205, in test_calculate_lower_in_bit_format_one_below_maximum_ip_and_one_below_maximum_subnet
+    subnet = subnet_calculator.calculate_lower_ipv4_range('254.254.254.254', '11111111.11111111.11111111.11111100')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 299, in calculate_lower_ipv4_range
+    lower_range += '.' + str(int(current_binary, 2))
+UnboundLocalError: local variable 'lower_range' referenced before assignment
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.CalculateLowerIpv4Range" name="test_calculate_lower_in_bit_format_well_above_minimum_ip_and_well_above_minimum_subnet" time="0.002" timestamp="2020-10-11T20:16:05">
+		<error message="local variable 'lower_range' referenced before assignment" type="UnboundLocalError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1195, in test_calculate_lower_in_bit_format_well_above_minimum_ip_and_well_above_minimum_subnet
+    subnet = subnet_calculator.calculate_lower_ipv4_range('160.160.160.100', '11111111.11111100.00000000.00000000')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 299, in calculate_lower_ipv4_range
+    lower_range += '.' + str(int(current_binary, 2))
+UnboundLocalError: local variable 'lower_range' referenced before assignment
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.CalculateLowerIpv4Range" name="test_calculate_lower_in_bit_format_well_below_maximum_ip_and_well_below_maximum_subnet" time="0.003" timestamp="2020-10-11T20:16:05">
+		<error message="local variable 'lower_range' referenced before assignment" type="UnboundLocalError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1210, in test_calculate_lower_in_bit_format_well_below_maximum_ip_and_well_below_maximum_subnet
+    subnet = subnet_calculator.calculate_lower_ipv4_range('254.128.0.0', '11111111.11111111.11100000.00000000')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 299, in calculate_lower_ipv4_range
+    lower_range += '.' + str(int(current_binary, 2))
+UnboundLocalError: local variable 'lower_range' referenced before assignment
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.CalculateLowerIpv4Range" name="test_calculate_lower_in_ip_format_maximum_ip_and_maximum_subnet" time="0.003" timestamp="2020-10-11T20:16:05">
+		<error message="local variable 'lower_range' referenced before assignment" type="UnboundLocalError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1230, in test_calculate_lower_in_ip_format_maximum_ip_and_maximum_subnet
+    subnet = subnet_calculator.calculate_lower_ipv4_range('255.255.255.255', '255.255.255.254')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 299, in calculate_lower_ipv4_range
+    lower_range += '.' + str(int(current_binary, 2))
+UnboundLocalError: local variable 'lower_range' referenced before assignment
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.CalculateLowerIpv4Range" name="test_calculate_lower_in_ip_format_minimum_ip_and_minimum_subnet" time="0.002" timestamp="2020-10-11T20:16:05">
+		<error message="local variable 'lower_range' referenced before assignment" type="UnboundLocalError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1215, in test_calculate_lower_in_ip_format_minimum_ip_and_minimum_subnet
+    subnet = subnet_calculator.calculate_lower_ipv4_range('0.0.0.0', '128.0.0.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 299, in calculate_lower_ipv4_range
+    lower_range += '.' + str(int(current_binary, 2))
+UnboundLocalError: local variable 'lower_range' referenced before assignment
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.CalculateLowerIpv4Range" name="test_calculate_lower_in_ip_format_one_above_minimum_ip_and_one_above_minimum_subnet" time="0.002" timestamp="2020-10-11T20:16:05">
+		<error message="local variable 'lower_range' referenced before assignment" type="UnboundLocalError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1220, in test_calculate_lower_in_ip_format_one_above_minimum_ip_and_one_above_minimum_subnet
+    subnet = subnet_calculator.calculate_lower_ipv4_range('1.1.1.1', '192.0.0.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 299, in calculate_lower_ipv4_range
+    lower_range += '.' + str(int(current_binary, 2))
+UnboundLocalError: local variable 'lower_range' referenced before assignment
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.CalculateLowerIpv4Range" name="test_calculate_lower_in_ip_format_one_below_maximum_ip_and_one_below_maximum_subnet" time="0.003" timestamp="2020-10-11T20:16:05">
+		<error message="local variable 'lower_range' referenced before assignment" type="UnboundLocalError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1235, in test_calculate_lower_in_ip_format_one_below_maximum_ip_and_one_below_maximum_subnet
+    subnet = subnet_calculator.calculate_lower_ipv4_range('254.254.254.254', '255.255.255.252')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 299, in calculate_lower_ipv4_range
+    lower_range += '.' + str(int(current_binary, 2))
+UnboundLocalError: local variable 'lower_range' referenced before assignment
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.CalculateLowerIpv4Range" name="test_calculate_lower_in_ip_format_well_above_minimum_ip_and_well_above_minimum_subnet" time="0.003" timestamp="2020-10-11T20:16:05">
+		<error message="local variable 'lower_range' referenced before assignment" type="UnboundLocalError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1225, in test_calculate_lower_in_ip_format_well_above_minimum_ip_and_well_above_minimum_subnet
+    subnet = subnet_calculator.calculate_lower_ipv4_range('160.160.160.100', '255.252.0.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 299, in calculate_lower_ipv4_range
+    lower_range += '.' + str(int(current_binary, 2))
+UnboundLocalError: local variable 'lower_range' referenced before assignment
+]]>		</error>
+	</testcase>
+	<testcase classname="subnet_calculator_tests.CalculateLowerIpv4Range" name="test_calculate_lower_in_ip_format_well_below_maximum_ip_and_well_below_maximum_subnet" time="0.002" timestamp="2020-10-11T20:16:05">
+		<error message="local variable 'lower_range' referenced before assignment" type="UnboundLocalError">
+<![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/home/student/Documents/cs3280project2/src/unittest/python/subnet_calculator_tests.py", line 1240, in test_calculate_lower_in_ip_format_well_below_maximum_ip_and_well_below_maximum_subnet
+    subnet = subnet_calculator.calculate_lower_ipv4_range('254.128.0.0', '255.255.224.0')
+  File "/home/student/Documents/cs3280project2/src/main/python/subnet_calculator.py", line 299, in calculate_lower_ipv4_range
+    lower_range += '.' + str(int(current_binary, 2))
+UnboundLocalError: local variable 'lower_range' referenced before assignment
+]]>		</error>
+	</testcase>
+</testsuite>

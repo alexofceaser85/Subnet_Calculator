@@ -21,14 +21,14 @@ lower_ip_range = ''
 upper_ip_range = ''
 subnet = ''
 
-def run(html,http_server = None, server_class=HTTPServer, handler_class=BaseHTTPRequestHandler):
+def run(http_server = None, server_class=HTTPServer, handler_class=BaseHTTPRequestHandler):
     """
     runs the http server
     """
     ip = 'localhost'
     port = 3280
     open_browser = True
-    Handler = generate_handler(html)
+    Handler = generate_handler()
 
     srv = server.HTTPServer((ip, port), Handler)
     sys.stdout.flush()
@@ -43,7 +43,7 @@ def run(html,http_server = None, server_class=HTTPServer, handler_class=BaseHTTP
         print('stopped server')
 
     srv.server_close()
-def generate_handler(html, files=None):
+def generate_handler(files=None):
     """
     generates the http handler
     """
@@ -87,12 +87,13 @@ def set_ip_html_information(ip_address, subnet_mask):
         if(subnet_calculator.validate_ipv4_netmask_ip_format(subnet_mask)):
             html += '<p>subnet mask: ' + subnet_mask + '\n</p>'
             html += '<p>ipv4 subnet: ' + subnet_calculator.calculate_ipv4_subnet(ip_address, subnet_mask) + '\n</p>'
-            html += '<p>ipv4 range: ' + subnet_calculator.calculate_upper_ipv4_range(ip_address, subnet_mask) + '\n</p>'
+            html += '<p>ipv4 range: ' + subnet_calculator.calculate_lower_ipv4_range(ip_address, subnet_mask) + ' - ' + subnet_calculator.calculate_upper_ipv4_range(ip_address, subnet_mask) + '\n</p>'
         elif (subnet_calculator.validate_ipv4_netmask_bit_format(subnet_mask)):
             html += '<p>subnet mask: ' + subnet_mask + '\n</p>'
             binary_mask = subnet_calculator.convert_netmask_bits_to_binary(subnet_mask, 35, 9)
             html += '<p>ipv4 subnet: ' + subnet_calculator.calculate_ipv4_subnet(ip_address, binary_mask) + '\n</p>'
-            html += '<p>ipv4 range: ' + subnet_calculator.calculate_upper_ipv4_range(ip_address, binary_mask) + '\n</p>'
+            html += '<p>ipv4 range: ' + subnet_calculator.calculate_lower_ipv4_range(ip_address, binary_mask) + ' - ' + subnet_calculator.calculate_upper_ipv4_range(ip_address, binary_mask) + '\n</p>'
+
         else:
             html += '<p>invalid net mask, please enter a netmask in either an ipv4 format or a bit format\n</p>'
     elif(subnet_calculator.validate_ipv6_address(ip_address)):
@@ -102,7 +103,7 @@ def set_ip_html_information(ip_address, subnet_mask):
             html +='<p>subnet mask: ' + subnet_mask + '\n</p>'
             binary_mask = subnet_calculator.convert_netmask_bits_to_binary(subnet_mask, 135, 17)
             html += '<p>ipv6 subnet: ' + subnet_calculator.calculate_ipv6_subnet(ip_address, binary_mask) + '\n</p>'
-            html += '<p>ipv6 range: ' + subnet_calculator.calculate_upper_ipv6_range(ip_address, binary_mask) + '\n</p>'
+            html += '<p>ipv6 range: ' + subnet_calculator.calculate_lower_ipv6_range(ip_address, binary_mask) + ' - ' + subnet_calculator.calculate_upper_ipv6_range(ip_address, binary_mask) + '\n</p>'
         else:
             html += '<p>invalid netmask, please enter a netmask in bit format\n</p>'
     else:
@@ -111,4 +112,4 @@ def set_ip_html_information(ip_address, subnet_mask):
     return html
 
 if (__name__ == '__main__'):
-    run('<h1>h</h1>')
+    run()

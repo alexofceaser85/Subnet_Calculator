@@ -11,10 +11,7 @@ __version__ = "11-October-2020"
 
 def main():
 
-    service.run('<h1>hello world</h1>')
-    service.generate_handler('<h1>hello world</h1>')
-    print(service.get_ip_address)
-    print('x')
+    service.run()
 
 if __name__ == '__main__':
     main()

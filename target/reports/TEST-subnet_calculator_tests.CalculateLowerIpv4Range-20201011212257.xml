@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" file="subnet_calculator_tests.py" name="subnet_calculator_tests.CalculateLowerIpv4Range-20201011212257" skipped="0" tests="12" time="0.020" timestamp="2020-10-11T21:22:57">
+	<testcase classname="subnet_calculator_tests.CalculateLowerIpv4Range" name="test_calculate_lower_in_bit_format_maximum_ip_and_maximum_subnet" time="0.004" timestamp="2020-10-11T21:22:57"/>
+	<testcase classname="subnet_calculator_tests.CalculateLowerIpv4Range" name="test_calculate_lower_in_bit_format_minimum_ip_and_minimum_subnet" time="0.001" timestamp="2020-10-11T21:22:57"/>
+	<testcase classname="subnet_calculator_tests.CalculateLowerIpv4Range" name="test_calculate_lower_in_bit_format_one_above_minimum_ip_and_one_above_minimum_subnet" time="0.002" timestamp="2020-10-11T21:22:57"/>
+	<testcase classname="subnet_calculator_tests.CalculateLowerIpv4Range" name="test_calculate_lower_in_bit_format_one_below_maximum_ip_and_one_below_maximum_subnet" time="0.001" timestamp="2020-10-11T21:22:57"/>
+	<testcase classname="subnet_calculator_tests.CalculateLowerIpv4Range" name="test_calculate_lower_in_bit_format_well_above_minimum_ip_and_well_above_minimum_subnet" time="0.001" timestamp="2020-10-11T21:22:57"/>
+	<testcase classname="subnet_calculator_tests.CalculateLowerIpv4Range" name="test_calculate_lower_in_bit_format_well_below_maximum_ip_and_well_below_maximum_subnet" time="0.002" timestamp="2020-10-11T21:22:57"/>
+	<testcase classname="subnet_calculator_tests.CalculateLowerIpv4Range" name="test_calculate_lower_in_ip_format_maximum_ip_and_maximum_subnet" time="0.001" timestamp="2020-10-11T21:22:57"/>
+	<testcase classname="subnet_calculator_tests.CalculateLowerIpv4Range" name="test_calculate_lower_in_ip_format_minimum_ip_and_minimum_subnet" time="0.002" timestamp="2020-10-11T21:22:57"/>
+	<testcase classname="subnet_calculator_tests.CalculateLowerIpv4Range" name="test_calculate_lower_in_ip_format_one_above_minimum_ip_and_one_above_minimum_subnet" time="0.002" timestamp="2020-10-11T21:22:57"/>
+	<testcase classname="subnet_calculator_tests.CalculateLowerIpv4Range" name="test_calculate_lower_in_ip_format_one_below_maximum_ip_and_one_below_maximum_subnet" time="0.001" timestamp="2020-10-11T21:22:57"/>
+	<testcase classname="subnet_calculator_tests.CalculateLowerIpv4Range" name="test_calculate_lower_in_ip_format_well_above_minimum_ip_and_well_above_minimum_subnet" time="0.002" timestamp="2020-10-11T21:22:57"/>
+	<testcase classname="subnet_calculator_tests.CalculateLowerIpv4Range" name="test_calculate_lower_in_ip_format_well_below_maximum_ip_and_well_below_maximum_subnet" time="0.001" timestamp="2020-10-11T21:22:57"/>
+</testsuite>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" file="subnet_calculator_tests.py" name="subnet_calculator_tests.TestConvertNetmaskBitsToBinary-20201011203351" skipped="0" tests="12" time="0.015" timestamp="2020-10-11T20:33:52">
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_maximum_ipv4_netmask" time="0.002" timestamp="2020-10-11T20:33:52"/>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_maximum_ipv6_netmask" time="0.001" timestamp="2020-10-11T20:33:52"/>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_minimum_ipv6_netmask" time="0.002" timestamp="2020-10-11T20:33:52"/>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_minimum_netmask" time="0.001" timestamp="2020-10-11T20:33:52"/>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_netmask_one_above_minimum" time="0.001" timestamp="2020-10-11T20:33:52"/>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_netmask_well_above_minimum" time="0.001" timestamp="2020-10-11T20:33:52"/>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_one_above_minimum_ipv6_netmask" time="0.001" timestamp="2020-10-11T20:33:52"/>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_one_below_maximum_ipv4_netmask" time="0.001" timestamp="2020-10-11T20:33:52"/>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_one_below_maximum_ipv6_netmask" time="0.001" timestamp="2020-10-11T20:33:52"/>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_well_above_minimum_ipv6_netmask" time="0.001" timestamp="2020-10-11T20:33:52"/>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_well_below_maximum_ipv4_netmask" time="0.001" timestamp="2020-10-11T20:33:52"/>
+	<testcase classname="subnet_calculator_tests.TestConvertNetmaskBitsToBinary" name="test_well_below_maximum_ipv6_netmask" time="0.001" timestamp="2020-10-11T20:33:52"/>
+</testsuite>

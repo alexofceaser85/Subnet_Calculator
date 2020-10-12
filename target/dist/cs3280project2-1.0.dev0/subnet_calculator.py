@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-This holds the code responsible for determining a valid IP address and subnet mask and then determining the correct subnet
+This holds the code responsible for determining a valid IP address and subnet mask and then
+determining the correct subnet
 """
 import re
 
@@ -21,9 +22,9 @@ def validate_ipv4_address(ipv4_address):
     Checks if the given address is in valid ipv4 format
     """
 
-    valid_ipv4_regex = r"^([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])(\.([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])){3}$"
-
-    if (re.match(valid_ipv4_regex, ipv4_address)):
+    if re.match(r'^([0-9]|[1-9][0-9]'
+                r'|1[0-9]{2}|2[0-4][0-9]|25[0-5])(\.([0-9]|[1-9][0-9]'
+                r'|1[0-9]{2}|2[0-4][0-9]|25[0-5])){3}$', ipv4_address):
         return True
 
     return False
@@ -33,53 +34,54 @@ def validate_ipv6_address(ipv6_address):
     Checks if the given address is in valid ipv6 format
     """
 
-    if (ipv6_address.count(':') > IPV6_MAX_COLONS):
+    if ipv6_address.count(':') > IPV6_MAX_COLONS:
 
         return False
 
-    valid_ipv6_regex = r"^((((?:[0-9A-F]{1,4}))(((?::[0-9A-F]{1,4}){7})|((((?::[0-9A-F]{1,4}))){0,5}((?:(::)[0-9A-F]{0,4}))(((?::[0-9A-F]{1,4}))){0,5})))|(?:(::)[0-9A-F]{0,4}))$"
-
-    if (re.match(valid_ipv6_regex, ipv6_address, re.IGNORECASE)):
+    if re.match(r'^((((?:[0-9A-F]{1,4}))(((?::[0-9A-F]{1,4}){7})'
+                r'|((((?::[0-9A-F]{1,4}))){0,5}((?:(::)[0-9A-F]{0,4}))'
+                r'(((?::[0-9A-F]{1,4}))){0,5})))'
+                r'|(?:(::)[0-9A-F]{0,4}))$', ipv6_address, re.IGNORECASE):
         return True
 
     return False
 
-def validate_ipv4_netmask_ip_format(netmask):
+def validate_ipv4_netmask_as_ip(netmask):
     """
     Checks if the given netmask is in a valid ipv4 format
     for example: 255.255.0.0 is valid but 16 is not.
     """
 
-    if (netmask.count('.') != IPV4_NETMASK_MAX_PERIODS):
+    if netmask.count('.') != IPV4_NETMASK_MAX_PERIODS:
         return False
 
-    valid_netmask_ip_regex = r"^(((255)((\.255){0,2}(?:(((\.254)|(\.252)|(\.248)|(\.240)|(\.224)|(\.192)|(\.128)))){0,1}(\.0){0,2}))|(((254)|(252)|(248)|(240)|(224)|(192)|(128)|(0))(\.0){3}))$"
-
-    if (re.match(valid_netmask_ip_regex, netmask)):
+    if re.match(r'^(((255)((\.255){0,2}(?:(((\.254)|(\.252)|(\.248)|(\.240)|(\.224)|(\.192)'
+                r'|(\.128)))){0,1}(\.0){0,2}))'
+                r'|(((254)|(252)|(248)|(240)|(224)|(192)|(128)|(0))(\.0){3}))$', netmask):
         return True
 
     return False
 
-def validate_ipv4_netmask_bit_format(netmask):
+def validate_ipv4_netmask_as_bit(netmask):
     """
     Checks if the given ipv4 netmask is in a valid bit format
     for example: 16 is valid but 255.255.0.0 is not
     """
     valid_netmask_bit_regex = r"^(([1-9])|((1|2)[0-9])|(3[0-1]))$"
-    
-    if (re.match(valid_netmask_bit_regex, netmask)):
+
+    if re.match(valid_netmask_bit_regex, netmask):
         return True
 
     return False
 
-def validate_ipv6_netmask_bit_format(netmask):
+def validate_ipv6_netmask_as_bit(netmask):
     """
     Checks if the given ipv6 netmask is in a valid bit format
     for example: 64 is valid but 255.255.255.255.255.255.255.255 is not
     """
     valid_netmask_bit_regex = r"^(([1-9])|([1-9][0-9])|(1[0-2][0-8]))$"
 
-    if (re.match(valid_netmask_bit_regex, netmask)):
+    if re.match(valid_netmask_bit_regex, netmask):
         return True
 
     return False
@@ -93,21 +95,21 @@ def convert_netmask_bits_to_binary(netmask, max_length, period_index):
     current_netmask_bits = int(netmask)
     binary_netmask = ''
 
-    while(netmask_bits_index <= max_length):
+    while netmask_bits_index <= max_length:
 
-        if (netmask_bits_index % period_index == 0):
+        if netmask_bits_index % period_index == 0:
             binary_netmask += '.'
             netmask_bits_index += 1
-        elif (current_netmask_bits != 0):
+        elif current_netmask_bits != 0:
             binary_netmask += '1'
             current_netmask_bits -= 1
             netmask_bits_index += 1
         else:
             binary_netmask += '0'
             netmask_bits_index += 1
-    
-    binary_netmask_no_leading_period = binary_netmask[1:]
-    return binary_netmask_no_leading_period
+
+    netmask_no_leading_period = binary_netmask[1:]
+    return netmask_no_leading_period
 
 def calculate_ipv4_subnet(ip_address, netmask):
     """
@@ -117,9 +119,9 @@ def calculate_ipv4_subnet(ip_address, netmask):
     subnet = ""
     current_octet_index = 0
     split_netmask = netmask.split('.')
-    
-    for octet in split_ip_address:        
-        if (validate_ipv4_netmask_ip_format(netmask)):
+
+    for octet in split_ip_address:
+        if validate_ipv4_netmask_as_ip(netmask):
             current_netmask_as_integer = int(split_netmask[current_octet_index])
         else:
             current_netmask_as_integer = int(split_netmask[current_octet_index], 2)
@@ -128,32 +130,31 @@ def calculate_ipv4_subnet(ip_address, netmask):
         current_octet_index += 1
         octet_without_binary_indicator = binary_octet.replace('0b', '')
         subnet += '.' + str(int(octet_without_binary_indicator, 2))
-    
+
     subnet_without_leading_period = subnet[1:]
     return subnet_without_leading_period
 
 def expand_ipv6_address(ip_address):
     """
-    searches the ipv6 address for shortened zero groups (::) and expands them to include the zeros in the groups
+    searches the ipv6 address for shortened zero groups (::) and expands them to include the zeros
+    in the groups
     """
     split_ip_address = ip_address.split(':')
     group_index = 0
     expanded_ipv6 = ''
-    integer_base = 16
 
     for group in split_ip_address:
         if not group:
             group = '0000'
 
-            while(len(split_ip_address) < IPV6_MAX_GROUPS):     
+            while len(split_ip_address) < IPV6_MAX_GROUPS:
                 split_ip_address.insert(group_index, '0000')
-        
+
         expanded_ipv6 += ':' + group
         group_index += 1
 
-    expanded_ipv6_without_leading_colon = expanded_ipv6[1:]
-    
-    return expanded_ipv6_without_leading_colon
+    ipv6_without_leading_colon = expanded_ipv6[1:]
+    return ipv6_without_leading_colon
 
 def calculate_ipv6_subnet(ip_address, netmask):
     """
@@ -170,10 +171,10 @@ def calculate_ipv6_subnet(ip_address, netmask):
         binary_group = bin(int(group, 16) & current_netmask_as_integer)
         binary_group_without_indicator = binary_group.replace('0b', '')
         subnet_as_hexadecimal = hex(int(binary_group_without_indicator, 2))
-        hexadecimal_without_indicator = subnet_as_hexadecimal[2:] 
+        hexadecimal_without_indicator = subnet_as_hexadecimal[2:]
         subnet += ':' + hexadecimal_without_indicator
         current_group_index += 1
-    
+
     subnet_without_leading_period = subnet[1:]
     return subnet_without_leading_period
 
@@ -186,14 +187,14 @@ def calculate_binary_opposite(binary_string, max_length_for_leading_zeros):
 
     for number in binary_string:
 
-        if(number == '0'):
+        if number == '0':
             binary_opposite_string += '1'
 
-            if (len(binary_string) < max_length_for_leading_zeros):
-                while(len(binary_opposite_string) < max_length_for_leading_zeros):
+            if len(binary_string) < max_length_for_leading_zeros:
+                while len(binary_opposite_string) < max_length_for_leading_zeros:
                     binary_opposite_string += '1'
 
-        elif(number == '1'):
+        elif number == '1':
             binary_opposite_string += '0'
         else:
             binary_opposite_string += number
@@ -211,9 +212,8 @@ def calculate_upper_ipv4_range(ip_address, netmask):
     group_index = 0
 
     for group in netmask_group:
-        current_netmask_as_integer = 0
 
-        if (validate_ipv4_netmask_ip_format(netmask)):
+        if validate_ipv4_netmask_as_ip(netmask):
             opposite_binary = calculate_binary_opposite(bin(int(group)), 8)
         else:
             opposite_binary = calculate_binary_opposite(bin(int(group, 2)), 8)
@@ -221,17 +221,19 @@ def calculate_upper_ipv4_range(ip_address, netmask):
         current_binary = ''
         character_index = 0
 
-        while (len(ip_address_binary) < 8):
+        while len(ip_address_binary) < 8:
             ip_address_binary += '0'
-       
-        for character in ip_address_binary:
-            if(group_index == (len(netmask_group) - 1) and (character_index == (len(ip_address_binary) - 1))):
+
+        while character_index < len(ip_address_binary):
+            netmask_length = len(netmask_group) - 1
+            ip_length = len(ip_address_binary) - 1
+            if (group_index == netmask_length) and (character_index == ip_length):
                 current_binary += '0'
-            elif(opposite_binary[character_index] == '1'):
+            elif opposite_binary[character_index] == '1':
                 current_binary += '1'
             else:
                 current_binary += ip_address_binary[character_index]
-            
+
             character_index += 1
         upper_range += '.' + str(int(current_binary, 2))
         group_index += 1
@@ -248,18 +250,17 @@ def calculate_upper_ipv6_range(ip_address, netmask):
     group_index = 0
 
     for group in netmask_group:
-        current_netmask_as_integer = 0
         opposite_binary = calculate_binary_opposite(bin(int(group, 2)), 16)
         ip_address_binary = bin(int(ip_address_group[group_index], 16)).replace('0b', '')
         current_binary = ''
         character_index = 0
 
-        if('1' not in ip_address_binary):
-            while (len(ip_address_binary) < 16):
+        if '1' not in ip_address_binary:
+            while len(ip_address_binary) < 16:
                 ip_address_binary += '0'
 
-        for character in ip_address_binary:
-            if(opposite_binary[character_index] == '1'):
+        while character_index < len(ip_address_binary):
+            if opposite_binary[character_index] == '1':
                 current_binary += '1'
             else:
                 current_binary += ip_address_binary[character_index]
@@ -276,31 +277,60 @@ def calculate_lower_ipv4_range(ip_address, netmask):
     """
     netmask_group = netmask.split('.')
     ip_address_group = calculate_ipv4_subnet(ip_address, netmask).split('.')
-    upper_range = ''
+    lower_range = ''
     group_index = 0
 
-    for group in netmask_group:
-        current_netmask_as_integer = 0
+    while group_index < len(netmask_group):
 
         ip_address_binary = bin(int(ip_address_group[group_index])).replace('0b', '')
         current_binary = ''
         character_index = 0
-        
-        while (len(ip_address_binary) < 8):
+
+        while len(ip_address_binary) < 8:
             ip_address_binary += '0'
-        
-        for character in ip_address_binary:
-            if(group_index == (len(ip_address_group) - 1) and (character_index == (len(ip_address_binary) - 1))):
+
+        while character_index < len(ip_address_binary):
+            group_length = len(ip_address_group) - 1
+            binary_length = len(ip_address_binary) - 1
+            if(group_index == group_length) and (character_index == binary_length):
                 current_binary += '1'
             else:
                 current_binary += ip_address_binary[character_index]
 
             character_index += 1
-        upper_range += '.' + str(int(current_binary, 2))
+        lower_range += '.' + str(int(current_binary, 2))
         group_index += 1
-        upper_range_no_leading_period = upper_range[1:]
-    return upper_range_no_leading_period
+        lower_range_no_leading_period = lower_range[1:]
+    return lower_range_no_leading_period
 
-if __name__ == '__main__':
-    calculate_lower_ipv4_range('128.128.171.1', '11111111.11111111.11110000.00000000')
+def calculate_lower_ipv6_range(ip_address, netmask):
 
+    """
+    calculates the lower ipv6 range
+    """
+    netmask_group = netmask.split('.')
+    ip_address_group = calculate_ipv6_subnet(ip_address, netmask).split(':')
+    lower_range = ''
+    group_index = 0
+
+    for group in netmask_group:
+        opposite_binary = calculate_binary_opposite(bin(int(group, 2)), 16)
+        ip_address_binary = bin(int(ip_address_group[group_index], 16)).replace('0b', '')
+        current_binary = ''
+        character_index = 0
+
+        if '1' not in ip_address_binary:
+            while len(ip_address_binary) < 16:
+                ip_address_binary += '0'
+
+        while character_index < len(ip_address_binary):
+            if opposite_binary[character_index] == '1':
+                current_binary += '0'
+            else:
+                current_binary += ip_address_binary[character_index]
+            character_index += 1
+
+        lower_range += ':' + hex(int(current_binary, 2)).replace('0x', '')
+        group_index += 1
+    lower_range_no_leading_period = lower_range[1:]
+    return lower_range_no_leading_period

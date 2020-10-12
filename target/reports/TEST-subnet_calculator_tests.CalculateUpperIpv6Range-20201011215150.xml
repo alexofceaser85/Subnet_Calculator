@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" file="subnet_calculator_tests.py" name="subnet_calculator_tests.CalculateUpperIpv6Range-20201011215150" skipped="0" tests="6" time="0.016" timestamp="2020-10-11T21:51:51">
+	<testcase classname="subnet_calculator_tests.CalculateUpperIpv6Range" name="test_calculate_upper_at_maximum_ip_and_at_maximum_subnet" time="0.003" timestamp="2020-10-11T21:51:51"/>
+	<testcase classname="subnet_calculator_tests.CalculateUpperIpv6Range" name="test_calculate_upper_one_below_maximum_ip_and_one_below_maximum_subnet" time="0.003" timestamp="2020-10-11T21:51:51"/>
+	<testcase classname="subnet_calculator_tests.CalculateUpperIpv6Range" name="test_calculate_upper_range_at_minimum_ip_and_minimum_subnet" time="0.002" timestamp="2020-10-11T21:51:51"/>
+	<testcase classname="subnet_calculator_tests.CalculateUpperIpv6Range" name="test_calculate_upper_range_one_above_minimum_ip_and_one_above_minimum_subnet" time="0.004" timestamp="2020-10-11T21:51:51"/>
+	<testcase classname="subnet_calculator_tests.CalculateUpperIpv6Range" name="test_calculate_upper_range_well_above_minimum_ip_and_well_above_minimum_subnet" time="0.003" timestamp="2020-10-11T21:51:51"/>
+	<testcase classname="subnet_calculator_tests.CalculateUpperIpv6Range" name="test_calculate_upper_well_below_maximum_ip_and_well_below_maximum_subnet" time="0.002" timestamp="2020-10-11T21:51:51"/>
+</testsuite>

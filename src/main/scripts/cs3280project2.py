@@ -1,20 +1,18 @@
 #!/usr/bin/env python3
 """
-This is the main method for the program
+This is the main class for the program
 """
 
-import subnet_calculator
 import service
 
 __author__ = "Alex DeCesare"
 __version__ = "11-October-2020"
 
 def main():
-
-    service.run('<h1>hello world</h1>')
-    service.generate_handler('<h1>hello world</h1>')
-    print(service.get_ip_address)
-    print('x')
+    """
+    The main method for the program
+    """
+    service.run()
 
 if __name__ == '__main__':
     main()

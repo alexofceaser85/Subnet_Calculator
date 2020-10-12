@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" file="subnet_calculator_tests.py" name="subnet_calculator_tests.TestCalculateBinaryOpposite-20201011212500" skipped="0" tests="5" time="0.007" timestamp="2020-10-11T21:25:01">
+	<testcase classname="subnet_calculator_tests.TestCalculateBinaryOpposite" name="test_large_binary_string" time="0.001" timestamp="2020-10-11T21:25:01"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateBinaryOpposite" name="test_one_one" time="0.001" timestamp="2020-10-11T21:25:01"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateBinaryOpposite" name="test_one_zero" time="0.002" timestamp="2020-10-11T21:25:01"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateBinaryOpposite" name="test_seperated_binary_string" time="0.001" timestamp="2020-10-11T21:25:01"/>
+	<testcase classname="subnet_calculator_tests.TestCalculateBinaryOpposite" name="test_small_binary_string" time="0.001" timestamp="2020-10-11T21:25:01"/>
+</testsuite>
